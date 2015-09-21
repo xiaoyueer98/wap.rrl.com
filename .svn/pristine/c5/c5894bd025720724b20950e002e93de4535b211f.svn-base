@@ -1,0 +1,88 @@
+<?php
+
+function test()
+{
+        session_start();
+        $_SESSION['test'] = null;
+        var_dump($_SESSION);
+}
+
+//获取session
+function get_test()
+{
+
+        ini_set("session.save_path", "/var/www/wap_renrenlie/tmp/");
+        ini_set("session.cookie_lifetime", 60);
+        ini_set("session.gc_maxlifetime", 60);
+
+        session_start();
+        var_dump($_SESSION);
+}
+
+//设置session
+function sessions()
+{
+
+        ini_set("session.cookie_lifetime", 60);
+        ini_set("session.gc_maxlifetime", 60);
+        ini_set("session.save_path", "/var/www/wap_renrenlie/tmp/");
+        ini_set("session.gc_divisor", 1);
+
+        session_start();
+        $_SESSION['test'] = "test";
+}
+
+//sessions();
+//get_test();
+
+function test1()
+{
+        var_dump(NULL);
+        var_dump(addslashes(NULL));
+        var_dump(get_magic_quotes_gpc());
+        die;
+        session_start();
+        var_dump($_COOKIE['userinfo']);
+        var_dump($_SESSION['userinfo']);
+        if ($_COOKIE['userinfo'] && !empty($_SESSION['userinfo']))
+        {
+                $_SESSION['userinfo'] = unserialize($_COOKIE['userinfo']);
+        }
+        echo "<br/>";
+        var_dump($_COOKIE['userinfo']);
+        var_dump($_SESSION['userinfo']);
+}
+
+function test2()
+{
+        session_start();
+        setcookie("userinfo", serialize(array("userid" => "1157", "username" => "mamade")), time() - 1);
+        var_dump($_COOKIE['userinfo']);
+        var_dump($_SESSION['userinfo']);
+}
+
+function sun()
+{
+        $i   = 5;
+        $sum = 0;
+        for ($j = 0; $j <= 10; $j++)
+        {
+                if ($j == $i)
+                {
+                        break;
+                }
+                else
+                {
+                        $sum +=$j;
+                        echo $sum."<br/>";
+                }
+        }
+        echo $sum;
+}
+function test11()
+{
+        var_dump($_SERVER['REMOTE_ADDR']);
+        
+}
+
+test11();

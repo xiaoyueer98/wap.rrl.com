@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简历库</title>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/new-company.css">
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css">
+	<script type="text/javascript" src="/Public/new-js/iscroll.js"></script>
+    <script type="text/javascript" src="/Public/js/zepto.min.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="full-screen" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+	<div class="mask" style="display:none"></div>
+	<div class="com-alt com-dqzt" style="display:none">
+		<ul class="r-jt">
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block m">未审核</em> 
+					<b class="fl-rig dis-block m"></b>
+				</span>
+			</li>
+			<li class="bd m list">
+				<a href="">
+					<span>
+						<em class="fl-lef dis-block">不面试</em> 
+					</span>
+				</a>
+			</li>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">面试预约</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+			<li class="bd m list">
+				<a href="">
+					<span>
+						<em class="fl-lef dis-block">不面试</em> 
+					</span>
+				</a>
+			</li>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">面试预约</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+		</ul>
+	</div>
+	<div class="com-alt rcmd-fee" style="display:none">
+		<a href="javascript:void(0);" class="cold"></a>
+		<div class="text">
+			<em>推荐费：</em>
+			<span><input type="text"><b>00</b></span>
+			<i>元</i>
+		</div>
+		<p>馨提示：增加推荐费，可以刺激推荐人的兴趣及动力，缩短招聘周期。推荐费只可以上调，不可以下调。</p>
+		<span class="btn2" style="">确定</span>
+	</div>
+	<div class="short-message">
+		<div class="sm-head">
+			<span class="l">发送短信</span>
+			<span class="r"></span>
+		</div>
+		<div class="sm-con clearfix">
+			<p><span>亲爱的</span><input class="input1" type="text" value="冯辉"><span>同学，我们诚挚邀请你于<input class="input2" type="text" value="2015年6月26日上午九点">，和我们北京乐贝网科技有限公司面试;</span></p>
+			<p><span>公司地点：</span><input class="input3" type="text" value="北京市海淀区上地嘻嘻大厦2203号;"></p>
+			<p><span>乘车路线：</span><input class="input3" type="text" value="乘坐地铁1号线在东直门站下车，或乘坐886路公交车在，知春路站下车；;"></p>
+			<p><span>联系人：</span><input class="input1" type="text" value="Robin"></p>
+			<p><span>联系电话：</span><input class="input4" type="text" value="18500521769"><span>请勿迟到</span></p>
+		</div>
+		<div class="sm-footer">
+			<span class="l"></span>
+			<span class="r">发送</span>
+		</div>
+	</div>
+	<div class="com-alt modify-fee" style="display:none">
+		<a href="javascript:void(0);" class="cold"></a>
+		<div class="alt-head">修改招聘资费</div>
+		<p>您确定修改此招聘的费用为100元吗？</p>
+		<span class="btn2" style="">确定</span>
+	</div>
+	<header class="com-head fixed">
+		<div class="con">
+			<span class="l dis-block"></span>
+			<span class="c dis-block">简历库</span>
+			<span class="r dis-block"></span>
+		</div>
+	</header>
+	<p class="error" style="display:none">添加招聘资费成功</p>
+	<div class="wrap">
+		<ul id="nav" class="nav">
+		    <li><a href="#"><span class="sp0 sp0_2"></span><b class='m'>完善资料</b></a></li>
+		    <li><a href="#"><span class="sp1"></span><b>签订合同</b></a></li>
+		    <li><a href="#"><span class="sp2"></span><b>发布职位</b></a></li>
+		    <li><a href="#"><span class="sp3"></span><b>查看候选人</b></a></li>
+		    <li><a href="#"><span class="sp4"></span><b>入职管理</b></a></li>
+		</ul>
+
+		<section class="is-rct resume" style="padding-bottom:20px;display:block;">
+			<div style="background:#f0f0f0;margin-bottom:10px;">
+				<div class="wh-center95 top-nav" >
+					<div class="l">
+						<span class="dis-block dis-lef fl-lef">招聘职位：</span>
+						<em class="dis-block dis-lef fl-lef">全部职位</em>
+						<div class="cm">
+							<ul>
+								<li>UI设计师UI设计师UI设计师</li>
+								<li>UI设计师</li>
+								<li>UI设计师</li>
+								<li>UI设计师</li>
+							</ul>
+						</div>
+					</div>
+					<span class="r fl-rig">招聘资费：200000</span>
+				</div>
+			</div>
+			<div class="pd-tb bd resume-list">
+				<div class="rcmt-list">
+					<div class="div-list odiv1 clearfix">
+						<span class="fl-lef">候选人：</span>
+						<span class="fl-lef b">冯辉</span>
+						<div class="fl-rig">
+							<span class="fl-lef">在职状态：</span>
+							<span class="fl-lef">离职随时到岗</span>
+						</div>
+					</div>
+					<div class="div-list odiv2 clearfix">
+						<span class="fl-lef">面试职位：</span>
+						<span class="fl-lef">高级UI设计师</span>
+						<div class="fl-rig">
+							<span class="fl-lef date">可面试时间</span>
+						</div>
+					</div>
+					<div class="div-list odiv3 clearfix">
+						<span class="fl-lef">推荐人：</span>
+						<span class="fl-lef">Francis</span>
+						<div class="fl-rig dis-block">
+							<span class="fl-fl">推荐时间：</span>
+							<span class="fl-fl">2015-07-10</span>
+						</div>
+					</div>
+					<div class="div-list odiv4 clearfix">
+						<span class="fl-lef">电话：</span>
+						<span class="fl-lef">18500521769</span>
+						<div class="fl-rig">
+							<span class="fl-lef">付款信息：</span>
+							<span class="fl-lef" style="padding-right:30px;">未打款</span>
+						</div>
+					</div>
+					<span class="fl-lef mm"><img src="/Public/new-images/new-company/icon2.png" alt=""></span>
+					<div class="eject" style="display:block;">
+						<a href="javascript:void(0);" class="com-dqzt2"><span class=""></span><em>当前状态</em></a>
+						<a href="javascript:void(0);"><span></span><em>查看简历</em></a>
+						<a href="javascript:void(0);" class="fsdx-btn"><span></span><em>面试短信</em></a>
+					</div>
+
+					<div class="data-zhezhao">
+						<a href="javascript:void(0)" class="fh"></a>
+						<div class="data-head">
+							<span>可面试时间</span>
+						</div>
+						<p>6月20日下午3:00，等下班以后可以面试。6月20日下午3:00，等下班以后可以面试。6月20日下午3:00，等下班以后可以面试。</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="pd-tb bd resume-list">
+				<div class="rcmt-list">
+					<div class="div-list odiv1 clearfix">
+						<span class="fl-lef">候选人：</span>
+						<span class="fl-lef b">冯辉</span>
+						<div class="fl-rig">
+							<span class="fl-lef">在职状态：</span>
+							<span class="fl-lef">离职随时到岗</span>
+						</div>
+					</div>
+					<div class="div-list odiv2 clearfix">
+						<span class="fl-lef">面试职位：</span>
+						<span class="fl-lef">高级UI设计师</span>
+						<div class="fl-rig">
+							<span class="fl-lef date">可面试时间</span>
+						</div>
+					</div>
+					<div class="div-list odiv3 clearfix">
+						<span class="fl-lef">推荐人：</span>
+						<span class="fl-lef">Francis</span>
+						<div class="fl-rig dis-block">
+							<span class="fl-fl">推荐时间：</span>
+							<span class="fl-fl">2015-07-10</span>
+						</div>
+					</div>
+					<div class="div-list odiv4 clearfix">
+						<span class="fl-lef">电话：</span>
+						<span class="fl-lef">18500521769</span>
+						<div class="fl-rig">
+							<span class="fl-lef">付款信息：</span>
+							<span class="fl-lef" style="padding-right:30px;">未打款</span>
+						</div>
+					</div>
+					<span class="fl-lef mm"><img src="/Public/new-images/new-company/icon2.png" alt=""></span>
+					<div class="eject" style="display:block;">
+						<a href="javascript:void(0);" class="com-dqzt2"><span class=""></span><em>当前状态</em></a>
+						<a href="javascript:void(0);"><span></span><em>查看简历</em></a>
+						<a href="javascript:void(0);" class="fsdx-btn"><span></span><em>面试短信</em></a>
+					</div>
+
+					<div class="data-zhezhao">
+						<a href="javascript:void(0)" class="fh"></a>
+						<div class="data-head">
+							<span>可面试时间</span>
+						</div>
+						<p>6月20日下午3:00，等下班以后可以面试。6月20日下午3:00，等下班以后可以面试。6月20日下午3:00，等下班以后可以面试。</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript">
+    $(document).ready(function(){
+			var odiv4 = $(".rcmt-list .odiv4").width();
+			var mmWidth = $(".rcmt-list .mm").width();
+
+			$(".rcmt-list .mm").click( function(){
+				if($(this).hasClass("aa")){
+					$(this).parent().find(".eject").animate({
+						translate: '110%,0'
+					},200,'ease-out',function(){
+						$(this).css({
+							'-webkit-transform': 'translate(110%,0)'
+						});
+					});
+					$(this).removeClass("aa");
+				}else{
+					$(this).parent().find(".eject").animate({
+						translate: '0%,0'
+					},200,'ease-out',function(){
+						$(this).css({
+							'-webkit-transform': 'translate(0%,0)'
+						});
+					});
+
+					$(this).parents(".resume-list").siblings().find(".eject").animate({
+						translate: '110%,0'
+					},200,'ease-out',function(){
+						$(this).css({
+							'-webkit-transform': 'translate(110%,0)'
+						});
+					});
+					$(this).parents(".resume-list").siblings().find(".mm").removeClass("aa");
+					$(this).addClass("aa");
+				}
+			});
+			
+			$(".rcmt-list .date").click(function(){
+				$(this).parents(".resume-list").find(".data-zhezhao").animate({
+					translate: '0%,0'
+				},200,'ease-out',function(){
+					$(this).parents(".resume-list").find(".data-zhezhao").css({
+						'-webkit-transform': 'translate(0%,0)'
+					})
+				});
+
+				$(this).parents(".resume-list").siblings().find(".data-zhezhao").animate({
+					translate: '100%,0'
+				},200,'ease-out',function(){
+					$(this).css({
+						'-webkit-transform': 'translate(100%,0)'
+					})
+				});
+				$(this).parents(".resume-list").find(".fh").click(function(){
+					$(this).parent().animate({
+						translate: '100%,0'
+					},200,'ease-out',function(){
+						$(this).parents(".resume-list").siblings().find(".data-zhezhao").css({
+							'-webkit-transform': 'translate(100%,0)'
+						})
+					});
+				})
+			});
+
+			/*-------发送短信----*/
+			$(".fsdx-btn").click(function(){
+				$(".mask").fadeIn();
+				$(".short-message").fadeIn();
+			});
+
+			$(".sm-head").click(function(){
+				$(".mask").hide();
+				$(".short-message").fadeOut();
+			})
+
+			var myScroll9 = new IScroll('.com-dqzt', {
+				click:true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+			var myScroll1 = new IScroll('.cm', {
+				click:true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+			$(".top-nav em").click(function(){
+				if($(this).hasClass("cc")){
+					$(".top-nav .cm").hide();
+					$(this).removeClass("cc");
+					$(this).removeClass("m");
+					myScroll1.refresh();
+				}else{
+					$(".top-nav .cm").show();
+					$(this).addClass("cc");
+					myScroll1.refresh();
+					$(this).addClass("m");
+
+				}
+			});
+			$(".com-dqzt2").click(function(){
+				$(".mask").fadeIn();
+				$(".com-dqzt").fadeIn();
+				myScroll9.refresh();
+				$(".com-dqzt li").click(function(){
+					$(this).find("em").addClass("m").next().addClass("m");
+					$(this).siblings().find("em").removeClass("m").next().removeClass("m");
+					//var text = $(this).find("em").text();
+					//$("#com-dqzt").find("span").text(text);
+					setTimeout(function(){
+						$(".com-dqzt").fadeOut();
+						$(".mask").hide();
+					},200)
+					
+				})
+			});
+
+
+			$(".rcmt-list .eject").width( odiv4 - (mmWidth+5))
+			$("#m-tre").click(function(){
+				if($("#m-tre").hasClass("current")){
+					$(".m-phone").hide();
+					$(this).removeClass("current").removeClass("m");
+				}else{
+					$(".m-phone").show();
+					$(this).addClass("current").addClass("m");
+				}
+			})
+
+			$("input").click(function(){
+				if(document.activeElement.tagName == 'INPUT'){
+					$(".fixed").css({'position': 'absolute','top':'0'}); 
+				} else if(document.activeElement.tagName !== 'INPUT'){  
+					$(".fixed").css('position', 'fixed');
+				}
+			})
+			
+    })
+	
+    //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+</body>
+</html>

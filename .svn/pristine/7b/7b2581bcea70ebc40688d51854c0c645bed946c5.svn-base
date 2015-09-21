@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>人人猎</title>
+        <link rel="stylesheet"  href="/Public/css/reset.css">
+        <link rel="stylesheet"  href="/Public/css/wep.css">
+        <script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="/Public/js/iscroll2.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <meta content="telephone=no" name="format-detection" />
+        <script type="text/javascript">
+
+            var myScroll,
+                    pullDownEl, pullDownOffset,
+                    pullUpEl, pullUpOffset,
+                    generatedCount = 0;
+            function ajx(page, number) {
+                $.ajax({
+                    type: 'POST',
+                    url: '?s=/Usercenter/get_recommeded_list',
+                    data: 'page=' + page + '&number=' + number,
+                    dataType: 'json',
+                    success: function (data) {
+
+                        if (data.count == 0) {
+                            if ($.trim($("#thelist2").html()) == "") {
+                                $('#thelist2').append('<div class="resultjobs clearfix" style="font-size:14px;text-align:center;line-height:50px;color:#b4b4b4;">您还没有可推荐的人！</div>');
+                            }
+                            $('#pullUp').hide();
+                            return;
+                        }
+
+                        var data = eval(data['result']);
+                        for (var i = 0; i < data.length; i++) {
+                            var str = "";
+                            if (data[i].sex == "0") {
+                                var sex = "男";
+                            } else {
+                                var sex = "女";
+                            }
+
+                            str =
+                                    '<div class="list clearfix">'
+                                    + '<dl>'
+                                    + '<dt>'
+                                    + '<p class="pt"><span>' + data[i].username + '</span><span class="gender">' + sex + '</span><span class="phone">' + data[i].mobile + '</span></p>'
+                                    + '<p class="pb"><span>在职状态：</span><span>' + data[i].statedata + '</span></p>'
+                                    + '</dt>'
+                                    + '<dd class="rec">'
+                                    + '<span class="re_delet" onclick="recommend_del('+data[i].id+')" id="del'+data[i].id+'">'
+                                    +'</span><span class="re_delet" id="del'+data[i].id+'1" style="display:none;"></span>'
+//                                    + '<span class="re_editor" onclick="recommend_upd('+data[i].id+')" ></span>'
+                                    + '</dd>'
+                                    + '</dl>'
+                                    + '</div>';
+                            
+                            
+                            $('#thelist2').append(str)
+                        }
+                    }
+                });
+                ++num;
+            }
+            function pullUpAction() {
+                setTimeout(function () {
+                    var el, li, i;
+                    el = document.getElementById('thelist');
+                    myScroll.refresh();
+                }, 1000);
+            }
+            function pullUpAction2() {
+                setTimeout(function () {
+                    ajx(1, 10);
+                    myScroll.refresh();
+                }, 1000);
+            }
+            pullUpAction2()
+            var num = 1;
+
+            /**
+             * 初始化iScroll控件
+             */
+            function loaded() {
+                pullDownEl = document.getElementById('pullDown');
+                pullDownOffset = pullDownEl.offsetHeight;
+                pullUpEl = document.getElementById('pullUp');
+                pullUpOffset = pullUpEl.offsetHeight;
+
+                myScroll = new iScroll('re_wrapper', {
+                    scrollbarClass: 'myScrollbar', /* 重要样式 */
+                    useTransition: false, /* 此属性不知用意，本人从true改为false */
+                    topOffset: pullDownOffset,
+                    onRefresh: function () {
+                        if (pullDownEl.className.match('loading')) {
+                            pullDownEl.className = '';
+                            pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+                        } else if (pullUpEl.className.match('loading')) {
+                            pullUpEl.className = '';
+                            pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+                        }
+                    },
+                    onScrollMove: function () {
+                        if (this.y > 5 && !pullDownEl.className.match('flip')) {
+                            pullDownEl.className = 'flip';
+                            pullDownEl.querySelector('.pullDownLabel').innerHTML = '松手开始更新...';
+                            this.minScrollY = 0;
+                        } else if (this.y < 5 && pullDownEl.className.match('flip')) {
+                            pullDownEl.className = '';
+                            pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+                            this.minScrollY = -pullDownOffset;
+                        } else if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+                            pullUpEl.className = 'flip';
+                            pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
+                            this.maxScrollY = this.maxScrollY;
+                        } else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+                            pullUpEl.className = '';
+                            pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+                            this.maxScrollY = pullUpOffset;
+                        }
+                    },
+                    onScrollEnd: function () {
+                        if (pullDownEl.className.match('flip')) {
+//                            pullDownEl.className = 'loading';
+//                            pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载中...';
+                            //pullDownAction();	// Execute custom function (ajax call?)
+                        } else if (pullUpEl.className.match('flip')) {
+                            pullUpEl.className = 'loading';
+                            pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';
+                            pullUpAction();	// Execute custom function (ajax call?)
+                            ajx(num, 10);
+                        }
+                    }
+                });
+
+                setTimeout(function () {
+                    document.getElementById('re_wrapper').style.left = '0';
+                }, 800);
+            }
+
+            //初始化绑定iScroll控件 
+            document.addEventListener('touchmove', function (e) {
+                e.preventDefault();
+            }, false);
+            document.addEventListener('DOMContentLoaded', loaded, false);
+            
+            function  recommend_upd(r_id){
+                location.href="/index.php?s=/Usercenter/upd_recommend/id/"+r_id;
+            }
+            
+            /*删除被推荐人信息*/
+            function recommend_del(r_id){
+                
+                $("#del"+r_id).hide();
+                $("#del"+r_id+"1").show();
+                $.post("/index.php?s=/Usercenter/del_recommended", {'r_id': r_id,}, 
+                    function (data) {
+                            
+                             if(data.code == "200"){
+                                     
+                                     re_like_alert(data.msg);
+                             }else{
+                                     re_like_alert(data.msg);
+                             }   
+                         
+                     }, "json");
+            }
+        </script>
+    </head>
+    <body>
+    <include file="Public:like_alert" />
+    <include file="Public:header_new"/>
+    <include file="Public:head_nav"/>
+    <div id="re_wrapper">
+        <div id="scroller">
+            <div id="pullDown" style="display:none">
+                <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+            </div>
+            <include file="Public:nav" />
+            <div id="thelist">
+                <div id="thelist2">
+                    
+                </div>
+<!--                <div class="list clearfix">
+                        <dl>
+                            <dt>
+                            <p class="pt"><span>冯辉</span><span class="gender">男</span><span class="phone">185XXXXXXXX</span></p>
+                            <p class="pb"><span>在职状态：</span><span>在职2周内到岗</span></p>
+                            </dt>
+                            <dd class="rec">
+                                <span class="re_delet"></span>
+                                <span class="re_editor"></span>
+                            </dd>
+                        </dl>
+                    </div>-->
+            </div>
+
+            <div id="pullUp">
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+            </div>
+
+        </div>
+    </div>
+    <!-- <include file="Public:footer" /> -->
+
+</body>
+</html>

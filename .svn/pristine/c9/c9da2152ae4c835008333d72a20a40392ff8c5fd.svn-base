@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+        <title>人人猎</title>
+	<link rel="stylesheet"  href="/Public/css/reset.css">
+        <link rel="stylesheet"  href="/Public/css/wep.css">
+	<script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="/Public/js/iscroll.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+</head>
+<body>
+<include file="Public:header_new"/>
+<include file="Public:head_nav"/>
+<div class="set_wrapper" id="re_wrapper" >
+	<div id="scroller">
+		<div id="pullDown" style="display:none">
+			<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+		</div>
+		<include file="Public:nav"/>
+		<div class="con_modify thelist" id="thelist">
+			<ul style="padding-top:10px">
+				<h3>基本信息</h3>
+                                <php>
+                                    $username = $_SESSION['userinfo']['username'];
+                                    if(substr($username,0,3) == "qq_"){
+                                            $username = $_COOKIE[$username];
+                                            $username = "qq_".str_replace("qq_","",$username);
+                                    }
+                                </php>
+				<li><span>用户名：</span><em style="width:62px;overflow:hidden;text-overflow: ellipsis;">{$username}</em><span>真实姓名：</span><em>{$mArr.cnname}</em></li>
+				<li><span class="sp">性&nbsp&nbsp&nbsp别：</span><span class="sp">{$mArr.sex_r}</span></li>
+
+				<li><span class="sp">年&nbsp&nbsp&nbsp龄：</span><span class="sp">{$mArr.age}</span></li>
+				<li><span class="sp">邮&nbsp&nbsp&nbsp箱：</span><span class="sp">{$mArr.email}</span></li>
+				<li><span class="sp">手&nbsp&nbsp&nbsp机：</span><span class="sp">{$mArr.mobile}</span></li>
+				<li><span class="sp">微&nbsp&nbsp&nbsp信：</span><span class="sp">{$mArr.weixin}</span></li>
+			</ul>
+
+			<ul>
+				<li style="padding:0;padding-bottom:10px;"><button class="modify">修改</button></li>
+			</ul>
+		</div>
+
+		<div class="end thelist">
+			<ul style="padding-top:10px" class="jbxx">
+				<h3>基本信息</h3>
+				<li><span>用户名：</span><em style="width:62px;overflow:hidden;text-overflow: ellipsis;">{$username}</em><span>真实姓名：</span><input type="text" class="name" value="{$mArr.cnname}" id="cnname"></li>
+                                <li><span class="sp">性&nbsp&nbsp&nbsp别：</span>
+                                    <span class="sp">男</span><if condition="$mArr.sex eq 0"> <label  class="nan"  id="nan" ></label><else /><label  class="nan m"  id="nan" ></label> </if>
+                                    <span class="sp">女</span><if condition="$mArr.sex eq 1"> <label  class="nan"  id="nv" ></label><else /><label  class="nan m"  id="nv" ></label> </if>
+                                </li>
+                                <input type="hidden" value="0" id="sex">
+				<li><span class="sp">年&nbsp&nbsp&nbsp龄：</span><input type="text" class="name" value="{$mArr.age}" id="age"></li>
+				<li><span class="sp">邮&nbsp&nbsp&nbsp箱：</span><span>{$mArr.email}<span></li>
+				<li><span class="sp">手&nbsp&nbsp&nbsp机：</span><span>{$mArr.mobile}<span></li>
+				<li><span class="sp">微&nbsp&nbsp&nbsp信：</span><input type="text" value="{$mArr.weixin}" id="wx"></li>
+			</ul>
+			<ul>
+				<li style="padding:0;padding-bottom:10px;"><button class="modify end_btn" id="savebtn">完成</button></li>
+			</ul>
+		</div>
+		<div id="pullUp" style="display:none;">
+			<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+		</div>
+		
+	</div>
+</div>
+<include file="Public:like_alert"/>
+<!-- <include file="Public:footer"/> -->
+<script>
+document.addEventListener("touchmove", function (e) {
+            e.preventDefault();
+        }, false);
+        $(document).ready(function () {
+
+            $('.modify').click(function () {
+                $('.con_modify').hide()
+                $('.end').show()
+            })
+            $('.end_btn').click(function () {
+                $('.con_modify').show()
+                $('.end').hide()
+            })
+            var myScroll = new IScroll('#re_wrapper', {
+                mouseWheel: true,
+                disableMouse: true,
+                disablePointer: true,
+                click:true
+});
+        })
+        
+$("#nan").click(function(){
+    
+    if(this.className == "nan m"){
+        
+        $("#sex").val("0");
+        $("#nv")[0].className ="nan m";
+        this.className = "nan";
+    }
+})
+$("#nv").click(function(){
+    
+    if(this.className == "nan m"){
+        
+        $("#sex").val("1");
+        $("#nan")[0].className ="nan m";
+        this.className = "nan";
+       
+    }
+})
+$("#savebtn").click(function(){
+      $("#savebtn")[0].disabled = true;
+      var cnname = $.trim($("#cnname").val());
+      var sex = $.trim($("#sex").val());
+      var age = $.trim($("#age").val());
+      var wx = $.trim($("#wx").val());
+    
+      if(cnname == "" || age=="" || wx==""){
+          like_alert("请完善修改信息");
+          $("#savebtn")[0].disabled = false;
+          return;
+      }
+      if(cnname == "{$mArr.cnname}" && sex=="{$mArr.sex}" && age=="{$mArr.age}" && wx =="{$mArr.weixin}"){
+          re_like_alert("保存成功");
+          return;
+      }
+      $.post("/index.php?s=/Usercenter/myinfo_save", {
+                'cnname': cnname,
+                'sex': sex,
+                'age': age,
+                'wx': wx
+            }, function (data) {
+
+                if (data.code != "200") {
+                    
+                    like_alert(data.msg);
+                    $("#savebtn")[0].disabled = false;
+                    return;
+                    
+                } else {
+                    re_like_alert(data.msg);
+                }
+            }, "json");
+})    
+</script>
+</body>
+</html>

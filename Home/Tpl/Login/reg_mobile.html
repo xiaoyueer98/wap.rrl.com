@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>人人猎注册</title>
+        <script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="/Public/js/iscroll.js"></script>
+        <link rel="stylesheet"  href="/Public/css/reset.css">
+        <link rel="stylesheet"  href="/Public/css/wechat.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <script type="text/javascript">
+            document.addEventListener("touchmove", function (e) {
+                e.preventDefault();
+            }, false);
+            $(document).ready(function (e) {
+                var myScroll = new IScroll('#wamp', {mouseWheel: true, click: false});
+            })
+        </script>
+    </head>
+    <body>
+        <include file="Public:like_alert" />
+        <div id="container">
+            <include file="Public:header1" />
+            <section id="wamp">
+                <div class="scroll">
+                    <div class="center" style="height:190px;">
+                        <ul>
+                            <li><span>请输入您的手机号</span></li>
+                            <li><input class="txt" type="text" id='mobile'></li>
+                            <li><button class="btn_zh" id='reg_btn'>下一步</button></li>
+                            
+                        </ul>
+                    </div>
+                    <div style="text-align: center;font-size:14px;color:#626262"><span>如果是企业HR，请在PC端注册。</span></div>
+                </div>
+            </section>
+            <!-- <include file="Public:footer" /> -->
+        </div>
+        <script type="text/javascript">
+
+          
+          
+
+            $("#reg_btn").click(function () {
+
+                $("#reg_btn")[0].disabled = true;
+
+                var mobile = $("#mobile").val();
+              
+
+                if (!/^[0-9]{11}$/.test($('#mobile').val()) || $('#mobile').val() == '') {
+                    $("#reg_btn")[0].disabled = false;
+                    like_alert("手机号不符合规则");
+                    return;
+                }else{ 
+                    var hash = "<?php $_SESSION['cookie']=time();echo md5('rrl_'.$_SESSION['cookie']);?>";
+                    $.post("/index.php?s=/Reg/check_mobile", {
+                        'mobile': mobile,
+                        'type': '2',
+                        'hash':hash
+                    }, function (data) {
+
+                        if (data.code != "200") {
+                            $("#reg_btn")[0].disabled = false;
+                            like_alert(data.msg);
+                            return;
+                        } else {
+                            location.href = "/index.php?s=/Reg/reg_info";
+                        }
+                    }, "json");
+
+                }
+            })
+        </script>    
+
+    </body>
+</html>

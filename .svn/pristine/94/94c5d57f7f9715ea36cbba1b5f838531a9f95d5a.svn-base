@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>人人猎</title>
+        <link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="/Public/new-css/new-recommende.css"/>    
+        <script type="text/javascript" src="/Public/new-js/iscroll.js"></script>
+        <script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <meta content="telephone=no" name="format-detection" />
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.nav').hide();
+                $(".gsjj-btn").click(function () {
+                    $('.comp-text').slideDown();
+                    $('.myh3-2').addClass("m");
+                    $(".myh3").removeClass('m');
+                    setTimeout(function () {
+                        myScroll.refresh();
+                    }, 500)
+                })
+                $('.myh3-2').click(function () {
+                    $('.comp-text').slideUp();
+                    $('.myh3-comp-text2').removeClass("m");
+                    $(".myh3").addClass('m');
+                    setTimeout(function () {
+                        myScroll.refresh();
+                    }, 500)
+                })
+                myScroll = new IScroll('#m', {
+                    click: true,
+                    scrollbars: true,
+                    mouseWheel: true,
+                    interactiveScrollbars: true,
+                    shrinkScrollbars: 'scale',
+                    fadeScrollbars: true
+                });
+
+
+
+
+                var list2 = $(".posi-nav li");
+                var divs2 = $(".m-c>div");
+                list2.on("click", function () {
+                    that = $(this);
+                    index = that.index();
+                    that.addClass("m").siblings().removeClass("m");
+                    $(this).find("a").addClass("m").parent("li").siblings().find("a").removeClass("m");
+                    divs2.eq(index).show().siblings("div").hide();
+                    setTimeout(function () {
+                        myScroll.refresh();
+                    }, 500)
+                });
+
+            })
+            document.addEventListener('touchmove', function (e) {
+                e.preventDefault();
+            }, false);
+        </script>
+    </head>
+    <body>
+        <include file="Public:header_new"/>
+	<include file="Public:head_nav"/>
+        <div class="wrap job-wrap" id="wamp" >
+            <div class="content">
+                <include file="Public:nav"/>
+                <div id="m" class="flex wap">
+                    <div class="scroll md-pawd salon-index salon-child back-top">
+                        <span class="position"><img src="/Public/new-images/icon5.png" alt=""></span>
+                        <div class="salon-head">
+                            <span class="dis-block"><img src="/Public/new-images/pic1.png" alt=""></span>
+                            <i></i>
+                            <?php if($isActive):?>
+                            <a href='/index.php?s=/Salon/sign_up'><span class="btn">立即报名</span></a>
+                            <?php endif;?>
+                            <span class="head-position"><img src="/Public/new-images/icon6.png" alt=""></span>
+                        </div>
+                        <div>
+                            <span class="title">{$arActive.activename}套图</span>
+                        </div>
+                        <div class="myimg">
+                            <span class="clearfix"><img src="/Public/new-images/pic2.png" alt=""></span>
+                        </div>
+                        <div class="new-content" style='margin-left:5%;font-size:16px;margin-top:30px;margin-bottom:20px;'>
+                            {$arActive.content}
+                        </div>
+                        <ul>
+                            <if condition = "$arActivePre eq 0" >
+                                <else />
+                                <li class="clearfix">
+                                    <span class="dis-block fl-lef dis-inlin ms">上一期：</span>
+                                    <em class="dis-block fl-lef dis-inlin  ms"><a href='/index.php?s=/Salon/salon_detail/id/{$arActivePre.id}' style="color:#545454;">如何在创业全里混上去。</a></em>
+                                </li>
+                            </if>
+                            <if condition = "$arActiveNex eq 0" >
+                                <else />
+                                <li class="clearfix">
+                                    <span class="dis-block fl-lef dis-inlin ms">下一期：</span>
+                                    <em class="dis-block fl-lef dis-inlin  ms"><a href='/index.php?s=/Salon/salon_detail/id/{$arActiveNex.id}' style="color:#545454;">论推荐人的心态，hr如何处理建立问题。</a></em>
+                                </li>
+                            </if>
+                            <li class="clearfix mli" style="margin-top:20px;">
+                                <a href="/">返回首页</a> | <a href="#top" class="scrol-top">回到顶部</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <script>
+            $(function () {
+                $(".scrol-top").click(function () {
+                    $(".back-top").animate({
+                        '-webkit-transform': 'translate(0,0)'
+                    }, 400);
+                    setTimeout(function () {
+                        var myScroll1 = new IScroll('.wap', {mouseWheel: true, click: true});
+                    }, 200)
+                })
+            })
+        </script>
+    </body>
+</html>

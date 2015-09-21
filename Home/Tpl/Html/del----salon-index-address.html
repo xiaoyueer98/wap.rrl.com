@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>人人猎</title>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/new-recommende.css"/>    
+    <script type="text/javascript" src="/Public/new-js/iscroll.js"></script>
+    <script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <script type="text/javascript">
+    $(document).ready(function(){
+                $('.nav').hide();
+    		$(".gsjj-btn").click( function(){
+	            $('.comp-text').slideDown();
+	            $('.myh3-2').addClass("m");
+	            $(".myh3").removeClass('m');
+	            setTimeout(function(){
+	            	 myScroll.refresh();
+	            },500)
+			} )
+			$('.myh3-2').click( function(){
+	            $('.comp-text').slideUp();
+	            $('.myh3-2').removeClass("m");
+	            $(".myh3").addClass('m');
+	            setTimeout(function(){
+	            	 myScroll.refresh();
+	            },500)
+			} )
+			myScroll = new IScroll('#m', {
+				click:true,
+				scrollbars: true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+
+
+
+
+			var list2 = $(".posi-nav li");
+			var divs2 = $(".m-c>div");
+			list2.on("click",function(){
+				that = $(this);
+				index = that.index();
+				that.addClass("m").siblings().removeClass("m");
+				$(this).find("a").addClass("m").parent("li").siblings().find("a").removeClass("m");
+				divs2.eq(index).show().siblings("div").hide();
+				setTimeout(function(){
+	            	 myScroll.refresh();
+	            },500)
+			});
+		
+    })
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+</head>
+<body>
+	<include file="Public:header1"/>
+	<include file="Public:head-nav"/>
+	<div class="wrap job-wrap" id="wamp">
+		<div class="content">
+			<include file="Public:nav"/>
+			<div id="m" class="flex">
+				<div class="scroll md-pawd salon-address" style="padding-top:15px;">
+					<div class="clearfix">
+						<img src="/Public/new-images/address-img1.png" alt="">
+					</div>
+					<div class="clearfix">
+						<img src="/Public/new-images/address-img2.png" alt="">
+					</div>
+					<div class="clearfix">
+						<img src="/Public/new-images/address-img3.png" alt="">
+					</div>
+					<div class="clearfix">
+						<img src="/Public/new-images/address-img4.png" alt="">
+					</div>
+					<div class="clearfix">
+						<img src="/Public/new-images/address-img5.png" alt="">
+					</div>
+					<div class="clearfix">
+						<a href="">返回报名页</a>
+					</div>
+					
+				</div>
+			</div>
+			
+
+		</div>
+	</div>
+</body>
+</html>

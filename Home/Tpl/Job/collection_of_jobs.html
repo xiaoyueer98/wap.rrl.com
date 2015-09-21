@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>人人猎</title>
+        <link rel="stylesheet"  href="/Public/css/reset.css">
+        <link rel="stylesheet"  href="/Public/css/wep.css">
+        <script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="/Public/js/iscroll2.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <meta content="telephone=no" name="format-detection" />
+        <script type="text/javascript">
+
+            var myScroll,
+                    pullDownEl, pullDownOffset,
+                    pullUpEl, pullUpOffset,
+                    generatedCount = 0;
+
+            function ajx(page, number) {
+                $.ajax({
+                    type: 'POST',
+                    url: '/index.php?s=/Job/get_favjob_list',
+                    data: 'page=' + page + '&number=' + number,
+                    dataType: 'json',
+                    success: function (data) {
+
+                        if (data.count == 0) {
+
+                            if ($.trim($("#thelist2").html()) == "") {
+                                $('#thelist2').append('<div class="resultjobs clearfix" style="font-size:14px;text-align:center;line-height:50px;color:#b4b4b4;">还未有收藏职位，请浏览职位后加收藏！</div>');
+                            }
+                            $('#pullUp').hide();
+                            return;
+                        }
+
+                        var data = eval(data['result']);
+                        for (var i = 0; i < data.length; i++) {
+
+                            var posttimedata = "";
+                            if (data[i].posttimedata.indexOf("-") === "-1") {
+                                posttimedata = data[i].posttimedata;
+                            } else {
+                                posttimedata = data[i].posttimedata.substr(5);
+                                if (posttimedata.substr(0, 1) == "0") {
+                                    posttimedata = posttimedata.substr(1);
+                                }
+                            }
+
+//                            var treament = data[i].treatmentdata.replace("元", "");
+//                            var pos = treament.indexOf("-");
+//                            var treatmentB = treament.substr(0, pos);
+//                            var treatmentE = treament.substr(pos + 1);
+//                            var treamentNew = (treatmentB / 1000) + "K-" + (treatmentE / 1000) + "K";
+
+                            var str = "";
+                            if (data[i].deadline == 1) {
+                           
+                                str =
+                                        str = '<div class="list clearfix">'
+                                        + '<dl>'
+                                        + '<dt style="width:65%">'
+                                        + '<p class="pt"><span style="font-weight:bold;color:#206daf">' + data[i].title + '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="yxiajia"></span></p>'
+                                        + '<p><span>' + data[i].cpname + '</span></p>'
+                                        + '<p class="pb sczw"><span>' + posttimedata + '</span><span>北京</span><span>已推荐：</span><span>' + data[i].recommendednum + '人</span></p>'
+                                        + '</dt>'
+                                        + '<dd class="sczw_r">'
+                                        + '<p><span class="tp t">'+ data[i].treatmentdata +'</span></p>'
+                                        + '<p><span></span></p>'
+                                        + '<p><span class="tp bt">' + data[i].Tariff + '</span></p>'
+                                        + '</dd>'
+                                        + '</dl>'
+                                        + '</div>';
+
+                            } else {
+                                str = 
+                                         '<div class="list clearfix" onclick="location.href=\'/index.php?s=/Job/job_detail_new/jobid/' + data[i].id + '\'">'
+                                        + '<dl>'
+                                        + '<dt style="width:65%">'
+                                        + '<p class="pt"><span style="font-weight:bold;color:#206daf">' + data[i].title + '</span></p>'
+                                        + '<p><span>' + data[i].cpname + '</span></p>'
+                                        + '<p class="pb sczw"><span>' + posttimedata + '</span><span>北京</span><span>已推荐：</span><span>' + data[i].recommendednum + '人</span></p>'
+                                        + '</dt>'
+                                        + '<dd class="sczw_r">'
+                                        + '<p><span class="tp t">' + data[i].treatmentdata + '</span></p>'
+                                        + '<p><span></span></p>'
+                                        + '<p><span class="tp bt">' + data[i].Tariff + '</span></p>'
+                                        + '</dd>'
+                                        + '</dl>'
+                                        + '</div>';
+                                
+
+                            }
+
+                            $('#thelist2').append(str);
+                        }
+                    }
+                });
+                ++num;
+            }
+
+            function pullUpAction() {
+                setTimeout(function () {
+                    var el, li, i;
+                    el = document.getElementById('thelist');
+                    myScroll.refresh();
+                }, 1000);
+            }
+            function pullUpAction2() {
+                setTimeout(function () {
+                    ajx(1, 10);
+                    myScroll.refresh();
+                }, 1000);
+            }
+            pullUpAction2()
+            var num = 1;
+
+            /**
+             * 初始化iScroll控件
+             */
+            function loaded() {
+                pullDownEl = document.getElementById('pullDown');
+                pullDownOffset = pullDownEl.offsetHeight;
+                pullUpEl = document.getElementById('pullUp');
+                pullUpOffset = pullUpEl.offsetHeight;
+
+                myScroll = new iScroll('re_wrapper', {
+                    scrollbarClass: 'myScrollbar', /* 重要样式 */
+                    useTransition: false, /* 此属性不知用意，本人从true改为false */
+                    topOffset: pullDownOffset,
+                    onRefresh: function () {
+                        if (pullDownEl.className.match('loading')) {
+                            pullDownEl.className = '';
+                            pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+                        } else if (pullUpEl.className.match('loading')) {
+                            pullUpEl.className = '';
+                            pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+                        }
+                    },
+                    onScrollMove: function () {
+                        if (this.y > 5 && !pullDownEl.className.match('flip')) {
+                            pullDownEl.className = 'flip';
+                            pullDownEl.querySelector('.pullDownLabel').innerHTML = '松手开始更新...';
+                            this.minScrollY = 0;
+                        } else if (this.y < 5 && pullDownEl.className.match('flip')) {
+                            pullDownEl.className = '';
+                            pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+                            this.minScrollY = -pullDownOffset;
+                        } else if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+                            pullUpEl.className = 'flip';
+                            pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
+                            this.maxScrollY = this.maxScrollY;
+                        } else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+                            pullUpEl.className = '';
+                            pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+                            this.maxScrollY = pullUpOffset;
+                        }
+                    },
+                    onScrollEnd: function () {
+                        if (pullDownEl.className.match('flip')) {
+//                            pullDownEl.className = 'loading';
+//                            pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载中...';
+                            //pullDownAction();	// Execute custom function (ajax call?)
+                        } else if (pullUpEl.className.match('flip')) {
+                            pullUpEl.className = 'loading';
+                            pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';
+                            pullUpAction();	// Execute custom function (ajax call?)
+                            ajx(num, 10);
+                        }
+                    }
+                });
+
+                setTimeout(function () {
+                    document.getElementById('re_wrapper').style.left = '0';
+                }, 800);
+            }
+
+            //初始化绑定iScroll控件 
+            document.addEventListener('touchmove', function (e) {
+                e.preventDefault();
+            }, false);
+            document.addEventListener('DOMContentLoaded', loaded, false);
+
+
+        </script>
+    </head>
+    <body>
+    <include file="Public:like_alert" />
+    <include file="Public:header_new"/>
+    <include file="Public:head_nav"/>
+    <div id="re_wrapper">
+        <div id="scroller">
+            <div id="pullDown" style="display:none">
+                <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+            </div>
+            <include file="Public:nav" />
+            <div id="thelist">
+                <div id="thelist2">
+
+                </div>
+<!--                <div class="list clearfix">
+                    <dl>
+                        <dt style="width:65%">
+                        <p class="pt"><span style="font-weight:bold;color:#206daf">COO(运营总监)</span></p>
+                        <p><span>百度</span></p>
+                        <p class="pb sczw"><span>2013.06.07</span><span>北京</span><span>已推荐：</span><span>1人</span></p>
+                        </dt>
+                        <dd class="sczw_r">
+                            <p><span class="tp t">12K-16K</span></p>
+                            <p><span></span></p>
+                            <p><span class="tp bt">200000</span></p>
+                        </dd>
+                    </dl>
+                </div>-->
+            </div>
+
+            <div id="pullUp">
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+            </div>
+
+        </div>
+    </div>
+    <!-- <include file="Public:footer" /> -->
+
+</body>
+</html>

@@ -1,0 +1,481 @@
+[ 2015-08-01T10:43:47+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000806s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+NOTIC: [8] Undefined index: userinfo /private/var/www/mrenren/ThinkPHP/Lib/Core/Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `stj_job` [ RunTime:0.003579s ]
+SQL: select * from stj_job where stj_job.is_show=1 and stj_job.employ>(select count(*) from stj_record where stj_record.j_id = stj_job.id and audstart=6) and checkinfo='true' and endtime>unix_timestamp(now()) and is_deleted=0 order by orderid asc, checktime desc,starttime desc limit 0,10 [ RunTime:0.049469s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=225 [ RunTime:0.000248s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000245s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 770 [ RunTime:0.000401s ]
+SQL: SHOW COLUMNS FROM `stj_cascadedata` [ RunTime:0.001682s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=1 ) LIMIT 1   [ RunTime:0.000869s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000810s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=12000 ) LIMIT 1   [ RunTime:0.001239s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=1 ) LIMIT 1   [ RunTime:0.000762s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=225 [ RunTime:0.000251s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000197s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 780 [ RunTime:0.000628s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=1 ) LIMIT 1   [ RunTime:0.000857s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000751s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=8000 ) LIMIT 1   [ RunTime:0.000762s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000800s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=219 [ RunTime:0.000200s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000192s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 334 [ RunTime:0.000421s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.001023s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000684s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=15000 ) LIMIT 1   [ RunTime:0.000672s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000685s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000216s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000199s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 255 [ RunTime:0.000442s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000851s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000878s ]
+SQL: SHOW COLUMNS FROM `stj_casclist` [ RunTime:0.001899s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1100' ) LIMIT 1   [ RunTime:0.000206s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=20000 ) LIMIT 1   [ RunTime:0.000913s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.001025s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=50 [ RunTime:0.000238s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000155s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 189 [ RunTime:0.000571s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.000723s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000716s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='952' ) LIMIT 1   [ RunTime:0.000164s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=8000 ) LIMIT 1   [ RunTime:0.000917s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=6 ) LIMIT 1   [ RunTime:0.000846s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000215s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000225s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 159 [ RunTime:0.000434s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000986s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000909s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1015' ) LIMIT 1   [ RunTime:0.000217s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=40000 ) LIMIT 1   [ RunTime:0.000900s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000767s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000203s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000219s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 158 [ RunTime:0.000403s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000802s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000739s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1014' ) LIMIT 1   [ RunTime:0.000221s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=40000 ) LIMIT 1   [ RunTime:0.000762s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000803s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000197s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000191s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 157 [ RunTime:0.000417s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000934s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.001445s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1013' ) LIMIT 1   [ RunTime:0.000368s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=20000 ) LIMIT 1   [ RunTime:0.000908s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000825s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=50 [ RunTime:0.000275s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000201s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 141 [ RunTime:0.000365s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.001594s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000999s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1000' ) LIMIT 1   [ RunTime:0.000235s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=15000 ) LIMIT 1   [ RunTime:0.000727s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000844s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=57 [ RunTime:0.000257s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000218s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 122 [ RunTime:0.000451s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.000820s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000818s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='731' ) LIMIT 1   [ RunTime:0.000252s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=12000 ) LIMIT 1   [ RunTime:0.000864s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000859s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: arInventedData /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 24 行.
+NOTIC: [2] Invalid argument supplied for foreach() /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 24 行.
+NOTIC: [8] Undefined variable: isshow /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 822 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.040551s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040608s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000886s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000709s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000538s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000747s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003046s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001188s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001267s ]
+
+[ 2015-08-01T13:11:26+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000961s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001036s ]
+NOTIC: [8] Undefined index: userinfo /private/var/www/mrenren/ThinkPHP/Lib/Core/Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `stj_job` [ RunTime:0.003553s ]
+SQL: select * from stj_job where stj_job.is_show=1 and stj_job.employ>(select count(*) from stj_record where stj_record.j_id = stj_job.id and audstart=6) and checkinfo='true' and endtime>unix_timestamp(now()) and is_deleted=0 order by orderid asc, checktime desc,starttime desc limit 0,10 [ RunTime:0.063543s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=225 [ RunTime:0.000251s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000186s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 770 [ RunTime:0.000477s ]
+SQL: SHOW COLUMNS FROM `stj_cascadedata` [ RunTime:0.002118s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=1 ) LIMIT 1   [ RunTime:0.000983s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.001128s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=12000 ) LIMIT 1   [ RunTime:0.000869s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=1 ) LIMIT 1   [ RunTime:0.000846s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=225 [ RunTime:0.000214s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000198s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 780 [ RunTime:0.000379s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=1 ) LIMIT 1   [ RunTime:0.000759s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000675s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=8000 ) LIMIT 1   [ RunTime:0.000703s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000810s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=219 [ RunTime:0.000215s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000194s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 334 [ RunTime:0.000510s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.001082s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.001153s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=15000 ) LIMIT 1   [ RunTime:0.000811s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000814s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000196s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000201s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 255 [ RunTime:0.000418s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000811s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000946s ]
+SQL: SHOW COLUMNS FROM `stj_casclist` [ RunTime:0.001709s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1100' ) LIMIT 1   [ RunTime:0.000286s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=20000 ) LIMIT 1   [ RunTime:0.001123s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000960s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=50 [ RunTime:0.000238s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000231s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 189 [ RunTime:0.000491s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.001217s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000896s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='952' ) LIMIT 1   [ RunTime:0.000221s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=8000 ) LIMIT 1   [ RunTime:0.000749s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=6 ) LIMIT 1   [ RunTime:0.000748s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000196s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000223s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 159 [ RunTime:0.000361s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000887s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000756s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1015' ) LIMIT 1   [ RunTime:0.000227s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=40000 ) LIMIT 1   [ RunTime:0.000719s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000798s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000241s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000250s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 158 [ RunTime:0.000520s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.001015s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000946s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1014' ) LIMIT 1   [ RunTime:0.000218s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=40000 ) LIMIT 1   [ RunTime:0.001017s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000697s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000211s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000208s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 157 [ RunTime:0.000356s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000763s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000728s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1013' ) LIMIT 1   [ RunTime:0.000190s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=20000 ) LIMIT 1   [ RunTime:0.000829s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.001227s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=50 [ RunTime:0.000219s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000186s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 141 [ RunTime:0.000452s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.000935s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000939s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1000' ) LIMIT 1   [ RunTime:0.000196s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=15000 ) LIMIT 1   [ RunTime:0.000821s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000871s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=57 [ RunTime:0.000226s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000187s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 122 [ RunTime:0.000430s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.000828s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000755s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='731' ) LIMIT 1   [ RunTime:0.000193s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=12000 ) LIMIT 1   [ RunTime:0.000884s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000949s ]
+SQL: SHOW COLUMNS FROM `stj_company` [ RunTime:0.001368s ]
+SQL: SELECT * FROM `stj_company` WHERE ( id='225' ) LIMIT 1   [ RunTime:0.000303s ]
+SQL: SHOW COLUMNS FROM `stj_job` [ RunTime:0.001023s ]
+SQL: SELECT * FROM `stj_job` WHERE ( cpid='225' ) LIMIT 1   [ RunTime:0.000568s ]
+SQL: select * from stj_record r join stj_job b on r.j_id=b.id and r.status=2 and b.cpid=225 and b.is_deleted=0 and b.checkinfo='true' and b.endtime>1438405885 [ RunTime:0.002422s ]
+SQL: select * from stj_record r join stj_job b on r.j_id=b.id  and audstart=6 and b.cpid=225 [ RunTime:0.000492s ]
+NOTIC: [8] Undefined variable: jids /private/var/www/mrenren/Home/Lib/Action/IndexAction.class.php 第 71 行.
+SQL: select sum(Tariff) as count from stj_job where id in () [ RunTime:0.000132s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : select sum(Tariff) as count from stj_job where id in ()
+SQL: SELECT COUNT(*) AS tp_count FROM `stj_job` WHERE ( cpid='225' and is_deleted=0 ) LIMIT 1   [ RunTime:0.000423s ]
+NOTIC: [8] Undefined index: HTTP_REFERER /private/var/www/mrenren/Home/Lib/Action/IndexAction.class.php 第 89 行.
+NOTIC: [8] Undefined index: HTTP_REFERER /private/var/www/mrenren/Home/Lib/Action/IndexAction.class.php 第 89 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: arInventedData /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 24 行.
+NOTIC: [2] Invalid argument supplied for foreach() /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 24 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 287 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 287 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 288 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 288 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 289 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 289 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 290 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 290 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 291 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 291 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 375 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 375 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 376 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 376 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 377 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 377 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 378 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 378 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 379 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 379 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 511 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 511 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 512 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 512 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 513 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 513 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 514 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 514 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 515 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 515 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 584 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 584 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 585 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 585 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 586 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 586 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 587 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 587 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 588 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 588 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 731 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 731 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 732 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 732 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 733 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 733 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 734 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 734 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 735 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 735 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 786 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 786 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 787 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 787 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 788 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 788 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 789 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 789 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 790 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 790 行.
+NOTIC: [8] Undefined variable: isshow /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 822 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031686s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031718s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000291s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000164s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000105s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000893s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000294s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000327s ]
+
+[ 2015-08-01T13:28:01+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000246s ]
+NOTIC: [8] Undefined index: userinfo /private/var/www/mrenren/ThinkPHP/Lib/Core/Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `stj_job` [ RunTime:0.002248s ]
+SQL: select * from stj_job where stj_job.is_show=1 and stj_job.employ>(select count(*) from stj_record where stj_record.j_id = stj_job.id and audstart=6) and checkinfo='true' and endtime>unix_timestamp(now()) and is_deleted=0 order by orderid asc, checktime desc,starttime desc limit 0,10 [ RunTime:0.062902s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=225 [ RunTime:0.000234s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000184s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 770 [ RunTime:0.000526s ]
+SQL: SHOW COLUMNS FROM `stj_cascadedata` [ RunTime:0.001765s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=1 ) LIMIT 1   [ RunTime:0.000899s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000743s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=12000 ) LIMIT 1   [ RunTime:0.000794s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=1 ) LIMIT 1   [ RunTime:0.000801s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=225 [ RunTime:0.000222s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000191s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 780 [ RunTime:0.000398s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=1 ) LIMIT 1   [ RunTime:0.000889s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000899s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=8000 ) LIMIT 1   [ RunTime:0.000979s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000877s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=219 [ RunTime:0.000279s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000217s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 334 [ RunTime:0.000350s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.001353s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000885s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=15000 ) LIMIT 1   [ RunTime:0.000832s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000793s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000288s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000343s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 255 [ RunTime:0.000393s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.001091s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000789s ]
+SQL: SHOW COLUMNS FROM `stj_casclist` [ RunTime:0.002123s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1100' ) LIMIT 1   [ RunTime:0.000243s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=20000 ) LIMIT 1   [ RunTime:0.000892s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000905s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=50 [ RunTime:0.000243s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000182s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 189 [ RunTime:0.000433s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.001151s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000908s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='952' ) LIMIT 1   [ RunTime:0.000217s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=8000 ) LIMIT 1   [ RunTime:0.001011s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=6 ) LIMIT 1   [ RunTime:0.001469s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000245s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000164s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 159 [ RunTime:0.000497s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000862s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000826s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1015' ) LIMIT 1   [ RunTime:0.000184s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=40000 ) LIMIT 1   [ RunTime:0.000896s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000969s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000263s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000254s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 158 [ RunTime:0.000450s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000838s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000803s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1014' ) LIMIT 1   [ RunTime:0.000246s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=40000 ) LIMIT 1   [ RunTime:0.001302s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000974s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000270s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000150s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 157 [ RunTime:0.000491s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000765s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.001165s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1013' ) LIMIT 1   [ RunTime:0.000412s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=20000 ) LIMIT 1   [ RunTime:0.001129s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.001023s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=50 [ RunTime:0.000228s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000185s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 141 [ RunTime:0.000512s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.001273s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000983s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1000' ) LIMIT 1   [ RunTime:0.000231s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=15000 ) LIMIT 1   [ RunTime:0.000869s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000898s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=57 [ RunTime:0.000231s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000190s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 122 [ RunTime:0.000414s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.000844s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000795s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='731' ) LIMIT 1   [ RunTime:0.000240s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=12000 ) LIMIT 1   [ RunTime:0.000907s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000866s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: arInventedData /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 24 行.
+NOTIC: [2] Invalid argument supplied for foreach() /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 24 行.
+NOTIC: [8] Undefined variable: isshow /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 822 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031840s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000262s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000161s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000092s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000193s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000774s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000410s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000450s ]
+
+[ 2015-08-01T16:16:04+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+NOTIC: [8] Undefined index: userinfo /private/var/www/mrenren/ThinkPHP/Lib/Core/Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `stj_job` [ RunTime:0.002180s ]
+SQL: select * from stj_job where stj_job.is_show=1 and stj_job.employ>(select count(*) from stj_record where stj_record.j_id = stj_job.id and audstart=6) and checkinfo='true' and endtime>unix_timestamp(now()) and is_deleted=0 order by orderid asc, checktime desc,starttime desc limit 0,10 [ RunTime:0.048891s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=225 [ RunTime:0.000326s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000250s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 770 [ RunTime:0.000567s ]
+SQL: SHOW COLUMNS FROM `stj_cascadedata` [ RunTime:0.002300s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=1 ) LIMIT 1   [ RunTime:0.000853s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000811s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=12000 ) LIMIT 1   [ RunTime:0.000846s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=1 ) LIMIT 1   [ RunTime:0.000759s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=225 [ RunTime:0.000203s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000226s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 780 [ RunTime:0.007471s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=1 ) LIMIT 1   [ RunTime:0.001115s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.006756s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=8000 ) LIMIT 1   [ RunTime:0.001040s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000790s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=219 [ RunTime:0.000184s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000142s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 334 [ RunTime:0.000487s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.000765s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000855s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=15000 ) LIMIT 1   [ RunTime:0.001290s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.001549s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000246s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000153s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 255 [ RunTime:0.000341s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000907s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000823s ]
+SQL: SHOW COLUMNS FROM `stj_casclist` [ RunTime:0.001598s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1100' ) LIMIT 1   [ RunTime:0.000205s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=20000 ) LIMIT 1   [ RunTime:0.001023s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000738s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=50 [ RunTime:0.000229s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000210s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 189 [ RunTime:0.000421s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.001103s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000745s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='952' ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=8000 ) LIMIT 1   [ RunTime:0.000756s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=6 ) LIMIT 1   [ RunTime:0.000756s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000201s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000182s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 159 [ RunTime:0.000378s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000894s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000886s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1015' ) LIMIT 1   [ RunTime:0.000289s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=40000 ) LIMIT 1   [ RunTime:0.000738s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000742s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000234s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000209s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 158 [ RunTime:0.000401s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000848s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000864s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1014' ) LIMIT 1   [ RunTime:0.000227s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=40000 ) LIMIT 1   [ RunTime:0.000707s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000821s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000215s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000187s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 157 [ RunTime:0.000401s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000811s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000983s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1013' ) LIMIT 1   [ RunTime:0.000243s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=20000 ) LIMIT 1   [ RunTime:0.000851s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000837s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=50 [ RunTime:0.000230s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000185s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 141 [ RunTime:0.000422s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.001002s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000792s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1000' ) LIMIT 1   [ RunTime:0.000251s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=15000 ) LIMIT 1   [ RunTime:0.000873s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.001158s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=57 [ RunTime:0.000184s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000191s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 122 [ RunTime:0.000411s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.000873s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000876s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='731' ) LIMIT 1   [ RunTime:0.000192s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=12000 ) LIMIT 1   [ RunTime:0.000963s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.001018s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: arInventedData /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 24 行.
+NOTIC: [2] Invalid argument supplied for foreach() /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 24 行.
+NOTIC: [8] Undefined variable: isshow /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 822 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031535s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031567s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000278s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000550s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000106s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000203s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001209s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000302s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000330s ]
+

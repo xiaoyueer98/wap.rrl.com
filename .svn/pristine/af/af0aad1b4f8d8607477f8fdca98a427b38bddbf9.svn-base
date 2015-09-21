@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>com-index</title>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/new-company.css">
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css">
+	<script type="text/javascript" src="/Public/new-js/iscroll.js"></script>
+    <script type="text/javascript" src="/Public/js/zepto.min.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="full-screen" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+	<div class="mask"></div>
+	<div class="com-alt com-size">
+		<ul>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">20000-4000</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">60000-8000</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">70000-9000</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">10000-11000</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">100-200</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">300-400</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+		</ul>
+	</div>
+	<div class="com-alt com-nature">
+		<ul>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">欧美企业欧美企业欧美企业欧美企业欧美企业</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">港澳台企业</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">其他外商投资企业</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">国有企业</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">上市公司</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">事业单位/社会团体/非盈利机构</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">名民营企业</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">合资企业</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+		</ul>
+	</div>
+	<div class="com-alt com-stage">
+		<ul>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">A轮融资</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">B轮融资</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">C轮融资</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">已上市</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+		</ul>
+	</div>
+	<header class="com-head fixed">
+		<div class="con">
+			<span class="l dis-block"></span>
+			<span class="c dis-block">完善资料</span>
+			<span class="r dis-block"></span>
+		</div>
+	</header>
+	<p class="error">对不起您填写的信息有误，请重新填写</p>
+	<div class="wrap">
+		<ul id="nav" class="nav">
+		    <li><a href="#"><span class="sp0 sp0_2"></span><b class='m'>完善资料</b></a></li>
+		    <li><a href="#"><span class="sp1"></span><b>签订合同</b></a></li>
+		    <li><a href="#"><span class="sp2"></span><b>发布职位</b></a></li>
+		    <li><a href="#"><span class="sp3"></span><b>查看候选人</b></a></li>
+		    <li><a href="#"><span class="sp4"></span><b>入职管理</b></a></li>
+		</ul>
+
+		<section class="content m-content1" style="padding-bottom:20px;display:block">
+			<div>
+				<span class="h3 dis-block">公司信息</span>
+			</div>
+			<div class="com-list">
+				<div class="bd">
+					<div class="list"><em class="m">公司名称：</em><input type="text"></div>
+				</div>
+				<div class="bd">
+					<div class="list m" id="com-nature"><em class="m">公司性质 :</em><span>欧美企业</span></div>
+				</div>
+				<div class="bd">
+					<div class="list m" id="com-size"><em class="m">公司规模：</em><span>0-50</span></div>
+				</div>
+				<div class="bd">
+					<div class="list m" id="com-stage"><em class="m">公司阶段：</em><span>A轮融资</span></div>
+				</div>
+
+				<div class="bd">
+					<div class="list"><em class="m">成立日期：</em><input type="text"></div>
+				</div>
+
+				<div class="bd">
+					<div class="list"><em class="m">公司网址：</em><input type="text"></div>
+				</div>
+			</div>
+
+			<div class="mr-tp20">
+				<span class="h3 dis-block">公司简介：</span>
+			</div>
+			<div class="com-list">
+				<div class="bd">
+					<div class="list m"><em class="m wh30">请填写公司简介</em><span class="wh"></span></div>
+				</div>
+			</div>
+
+
+			<div class="mr-tp20">
+				<span class="h3 dis-block">公司亮点：</span>
+			</div>
+			<div class="com-list">
+				<div class="bd">
+					<div class="list m"><em class="m wh30">请填写公司亮点</em><span class="wh"></span></div>
+				</div>
+			</div>
+			<div class="mr-tp20">
+				<span class="h3 dis-block">联系我们：</span>
+			</div>
+			<div class="com-list">
+				<div class="bd">
+					<div class="list"><em class="m">办公地址：</em><input type="text"></div>
+				</div>
+				<div class="bd">
+					<div class="list"><em class="m">联&nbsp&nbsp系&nbsp&nbsp人 :</em><input type="text"></div>
+				</div>
+				<div class="bd">
+					<div class="list m"><em class="m">手&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp机：</em><input type="text"></div>
+				</div>
+				<div class="bd">
+					<div class="list"><em class="">座&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp机：</em><input type="text"></div>
+				</div>
+
+				<div class="bd">
+					<div class="list"><em class="m">邮&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp箱：</em><input type="text"></div>
+				</div>
+				<div><span class="btn hover-hand" id="baocun">保存</span></div>
+			</div>
+		</section>
+		<section class="content m-content2" style="padding-bottom:30px;display:none">
+			<div>
+				<span class="h3 dis-block">公司信息</span>
+			</div>
+			<div class="com-list">
+				<div class="bd">
+					<div class="list"><em class="m">公司名称：</em><span>北京众聘科技有限公司</span></div>
+				</div>
+				<div class="bd">
+					<div class="list m"><em class="m">公司性质 :</em><span>北京众聘科技有限公司</span></div>
+				</div>
+				<div class="bd">
+					<div class="list m"><em class="m">公司规模：</em><span>北京众聘科技有限公司</span></div>
+				</div>
+				<div class="bd">
+					<div class="list m"><em class="m">公司阶段：</em><span>北京众聘科技有限公司</span></div>
+				</div>
+
+				<div class="bd">
+					<div class="list"><em class="m">成立日期：</em><span>2015-6-30</span></div>
+				</div>
+
+				<div class="bd">
+					<div class="list"><em class="m">公司网址：</em><span>www.renrenlie.com</span></div>
+				</div>
+			</div>
+
+			<div class="mr-tp20">
+				<span class="h3 dis-block">公司简介：</span>
+			</div>
+			<div class="com-list">
+				<div class="bd">
+					<div class="list m"><em class="m wh30">请填写公司简介</em><span class="wh">中国最有效的优质互联网创业企业人才极速直招平台。她让企业在天内搞定招聘需求、招到靠谱的人；既让猎头、HR、知名公司的面试官等推荐人暂不使用的简历得以轻松变现，又让中高端候选人快速找到匹配的工作。</span></div>
+				</div>
+			</div>
+
+
+			<div class="mr-tp20">
+				<span class="h3 dis-block">公司亮点：</span>
+			</div>
+			<div class="com-list">
+				<div class="bd">
+					<div class="list m"><em class="m wh30">请填写公司亮点</em><span class="wh">中国最有效的优质互联网创业企业人才极速直招平台。她让企业在天内搞定招聘需求、招到靠谱的人；既让猎头、HR、知名公司的面试官等推荐人暂不使用的简历得以轻松变现，又让中高端候选人快速找到匹配的工作。</span></div>
+				</div>
+			</div>
+			<div class="mr-tp20">
+				<span class="h3 dis-block">联系我们：</span>
+			</div>
+			<div class="com-list">
+				<div class="bd">
+					<div class="list"><em class="m">办公地址：</em><span>北京市海淀区西二旗辉煌国际2号楼2206</span></div>
+				</div>
+				<div class="bd">
+					<div class="list"><em class="m">联&nbsp&nbsp系&nbsp&nbsp人 :</em><input type="text"></div>
+				</div>
+				<div class="bd">
+					<div class="list m"><em class="m">手&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp机：</em><span>冯辉</span></div>
+				</div>
+				<div class="bd">
+					<div class="list"><em class="">座&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp机：</em><span>7524009</span></div>
+				</div>
+
+				<div class="bd">
+					<div class="list"><em class="m">邮&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp箱：</em><span>francis_fh@163.com</span></div>
+				</div>
+				<div><span class="btn hover-hand" id="xiugai">修改</span></div>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript">
+    $(document).ready(function(){
+    		var myScroll = new IScroll('.com-size', {
+				click:true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+			var myScroll2 = new IScroll('.com-nature', {
+				click:true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+			var myScroll3 = new IScroll('.com-stage', {
+				click:true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+			$(".com-index .odiv").click(function(){
+				$(this).addClass("m").siblings().removeClass("m");
+			});
+
+			$("#com-size").click(function(){
+				$(".mask").fadeIn();
+				$(".com-size").fadeIn();
+				myScroll.refresh();
+				$(".com-size li").click(function(){
+					$(this).find("em").addClass("m").next().addClass("m");
+					$(this).siblings().find("em").removeClass("m").next().removeClass("m");
+					var text = $(this).find("em").text();
+					$("#com-size").find("span").text(text);
+					setTimeout(function(){
+						$(".com-size").fadeOut();
+						$(".mask").fadeOut();
+					},200)
+					
+				})
+			});
+
+			$("#com-nature").click(function(){
+				$(".mask").fadeIn();
+				$(".com-nature").fadeIn();
+				myScroll2.refresh();
+				$(".com-nature li").click(function(){
+					$(this).find("em").addClass("m").next().addClass("m");
+					$(this).siblings().find("em").removeClass("m").next().removeClass("m");
+					var text = $(this).find("em").text();
+					$("#com-nature").find("span").text(text);
+					setTimeout(function(){
+						$(".com-nature").fadeOut();
+						$(".mask").fadeOut();
+					},200)
+					
+				})
+			});
+
+			$("#com-stage").click(function(){
+				$(".mask").fadeIn();
+				$(".com-stage").fadeIn();
+				myScroll3.refresh();
+				$(".com-stage li").click(function(){
+					$(this).find("em").addClass("m").next().addClass("m");
+					$(this).siblings().find("em").removeClass("m").next().removeClass("m");
+					var text = $(this).find("em").text();
+					$("#com-stage").find("span").text(text);
+					setTimeout(function(){
+						$(".com-stage").fadeOut();
+						$(".mask").fadeOut();
+					},200)
+					
+				})
+			});
+
+
+
+			$("#baocun").click(function(){
+				$(".m-content1").hide();
+				$(".m-content2").show();
+			});
+
+			$("#xiugai").click(function(){
+				$(".m-content1").show();
+				$(".m-content2").hide();
+			});
+
+
+
+			$("input").click(function(){
+				if(document.activeElement.tagName == 'INPUT'){
+					$(".fixed").css({'position': 'absolute','top':'0'}); 
+				} else if(document.activeElement.tagName !== 'INPUT'){  
+					$(".fixed").css('position', 'fixed');
+				}
+			})
+			
+    })
+
+	
+    //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+</body>
+</html>

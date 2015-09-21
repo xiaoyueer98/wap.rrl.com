@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>人人猎</title>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/new-recommende.css"/>    
+    <script type="text/javascript" src="/Public/new-js/iscroll.js"></script>
+    <script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <script type="text/javascript">
+    $(document).ready(function(){
+                $('.nav').hide();
+    		$(".gsjj-btn").click( function(){
+	            $('.comp-text').slideDown();
+	            $('.myh3-2').addClass("m");
+	            $(".myh3").removeClass('m');
+	            setTimeout(function(){
+	            	 myScroll.refresh();
+	            },500)
+			} )
+			$('.myh3-2').click( function(){
+	            $('.comp-text').slideUp();
+	            $('.myh3-2').removeClass("m");
+	            $(".myh3").addClass('m');
+	            setTimeout(function(){
+	            	 myScroll.refresh();
+	            },500)
+			} )
+			myScroll = new IScroll('#m', {
+				click:true,
+				scrollbars: true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+
+
+
+
+			var list2 = $(".posi-nav li");
+			var divs2 = $(".m-c>div");
+			list2.on("click",function(){
+				that = $(this);
+				index = that.index();
+				that.addClass("m").siblings().removeClass("m");
+				$(this).find("a").addClass("m").parent("li").siblings().find("a").removeClass("m");
+				divs2.eq(index).show().siblings("div").hide();
+				setTimeout(function(){
+	            	 myScroll.refresh();
+	            },500)
+			});
+		
+    })
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+</head>
+<body>
+	<div class="wrap job-wrap" id="wamp" style="top:0;">
+		<div class="content">
+			<include file="Public:nav"/>
+			<div id="m" class="flex">
+				<div class="scroll md-pawd salon-index salon-child">
+					<span class="position"><img src="/Public/new-images/icon5.png" alt=""></span>
+					<div class="salon-head">
+						<span class="dis-block"><img src="/Public/new-images/pic1.png" alt=""></span>
+						<i></i>
+						<div><h3 style="border:none;margin:10px auto;width:90%">最新<b style="color:#f15233">预告</b></h3></div>
+						<ul>
+							
+							<li class="clearfix">
+								<span class="dis-block fl-lef dis-inlin">1.时间：</span>
+								<em class="dis-block fl-lef dis-inlin">2015年6月6日  下午1:30 — 4:00。</em>
+							</li>
+							<li class="clearfix">
+								<span class="dis-block fl-lef dis-inlin">2.标题：</span>
+								<em class="dis-block fl-lef dis-inlin">人人猎2015第3期线下沙龙分享会。</em>
+							</li>
+							<li class="clearfix">
+								<span class="dis-block fl-lef dis-inlin">3.主题：</span>
+								<em class="dis-block fl-lef dis-inlin">如何在互联网圈内混下去。</em>
+							</li>
+
+							<li class="clearfix">
+								<span class="dis-block fl-lef dis-inlin">4.地址：</span>
+								<em class="dis-block fl-lef dis-inlin">海淀区西二旗辉煌国际2号楼2206。</em>
+							</li>
+
+							<li class="clearfix">
+								<span class="dis-block fl-lef dis-inlin">5.电话：</span>
+								<em class="dis-block fl-lef dis-inlin">010-57188076</em>
+							</li>
+						</ul>
+						<span class="btn">立即报名</span>
+					</div>
+					<div>
+						<span class="title" style="color:#960606">往期活动回顾</span>
+					</div>
+					<div class="myimg">
+						<em><a href="">人人猎第<i>2</i><b>期线下分享会</b></a></em>
+						<span class="clearfix"><img src="/Public/new-images/pic2.png" alt=""></span>
+
+						<em><a href="">人人猎第<i>2</i><b>期线下分享会</b></a></em>
+						<span class="clearfix"><img src="/Public/new-images/pic2.png" alt=""></span>
+
+						<em><a href="">人人猎第<i>2</i><b>期线下分享会</b></a></em>
+						<span class="clearfix"><img src="/Public/new-images/pic2.png" alt=""></span>
+					</div>
+
+					<ul style="margin-top:10px;">
+						<li class="clearfix mli">
+							<a href="">返回首页</a> | <a href="#top">回到顶部</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+
+		</div>
+	</div>
+</body>
+</html>

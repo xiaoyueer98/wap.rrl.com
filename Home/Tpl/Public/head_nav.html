@@ -1,0 +1,30 @@
+<ul class="head-nav abslt" style='display:none;'>
+    <volist name="lArr" id="vo"  key="k" empty="">
+        <li class="">
+            <a href="{$vo.url}">
+                <span class="dis-block sp-img">
+                    <img src="{$vo.img}" alt="">
+                </span>
+                <span class="dis-block sp-text">{$vo.name}</span>
+            </a>
+        </li>
+    </volist>
+
+</ul>
+<script>
+    $(function () {
+        $(".head-nav li").each(function () {
+            if (location.href.indexOf($(this).find("a").attr("href")) != "-1" && $(this).find("a").attr("href") != "/") {
+                this.className = "m";
+            } else {
+                if (location.href.indexOf("/Job/job_detail_new") != "-1" || location.href.indexOf("/Job/push_resume_new") != "-1" || location.href.indexOf("/Job/resume_time_new") != "-1" || location.href.indexOf("/Job/add_resume_new") != "-1") {
+                    $(".head-nav li")[1].className = "m";
+                }else if(location.href.indexOf("/Salon/sign_up") != "-1" || location.href.indexOf("/Salon/salon_detail") != "-1"){
+                    $(".head-nav li")[1].className = "m";
+                } else {
+                    this.className = "";
+                }
+            }
+        })
+    })
+</script>

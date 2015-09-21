@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>人人猎</title>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/new-recommende.css"/>    
+    <script type="text/javascript" src="/Public/new-js/iscroll.js"></script>
+    <script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <script type="text/javascript">
+    $(document).ready(function(){
+                $('.nav').hide();
+    		$(".gsjj-btn").click( function(){
+	            $('.comp-text').slideDown();
+	            $('.myh3-2').addClass("m");
+	            $(".myh3").removeClass('m');
+	            setTimeout(function(){
+	            	 myScroll.refresh();
+	            },500)
+			} )
+			$('.myh3-2').click( function(){
+	            $('.comp-text').slideUp();
+	            $('.myh3-2').removeClass("m");
+	            $(".myh3").addClass('m');
+	            setTimeout(function(){
+	            	 myScroll.refresh();
+	            },500)
+			} )
+			myScroll = new IScroll('#m', {
+				click:true,
+				scrollbars: true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+
+
+
+
+			var list2 = $(".posi-nav li");
+			var divs2 = $(".m-c>div");
+			list2.on("click",function(){
+				that = $(this);
+				index = that.index();
+				that.addClass("m").siblings().removeClass("m");
+				$(this).find("a").addClass("m").parent("li").siblings().find("a").removeClass("m");
+				divs2.eq(index).show().siblings("div").hide();
+				setTimeout(function(){
+	            	 myScroll.refresh();
+	            },500)
+			});
+		
+    })
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+</head>
+<body>
+	<div class="wrap job-wrap" id="wamp" style="top:0;">
+		<div class="content">
+			<include file="Public:nav"/>
+			<div id="m" class="flex">
+				<div class="scroll md-pawd salon-index salon-child">
+					<span class="position"><img src="/Public/new-images/icon5.png" alt=""></span>
+					<div class="salon-head">
+						<span class="dis-block"><img src="/Public/new-images/pic1.png" alt=""></span>
+						<i></i>
+						<span class="btn">立即报名</span>
+						<span class="head-position"><img src="/Public/new-images/icon6.png" alt=""></span>
+					</div>
+					<div>
+						<span class="title">人人猎第2期线下沙龙套图</span>
+					</div>
+					<div class="myimg">
+						<span class="clearfix"><img src="/Public/new-images/pic2.png" alt=""></span>
+					</div>
+					<ul>
+						<li class="clearfix">
+							<span class="dis-block fl-lef dis-inlin">活动摘要：</span>
+							<em class="dis-block fl-lef dis-inlin">次活动很长成功取得猎你是新赛季速达啊。</em>
+						</li>
+						<li class="clearfix">
+							<span class="dis-block fl-lef dis-inlin">干货：</span>
+							<em class="dis-block fl-lef dis-inlin">此次活动很长成功取得猎你是新赛季速达啊。</em>
+						</li>
+						<li class="clearfix">
+							<span class="dis-block fl-lef dis-inlin">具体内容：</span>
+							<em class="dis-block fl-lef dis-inlin">此次活动很长dfsg sdf gdsfg 个电话是是神烦狗都很高二哥都很高的话固始饭店公司是固定伤害成功取s的韩国队和飞的话时候更舒服 是还是闪电皇冠都很高的话都是得猎你是新赛季速达啊。</em>
+						</li>
+
+						<li class="clearfix">
+							<span class="dis-block fl-lef dis-inlin ms">上一期：</span>
+							<em class="dis-block fl-lef dis-inlin  ms">如何在创业全里混上去。</em>
+						</li>
+						<li class="clearfix">
+							<span class="dis-block fl-lef dis-inlin ms">下一期：</span>
+							<em class="dis-block fl-lef dis-inlin  ms">下一期：论推荐人的心态，hr如何处理建立问题。</em>
+						</li>
+						<li class="clearfix mli">
+							<a href="">返回首页</a> | <a href="#top">回到顶部</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>人人猎</title>
+	<link rel="stylesheet"  href="/Public/css/reset.css">
+    <link rel="stylesheet"  href="/Public/css/wep.css">
+	<script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="/Public/js/iscroll2.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<script type="text/javascript">
+
+	var myScroll,
+		pullDownEl, pullDownOffset,
+		pullUpEl, pullUpOffset,
+		generatedCount = 0;
+
+
+	/**
+	 * 初始化iScroll控件
+	 */
+	function loaded() {
+		pullDownEl = document.getElementById('pullDown');
+		pullDownOffset = pullDownEl.offsetHeight;
+		pullUpEl = document.getElementById('pullUp');	
+		pullUpOffset = pullUpEl.offsetHeight;
+		
+		myScroll = new iScroll('re_wrapper', {
+			scrollbarClass: 'myScrollbar', /* 重要样式 */
+			useTransition: false, /* 此属性不知用意，本人从true改为false */
+			topOffset: pullDownOffset,
+			onRefresh: function () {
+				if (pullDownEl.className.match('loading')) {
+					pullDownEl.className = '';
+					pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+				} else if (pullUpEl.className.match('loading')) {
+					pullUpEl.className = '';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+				}
+			},
+			onScrollMove: function () {
+				if (this.y > 5 && !pullDownEl.className.match('flip')) {
+					pullDownEl.className = 'flip';
+					pullDownEl.querySelector('.pullDownLabel').innerHTML = '松手开始更新...';
+					this.minScrollY = 0;
+				} else if (this.y < 5 && pullDownEl.className.match('flip')) {
+					pullDownEl.className = '';
+					pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+					this.minScrollY = -pullDownOffset;
+				} else if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+					pullUpEl.className = 'flip';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
+					this.maxScrollY = this.maxScrollY;
+				} else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+					pullUpEl.className = '';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+					this.maxScrollY = pullUpOffset;
+				}
+			},
+			onScrollEnd: function () {
+				if (pullDownEl.className.match('flip')) {
+					pullDownEl.className = 'loading';
+					pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载中...';				
+					//pullDownAction();	// Execute custom function (ajax call?)
+				} else if (pullUpEl.className.match('flip')) {
+					pullUpEl.className = 'loading';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';				
+					//pullUpAction();	// Execute custom function (ajax call?)
+				}
+			}
+		});
+		
+		setTimeout(function () { document.getElementById('re_wrapper').style.left = '0'; }, 800);
+	}
+
+	//初始化绑定iScroll控件 
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	document.addEventListener('DOMContentLoaded', loaded, false); 
+
+	</script>
+</head>
+<body>
+<include file="Public:header1"/>
+<div id="re_wrapper">
+	<div id="scroller">
+		<div id="pullDown" style="display:none">
+			<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+		</div>
+		<include file="Public:nav"/>
+		<div id="thelist">
+			<div class="list clearfix">
+				<dl>
+					<dd class="rec check">
+						<span class="re_delet2"></span>
+					</dd>
+					<dt>
+						<p class="pt"><span>冯辉</span><span class="gender">男</span><span class="phone">185XXXXXXXX</span></p>
+						<p class="pb"><span>在职状态：</span><span>在职2周内到岗</span></p>
+					</dt>
+					
+				</dl>
+			</div>
+		</div>
+		
+		<div id="pullUp">
+			<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+		</div>
+		
+	</div>
+</div>
+<!-- <include file="Public:footer"/> -->
+</body>
+</html>

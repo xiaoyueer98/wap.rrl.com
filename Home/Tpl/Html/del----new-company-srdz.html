@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>com-index</title>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/new-company.css">
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css">
+	<script type="text/javascript" src="/Public/new-js/iscroll.js"></script>
+    <script type="text/javascript" src="/Public/js/zepto.min.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="full-screen" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <style>
+		.com-list input{
+			background: #dff1ff;
+		}
+    </style>
+</head>
+<body>
+	<div class="mask" style="display:block"></div>
+	<div class="com-alt srdz-alt" style="display:block">
+		<a href="javascript:void(0);" class="clos"></a>
+		<div class="srdz-head">
+			温馨提示
+		</div>
+		<div class="srdz-con">
+			<p>您成功完成了工作机会——私人订制，请您在设定的联系时间内，保持手机畅通，一旦有合适的工作机会，您的私人求职顾问将会与您联络。</p>
+		</div>
+		<span class="btn" style="margin-top:10px;">确定</span>
+	</div>
+	<header class="com-head fixed">
+		<div class="con">
+			<span class="l dis-block"></span>
+			<span class="c dis-block">完善资料</span>
+			<span class="r dis-block"></span>
+		</div>
+	</header>
+	<p class="error">对不起您填写的信息有误，请重新填写</p>
+	<div class="wrap">
+		<ul id="nav" class="nav">
+		    <li><a href="#"><span class="sp0 sp0_2"></span><b class='m'>完善资料</b></a></li>
+		    <li><a href="#"><span class="sp1"></span><b>签订合同</b></a></li>
+		    <li><a href="#"><span class="sp2"></span><b>发布职位</b></a></li>
+		    <li><a href="#"><span class="sp3"></span><b>查看候选人</b></a></li>
+		    <li><a href="#"><span class="sp4"></span><b>入职管理</b></a></li>
+		</ul>
+
+		<section class="content m-content1" style="padding-bottom:20px;display:block;margin-top:1px;">
+		<div class="srdz-banner"><img src="/Public/new-images/srdz-banner.png" alt=""></div>
+		<div class="srdz-text">
+			<p class="tx1">若你是年薪10以上的中高端人才若你想收入更高、发展前程更好若你希望你足不出户就有“高大上”的工作机会找上门。你最可靠的私人求职顾问--人人猎，帮你<b>“私人订制”</b>。人人猎,让与你匹配的工作机会找上你非常轻松。</p>
+			<p>1.你只需将你正在看更好工作机会的计划,通过在线填写“订制卡片”告诉人人猎的资深顾问。</p>
+			<p>2.人人猎帮你寻找与你最匹配的工作机会,安排好靠谱的面试机会；</p>
+			<p>3.你无需接听电话、无需一次次的向各企业沟通你的个人信息,你只需参加2-3个靠谱的面试,之后你从中选择最适合你的优质工作机会。</p>
+			<p>4.你成功入职后可以领取你面试的车补<b>1000元</b>。想想都很美吧！人人猎实现你的高薪工作梦,还给你提供面试车补。</p>
+			<p>马上参与，请填写<b>工作机会私人订制卡片</b>，靠谱的工作机会就会自动找上门！</p>
+		</div>
+		<div style="background:#dff1ff;padding:10px 0">
+			<div>
+				<span class="h3 dis-block">工作机会私人定制卡</span>
+			</div>
+			<div class="com-list">
+				<div class="bd3">
+					<div class="list"><em class="m">姓&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp名：</em><input type="text"></div>
+				</div>
+				<div class="bd3">
+					<div class="list" id="com-size"><em class="m" style="width:60px;">手&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp机：</em><input class="wh100" type="text"><span class="hqyzm hqyzm2">免费获取验证码</span></div>
+				</div>
+				<div class="bd3">
+					<div class="list"><em class="m">验&nbsp&nbsp证&nbsp&nbsp码：</em><input type="text"></div>
+				</div>
+				<div class="bd3">
+					<div class="list"><em class="m wh100">方便联系的时间：</em><input class="wh-55" type="text"></div>
+				</div>
+				<div class="bd3">
+					<div class="list"><em class="m">求职意愿：</em><input type="text"></div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<span class="btn">完成定制</span>
+		</div>
+			
+		</section>
+	</div>
+	<script type="text/javascript">
+    $(document).ready(function(){
+			$("input").click(function(){
+				if(document.activeElement.tagName == 'INPUT'){
+					$(".fixed").css({'position': 'absolute','top':'0'}); 
+				} else if(document.activeElement.tagName !== 'INPUT'){  
+					$(".fixed").css('position', 'fixed');
+				}
+			})
+			
+    })
+	
+    //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+</body>
+</html>

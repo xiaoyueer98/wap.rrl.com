@@ -1,0 +1,48 @@
+<header class="rec_hd">	
+    <span class="l" onclick="history.go(-1);"></span>
+    <ul class="hd_li">
+        <li>{$header_title}</li>
+        <b class="b"></b>
+<!--        <ul class="hd_ul">
+            <a href="/index.php?s=/Usercenter/recommended_setting"><li>推荐设置</li></a>
+            <a href="/index.php?s=/Usercenter/recommend_info"><li>被推荐人</li></a>
+        </ul>-->
+        <ul class="hd_ul">
+            <volist name="lArr" id="vo"  key="k" empty="">
+            <a href="{$vo.url}"><li>{$vo.name}</li></a>
+            </volist>
+        </ul>
+    </ul>
+    <label class="r"></label>
+</header>
+<span style="display:none;"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254515209'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1254515209%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></span>
+<script>
+    $(document).ready(function(){
+        $('.hd_li>li').click(function(){
+            $('.hd_ul').toggle(100);
+            $('.b').toggle(100);
+            $('.b').css('display','block');
+        });
+        $('.hd_ul li').click(function(){
+            $(this).addClass('m').siblings().removeClass('m');
+        });
+        $('.rec_hd label').click(function(){
+            if($(this).hasClass("current")){
+                $('.nav').slideUp();
+                $(this).css('-webkit-transform','rotate(0deg)');
+                $(this).removeClass("current");
+            }else{
+                $('.nav').slideDown();
+               
+                $(this).css('-webkit-transform','rotate(45deg)');
+                $(this).addClass("current");
+            }
+           // $('.nav').toggle(500);
+            
+            //$(this).css('-webkit-transform','rotate(45deg)');
+            // $(this).bind('click',function(){
+            //     $(this).css('-webkit-transform','rotate(0deg)');
+            // })
+        })
+    })
+</script>

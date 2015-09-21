@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/new-recommende.css"/>    
+    <script type="text/javascript" src="/Public/new-js/iscroll.js"></script>
+    <script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <script type="text/javascript">
+    $(document).ready(function(){
+    		$(".gsjj-btn").click( function(){
+	            $('.comp-text').slideDown();
+	            $('.myh3-2').addClass("m");
+	            $(".myh3").removeClass('m');
+	            setTimeout(function(){
+	            	 myScroll.refresh();
+	            },500)
+			} )
+
+			myScroll = new IScroll('#m', {
+				click:true,
+				scrollbars: true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+
+
+			$('.jl ul li em').on('click', function () {
+	            $(this).hide();
+	            $(this).nextAll().show();
+	        })
+    })
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+</head>
+<body>
+	<include file="Public:header3"/>
+	<div class="wrap job-wrap" id="wamp">
+		<div class="content">
+			<include file="Public:nav"/>
+			<ul class="rcmd-steps">
+				<li class="fl-lef m">
+					<b class="m">第一步</b>
+					<span class="m">选择要推荐的职位</span>
+					<em>PHP工程师</em>
+				</li>
+				<li class="fl-lef">
+					<b>第二步</b>
+					<span>选择推荐候选人</span>
+				</li>
+				<li class="fl-lef last">
+					<b>第三步</b>
+					<span>确认推荐</span>
+				</li>
+			</ul>
+			<div id="m" class="m detail flex">
+				<div class="scroll">
+					<ul class="posi-nav resume-nav">
+						<li class="hover-hand">候选人列表</li>
+						<li class="hover-hand m">添加候选人简历</li>
+					</ul>
+					<div class="m-c">
+						<div class="perfect-data">
+							<div class="con_modify thelist jl" id="thelist">
+				                <ul style="padding-top:10px;background:#ffffff">
+				                    <h3>基本设置</h3>
+				                    <form action="/index.php?s=/Job/resume_text" method="post" id="form">
+				                    <div class="bd">
+				                    	<li class="clearfix"><span>姓&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp名：</span><em>{$data.username}</em><input type="text" name='username' value="{$data.username}"></li>
+				                    </div>
+				                        
+				                    <div class="bd">
+				                    	<li class="clearfix"><span>性&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp别：</span>
+				                           
+				                            <if condition="$data.sex eq 1 ">
+				                                 <span style="width:20px;" class="sp no-back">男</span><label class="nan m" id='nan'></label>
+				                                 <span style="width:20px;" class="sp no-back">女</span><label class="nan" id='nv'></label>
+				                                 <input type='hidden' value='1' name='sex' id="sex">
+				                            <else />
+				                                 <span style="width:20px;" class="sp no-back">男</span><label class="nan" id='nan'></label>
+				                                 <span style="width:20px;" class="sp no-back">女</span><label class="nan m" id='nv'></label>
+				                                 <input  style="width:20px;"type='hidden' value='0' name='sex' id="sex">
+				                            </if>
+				                        </li>
+				                    </div>
+				                        
+				                        <div class="bd">
+				                    		<li class="clearfix"><span>年&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp龄：</span><em>{$data.age}</em><input type="text" name='age' value="{$data.age}"></li>
+				                   		</div>
+				                        
+				                        <div class="bd">
+				                        	<li class="clearfix"><span>邮&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp箱：</span><em>{$data.email}</em><input type="text" name='email' value="{$data.email}"></li>
+				                        </div>
+				                        
+				                        <div class="bd">
+				                        	<li class="clearfix"><span class="no-back">Q&nbspQ号码：</span><em>{$data.qqnum}</em><input type="text" name='qqnum' value="{$data.qqnum}"></li>
+				                        </div>
+				                        
+										<div class="bd">
+											<li class="clearfix">
+					                            <span>在职状态：</span>
+					                            <!--<em></em>-->
+					                                <select  name="state"  id="statesel" <!--style="display:none;"-->>
+					                                <php>foreach($stateArr as $k => $v){</php>
+					                                    <if condition="$v.datavalue eq $data.state ">
+					                                        <option value="{$v.datavalue}" selected='selected'>{$v.dataname}</option>
+					                                    <else />
+					                                        <option value="{$v.datavalue}">{$v.dataname}</option>
+					                                    </if>
+					                                <php>}</php>
+					                            </select>
+					                        </li>
+										</div>	
+				                        <div class="bd">
+				                        	<li class="clearfix"><span>联系电话：</span><em>{$data.mobile}</em><input type="text" name='mobile' value='{$data.mobile}'></li>
+				                        </div>
+				                        
+				                </ul>	
+				                <ul class="t" style="margin-top:10px;background:#ffffff">
+				                    
+				                    <div class="bd">
+				                    	<li class="clearfix" id="personal"><span class="no-back">自我评价：</span>{$data.personal}<input type="hidden" name='personal' value='{$data.personal}'></li>
+				                    </div>
+				                    <div class="bd">
+				                    	<li class="clearfix" id="edu"><span>教育经历：</span>{$data.edu}<input type="hidden" name='edu' value='{$data.edu}'></li>
+				                    </div>
+				                    <div class="bd">
+				                    	<li class="clearfix" id="exper"><span>工作经验：</span>{$data.exper}<input type="hidden"  name="exper" value='{$data.exper}'></li>
+				                    <div class="bd">
+				                    </div>
+					                    <li class="clearfix" id="zige"><span>资格证书：</span>{$data.zige}<input type="hidden"  name="zige" value='{$data.zige}'></li>
+					                    <div class="bd">
+				                    	
+				                    </div>
+				                    	<li class="clearfix" id="because"><span>推荐理由：</span>{$data.because}<input type="hidden"  name="because" value='{$data.because}'></li>
+				                    </div>
+				                    
+				                    <input type="hidden" value="" name="type"/>
+				                    <input type="hidden" value="" name="desc"/>
+				                </ul>			
+				            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<span class="myrcmd-btn">
+		我要推荐
+	</span>
+</body>
+</html>

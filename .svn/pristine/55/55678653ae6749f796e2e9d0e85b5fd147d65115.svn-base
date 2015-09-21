@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>com-index</title>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/new-company.css">
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css">
+	<script type="text/javascript" src="/Public/new-js/iscroll.js"></script>
+    <script type="text/javascript" src="/Public/js/zepto.min.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="full-screen" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+	<header class="com-head fixed">
+		<div class="con">
+			<span class="l dis-block"></span>
+			<span class="c dis-block">完善资料</span>
+			<span class="r dis-block"></span>
+		</div>
+	</header>
+	<p class="error" style="display:block">对不起您填写的信息有误，请重新填写</p>
+	<div style="background:#f0f0f0;margin-top:45px;">
+		<p style="text-align:center;color:#314356;height:30px;line-height:30px;">因为我们还不够完美，所以需要您的意见。</p>
+	</div>
+	<div class="wrap" style="padding-top:0;">
+		<section class="content m-content1" style="padding-bottom:20px;display:block">
+			
+			<div class="com-list">
+				<div class="bd">
+					<textarea placeholder="您的意见使人人猎成长！" class="textarea2" name="personal" id="audstartdate"></textarea>
+				</div>
+				<div class="bd">
+					<div class="list"><em>手机：</em><input type="text"></div>
+				</div>
+
+				<div class="bd">
+					<div class="list"><em>邮箱：</em><input type="text"></div>
+				</div>
+			</div>
+		</section>
+            <div><button class="btn hover-hand" id="btn">保存</button></div>
+	</div>
+	<script type="text/javascript">
+    $(document).ready(function(){
+		$("input").click(function(){
+			if(document.activeElement.tagName == 'INPUT'){
+				$(".fixed").css({'position': 'absolute','top':'0'}); 
+			} else if(document.activeElement.tagName !== 'INPUT'){  
+				$(".fixed").css('position', 'fixed');
+			}
+		})	
+    })
+    //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+</body>
+</html>

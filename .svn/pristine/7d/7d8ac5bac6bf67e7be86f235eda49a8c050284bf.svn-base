@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>人人猎</title>
+	<link rel="stylesheet"  href="/Public/css/reset.css">
+    <link rel="stylesheet"  href="/Public/css/wep.css">
+	<script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="/Public/js/iscroll.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+</head>
+<body>
+<header class="rec_hd">	
+	<span class="l"></span>
+	<ul class="hd_li">
+		<li>正在推荐</li>
+		<b class="b"></b>
+		<ul class="hd_ul">
+			<a href=""><li>推荐设置</li></a>
+			<a href=""><li>被推荐人</li></a>
+		</ul>
+	</ul>
+	<span class="r"></span>
+</header>
+<div class="set_wrapper" id="re_wrapper" >
+	<div id="scroller">
+		<div id="pullDown" style="display:none">
+			<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+		</div>
+		<include file="Public:nav"/>
+		<div class="con_modify thelist" id="thelist">
+			<ul style="padding-top:10px">
+				<h3>我的账号</h3>
+				<li><span>收款银行：</span><span>工商银行</span></li>
+				<li><span>收款账号：</span><span>2312 3360 6203 4569</span></li>
+			</ul>
+			<ul>
+				<li style="padding:0;padding-bottom:10px;"><button class="modify">修改</button></li>
+			</ul>
+		</div>
+
+		<div class="end thelist" id="thelist">
+			<ul style="padding-top:10px">
+				<h3>我的账号</h3>
+				<li><span>收款银行：</span><span>工商银行</span></li>
+				<li><span>收款账号：</span><input type="text" value="2312 3360 6203 4569"></li>
+			</ul>
+			<ul>
+				<li style="padding:0;padding-bottom:10px;"><button class="modify end_btn">完成</button></li>
+			</ul>
+		</div>
+		<div id="pullUp" style="display:none;">
+			<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+		</div>
+		
+	</div>
+</div>
+<!-- <footer>
+	<h3>人人猎</h3>
+	<p><span>TEL:4006-685-596</span>&nbsp&nbsp&nbsp <span>京ICP备14040265号</span></p>
+</footer> -->
+<script>
+document.addEventListener("touchmove", function (e) {
+                e.preventDefault();
+            }, false);
+	$(document).ready(function(){
+		
+		$('.modify').click(function(){
+			$('.con_modify').hide()
+			$('.end').show()
+		})
+		$('.end_btn').click(function(){
+			$('.con_modify').show()
+			$('.end').hide()
+		})
+		 var myScroll = new IScroll('#re_wrapper', {mouseWheel: true, click: false});
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>com-index</title>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/new-company.css">
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css">
+	<script type="text/javascript" src="/Public/new-js/iscroll.js"></script>
+    <script type="text/javascript" src="/Public/js/zepto.min.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="full-screen" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+	<div class="mask"></div>
+	<div class="com-alt com-place">
+		<ul>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">海淀区</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">朝阳区</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">石景山区</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">房山区</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">昌平区</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">西城区</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+		</ul>
+	</div>
+	<div class="com-alt com-salary">
+		<ul>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">2000-4000元</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">60000-8000元</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">70000-9000元</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">10000-11000元</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">100-200元</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">300-400</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+		</ul>
+	</div>
+	<div class="com-alt com-bkgd">
+		<ul>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">一线公司（BAT，即百度、腾讯）</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">二线公司（BAT以外的其他互联网上市公司）</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">三线公司（C轮融资）</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">三线公司（C轮融资）</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">三线公司（C轮融资）</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">三线公司（C轮融资）</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+		</ul>
+	</div>
+	<div class="com-alt com-education">
+		<ul>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">本科</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">专科</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">博士</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">硕士</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">博士后</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+		</ul>
+	</div>
+	<div class="com-alt com-language">
+		<ul>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">英语</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">日语</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">德语</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">法语</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">汉语</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+		</ul>
+	</div>
+	<div class="com-alt com-experience">
+		<ul>
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">3-5年工作经验</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">4-6年工作经验</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">5-7年工作经验</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">6-8年工作经验</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+
+			<li class="bd">
+				<span>
+					<em class="fl-lef dis-block">7-11年工作经验</em> 
+					<b class="fl-rig dis-block"></b>
+				</span>
+			</li>
+		</ul>
+	</div>
+	<div class="com-alt2 com-industry">
+		<ul class="ul-l">
+			<ul>
+				<li class="m">管理类</li>
+				<li>技术类</li>
+				<li>产品类</li>
+				<li>运营类</li>
+				<li>市场类</li>
+				<li>只能类</li>
+			</ul>
+			
+		</ul>
+		<ul class="ul-r">
+			<div>
+				<li class="alt2-list2" style="display:block">
+					<ul>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+					</ul>
+				</li>
+				<li class="alt2-list2">
+					<ul>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+					</ul>
+				</li>
+				<li class="alt2-list2">
+					<ul>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+					</ul>
+				</li>
+				<li class="alt2-list2">
+					<ul>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+					</ul>
+				</li>
+				<li class="alt2-list2">
+					<ul>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+
+					</ul>
+				</li>
+				<li class="alt2-list2">
+					<ul>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+						<li><span class="">CTO</span></li>
+					</ul>
+				</li>
+			</div>
+		</ul>
+	</div>
+	<div class="com-alt2 com-category">
+		<ul class="ul-l ul-l2">
+			<ul>
+				<li class="m">创业合伙人</li>
+				<li>设计</li>
+				<li>建筑地产物业</li>
+				<li>通信电子</li>
+				<li>金融</li>
+				<li>运营</li>
+			</ul>
+			
+		</ul>
+		<ul class="ul-r ul-r2">
+			<div>
+				<li class="alt2-list2" style="display:block">
+					<ul>
+						<li><span class="">创始人</span></li>
+						<li><span class="">联合创始人</span></li>
+						<li><span class="">技术合伙人</span></li>
+						<li><span class="">创始人</span></li>
+						<li><span class="">联合创始人</span></li>
+						<li><span class="">技术合伙人</span></li>
+						<li><span class="">创始人</span></li>
+						<li><span class="">联合创始人</span></li>
+						<li><span class="">技术合伙人</span></li>
+						<li><span class="">创始人</span></li>
+						<li><span class="">联合创始人</span></li>
+						<li><span class="">技术合伙人</span></li>
+						<li><span class="">创始人</span></li>
+						<li><span class="">联合创始人</span></li>
+						<li><span class="">技术合伙人</span></li>
+						<li><span class="">创始人</span></li>
+						<li><span class="">联合创始人</span></li>
+						<li><span class="">技术合伙人</span></li>
+						<li><span class="">创始人</span></li>
+						<li><span class="">联合创始人</span></li>
+						<li><span class="">技术合伙人</span></li>
+						<li><span class="">创始人</span></li>
+						<li><span class="">联合创始人</span></li>
+						<li><span class="">技术合伙人</span></li>
+					</ul>
+				</li>
+				<li class="alt2-list2">
+					<ul>
+						<li><span class="">设计总监</span></li>
+						<li><span class="">视觉设计师</span></li>
+						<li><span class="">交互设计师</span></li>
+						<li><span class="">创意总监知道</span></li>
+					</ul>
+				</li>
+				<li class="alt2-list2">
+					<ul>
+						<li><span class="">设计总监</span></li>
+						<li><span class="">视觉设计师</span></li>
+						<li><span class="">交互设计师</span></li>
+						<li><span class="">创意总监知道</span></li>
+					</ul>
+				</li>
+				<li class="alt2-list2">
+					<ul>
+						<li><span class="">高级建筑工程师</span></li>
+						<li><span class="">总工</span></li>
+						<li><span class="">物业经理主管</span></li>
+					</ul>
+				</li>
+				<li class="alt2-list2">
+					<ul>
+						<li><span class="">硬件工程师</span></li>
+						<li><span class="">硬件测试人员</span></li>
+						<li><span class="">机电工程师</span></li>
+						<li><span class="">研发工程师</span></li>
+
+					</ul>
+				</li>
+				<li class="alt2-list2">
+					<ul>
+						<li><span class="">运营总监</span></li>
+						<li><span class="">运营经理</span></li>
+						<li><span class="">运营主管</span></li>
+						<li><span class="">运营专员</span></li>
+					</ul>
+				</li>
+			</div>
+		</ul>
+	</div>
+	<div class="com-alt2 com-subdivide">
+		<ul class="ul-l ul-l3">
+			<ul>
+				<li class="m">创业合伙人</li>
+				<li>设计</li>
+				<li>建筑地产物业</li>
+				<li>通信电子</li>
+				<li>金融</li>
+				<li>运营</li>
+			</ul>
+			
+		</ul>
+		<ul class="ul-r ul-r3">
+			<div>
+				<li class="alt2-list2" style="display:block">
+					<ul>
+						<li><span class="">创始人</span></li>
+						<li><span class="">联合创始人</span></li>
+						<li><span class="">技术合伙人</span></li>
+						<li><span class="">创始人</span></li>
+						<li><span class="">联合创始人</span></li>
+						<li><span class="">技术合伙人</span></li>
+						<li><span class="">创始人</span></li>
+						<li><span class="">联合创始人</span></li>
+						<li><span class="">技术合伙人</span></li>
+						<li><span class="">创始人</span></li>
+						<li><span class="">联合创始人</span></li>
+						<li><span class="">技术合伙人</span></li>
+						<li><span class="">创始人</span></li>
+						<li><span class="">联合创始人</span></li>
+						<li><span class="">技术合伙人</span></li>
+						<li><span class="">创始人</span></li>
+						<li><span class="">联合创始人</span></li>
+						<li><span class="">技术合伙人</span></li>
+						<li><span class="">创始人</span></li>
+						<li><span class="">联合创始人</span></li>
+						<li><span class="">技术合伙人</span></li>
+						<li><span class="">创始人</span></li>
+						<li><span class="">联合创始人</span></li>
+						<li><span class="">技术合伙人</span></li>
+					</ul>
+				</li>
+				<li class="alt2-list2">
+					<ul>
+						<li><span class="">设计总监</span></li>
+						<li><span class="">视觉设计师</span></li>
+						<li><span class="">交互设计师</span></li>
+						<li><span class="">创意总监知道</span></li>
+					</ul>
+				</li>
+				<li class="alt2-list2">
+					<ul>
+						<li><span class="">设计总监</span></li>
+						<li><span class="">视觉设计师</span></li>
+						<li><span class="">交互设计师</span></li>
+						<li><span class="">创意总监知道</span></li>
+					</ul>
+				</li>
+				<li class="alt2-list2">
+					<ul>
+						<li><span class="">高级建筑工程师</span></li>
+						<li><span class="">总工</span></li>
+						<li><span class="">物业经理主管</span></li>
+					</ul>
+				</li>
+				<li class="alt2-list2">
+					<ul>
+						<li><span class="">硬件工程师</span></li>
+						<li><span class="">硬件测试人员</span></li>
+						<li><span class="">机电工程师</span></li>
+						<li><span class="">研发工程师</span></li>
+
+					</ul>
+				</li>
+				<li class="alt2-list2">
+					<ul>
+						<li><span class="">运营总监</span></li>
+						<li><span class="">运营经理</span></li>
+						<li><span class="">运营主管</span></li>
+						<li><span class="">运营专员</span></li>
+					</ul>
+				</li>
+			</div>
+		</ul>
+	</div>
+	<header class="com-head fixed">
+		<div class="con">
+			<span class="l dis-block"></span>
+			<span class="c dis-block">完善资料</span>
+			<span class="r dis-block"></span>
+		</div>
+	</header>
+	<p class="error">对不起您填写的信息有误，请重新填写</p>
+	<div class="wrap">
+		<ul id="nav" class="nav">
+		    <li><a href="#"><span class="sp0 sp0_2"></span><b class='m'>完善资料</b></a></li>
+		    <li><a href="#"><span class="sp1"></span><b>签订合同</b></a></li>
+		    <li><a href="#"><span class="sp2"></span><b>发布职位</b></a></li>
+		    <li><a href="#"><span class="sp3"></span><b>查看候选人</b></a></li>
+		    <li><a href="#"><span class="sp4"></span><b>入职管理</b></a></li>
+		</ul>
+
+		<section class="content m-content1" style="padding-bottom:20px;display:block">
+			<div>
+				<span class="h3 dis-block">公司信息</span>
+			</div>
+			<div class="com-list">
+				<div class="bd">
+					<div class="list"><em class="m">职位名称：</em><input type="text"></div>
+				</div>
+				<div class="bd">
+					<div class="list m" id="com-industry"><em class="m">行业类别 :</em><span>CTO</span></div>
+				</div>
+				<div class="bd">
+					<div class="list m" id="com-category"><em class="m">职位类别：</em><span>设计总监</span></div>
+				</div>
+				<div class="bd">
+					<div class="list m" id="com-place"><em class="m">工作地点：</em><span>海淀区</span></div>
+				</div>
+
+				<div class="bd">
+					<div class="list"><em class="m">招聘人数：</em><input type="text"></div>
+				</div>
+			</div>
+			
+
+			<div class="com-list" style="margin-top:30px;">
+				<div class="bd">
+					<div class="list m" id="com-salary"><em class="m">月薪待遇:</em><span>欧美企业</span></div>
+				</div>
+				<div class="bd">
+					<div class="list m" id="com-subdivide"><em class="m">细分行业：</em><span>0-50</span></div>
+				</div>
+				<div class="bd">
+					<div class="list m" id="com-bkgd"><em class="m">公司背景：</em><span>A轮融资</span></div>
+				</div>
+				
+
+			</div>
+
+			<div class="com-list" style="margin-top:30px;">
+				<div class="bd">
+					<div class="list"><em class="m">汇报对象</em><input type="text"></div>
+				</div>
+				<div class="bd">
+					<div class="list"><em class="">下属人数</em><input type="text"></div>
+				</div>
+
+				<div class="bd">
+					<div class="list"><em class="m">截止时间</em><input type="text"></div>
+				</div>
+			</div>
+
+			<div style="margin-top:30px;">
+				<span class="h3 dis-block">职位要求</span>
+			</div>
+			<div class="com-list">
+				<div class="bd">
+					<div class="list m" id="com-education"><em class="m">学历要求：</em><span>欧美企业</span></div>
+				</div>
+				<div class="bd">
+					<div class="list m" id="com-language"><em class="m">语言能力：</em><span>0-50</span></div>
+				</div>
+				<div class="bd">
+					<div class="list m" id="com-experience"><em class="m">工作经验：</em><span>A轮融资</span></div>
+				</div>
+			</div>
+
+
+
+			<div style="margin-top:30px;">
+				<span class="h3 dis-block">工作职责</span>
+			</div>
+			<div class="com-list">
+				<div class="bd">
+					<div class="list m"><em class="m wh30">请填写工作职责</em><span class="wh">啊时代发生的发</span></div>
+				</div>
+			</div>
+
+			<div style="margin-top:30px;">
+				<span class="h3 dis-block">岗位要求</span>
+			</div>
+			<div class="com-list">
+				<div class="bd">
+					<div class="list m"><em class="m wh30">请填写岗位要求</em><span class="wh">啊时代发生的发</span></div>
+				</div>
+			</div>
+
+
+			<div style="margin-top:30px;">
+				<span class="h3 dis-block">其他</span>
+			</div>
+			<div class="com-list">
+				<div class="bd">
+					<div class="list" id="com-nature"><em class="m" style="width:120px;">您的默认联系方式为 :</em><span class="wh100 cl2">18500521769</span></div>
+				</div>
+				<div class="">
+					<div class="list" id="com-nature"><em style="width:130px;">是否使用其他联系方式 :</em><label id="m-tre" for=""></label></div>
+				</div>
+				<div class="m-phone">
+					<div class="bd">
+						<div class="list"><em class="m">联系人</em><input type="text"></div>
+					</div>
+
+					<div class="bd">
+						<div class="list"><em class="m">手机</em><input type="text"></div>
+					</div>
+					<div class="bd">
+						<div class="list"><em class="m">招聘资费</em><label class="dis-block fl-lef lb-input"><input style="" type="text"><i>00</i></label><span class="yuan">元</span></div>
+					</div>
+				</div>
+				<div><span class="btn hover-hand" id="">保存</span></div>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript">
+    $(document).ready(function(){
+    		var myScroll = new IScroll('.com-salary', {
+				click:true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+			var myScroll3 = new IScroll('.com-bkgd', {
+				click:true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+			var myScroll4 = new IScroll('.com-education', {
+				click:true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+			var myScroll5 = new IScroll('.com-language', {
+				click:true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+			var myScroll6 = new IScroll('.com-experience', {
+				click:true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+			var myScroll7 = new IScroll('.ul-r', {
+				click:true,
+				scrollY: true, 
+				mouseWheel: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+			var myScroll8 = new IScroll('.ul-l', {
+				click:true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+			var myScroll11 = new IScroll('.ul-l2', {
+				click:true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+			var myScroll10 = new IScroll('.ul-r2', {
+				click:true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+
+			var myScroll9 = new IScroll('.com-place', {
+				click:true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+
+
+			var myScroll12 = new IScroll('.ul-l3', {
+				click:true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+			var myScroll13 = new IScroll('.ul-r3', {
+				click:true,
+				mouseWheel: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+
+			$(".com-index .odiv").click(function(){
+				$(this).addClass("m").siblings().removeClass("m");
+			});
+			$("#com-place").click(function(){
+				$(".mask").fadeIn();
+				$(".com-place").fadeIn();
+				myScroll9.refresh();
+				$(".com-place li").click(function(){
+					$(this).find("em").addClass("m").next().addClass("m");
+					$(this).siblings().find("em").removeClass("m").next().removeClass("m");
+					var text = $(this).find("em").text();
+					$("#com-place").find("span").text(text);
+					setTimeout(function(){
+						$(".com-place").fadeOut();
+						$(".mask").hide();
+					},200)
+					
+				})
+			});
+			$("#com-salary").click(function(){
+				$(".mask").fadeIn();
+				$(".com-salary").fadeIn();
+				myScroll.refresh();
+				$(".com-salary li").click(function(){
+					$(this).find("em").addClass("m").next().addClass("m");
+					$(this).siblings().find("em").removeClass("m").next().removeClass("m");
+					var text = $(this).find("em").text();
+					$("#com-salary").find("span").text(text);
+					setTimeout(function(){
+						$(".com-salary").fadeOut();
+						$(".mask").hide();
+					},200)
+					
+				})
+			});
+
+
+			
+			$("#com-bkgd").click(function(){
+				$(".mask").fadeIn();
+				$(".com-bkgd").fadeIn();
+				myScroll3.refresh();
+				$(".com-bkgd li").click(function(){
+					$(this).find("em").addClass("m").next().addClass("m");
+					$(this).siblings().find("em").removeClass("m").next().removeClass("m");
+					var text = $(this).find("em").text();
+					$("#com-bkgd").find("span").text(text);
+					setTimeout(function(){
+						$(".com-bkgd").fadeOut();
+						$(".mask").hide();
+					},200)
+					
+				})
+			});
+
+			$("#com-education").click(function(){
+				$(".mask").fadeIn();
+				$(".com-education").fadeIn();
+				myScroll4.refresh();
+				$(".com-education li").click(function(){
+					$(this).find("em").addClass("m").next().addClass("m");
+					$(this).siblings().find("em").removeClass("m").next().removeClass("m");
+					var text = $(this).find("em").text();
+					$("#com-education").find("span").text(text);
+					setTimeout(function(){
+						$(".com-education").fadeOut();
+						$(".mask").hide();
+					},200)
+					
+				})
+			});
+
+			$("#com-language").click(function(){
+				$(".mask").fadeIn();
+				$(".com-language").fadeIn();
+				myScroll5.refresh();
+				$(".com-language li").click(function(){
+					$(this).find("em").addClass("m").next().addClass("m");
+					$(this).siblings().find("em").removeClass("m").next().removeClass("m");
+					var text = $(this).find("em").text();
+					$("#com-language").find("span").text(text);
+					setTimeout(function(){
+						$(".com-language").fadeOut();
+						$(".mask").hide();
+					},200)
+					
+				})
+			});
+
+			$("#com-experience").click(function(){
+				$(".mask").fadeIn();
+				$(".com-experience").fadeIn();
+				myScroll6.refresh();
+				$(".com-experience li").click(function(){
+					$(this).find("em").addClass("m").next().addClass("m");
+					$(this).siblings().find("em").removeClass("m").next().removeClass("m");
+					var text = $(this).find("em").text();
+					$("#com-experience").find("span").text(text);
+					setTimeout(function(){
+						$(".com-experience").fadeOut();
+						$(".mask").hide();
+					},200)
+					
+				})
+			});
+
+			$("#com-industry").click(function(){
+				$(".mask").fadeIn();
+				$(".com-industry").fadeIn();
+				myScroll7.refresh();
+				myScroll8.refresh();
+				var index;
+				var list = $(".com-industry .ul-l li");
+				var divs = $(".com-industry .ul-r div>li");
+				list.on("click",function(){
+					that = $(this);
+					index = that.index();
+					that.addClass("m").siblings().removeClass("m");
+					$(this).addClass("m").siblings().removeClass("m");
+					divs.eq(index).show().siblings("li").hide();
+					myScroll7.refresh();
+					myScroll8.refresh();
+					divs.eq(index).find("li").click(function(){
+						$(this).find("span").addClass("m").parent().siblings().find("span").removeClass("m");
+						var $text = $(this).find("span").text();
+						$("#com-industry span").text($text);
+						setTimeout(function(){
+							$(".com-industry").fadeOut();
+							$(".mask").hide();
+						},200)
+					})
+				});
+				var index2 = $(".com-industry .ul-r div>li li").size();
+				//alert(index2)
+				for( i=0; i<index2; i++){
+					divs.find("li").eq(i).click(function(){
+						$(this).find("span").addClass("m").parent().siblings().find("span").removeClass("m");
+						var $text = $(this).find("span").text();
+						$("#com-industry span").text($text);
+						setTimeout(function(){
+							$(".com-industry").fadeOut();
+							$(".mask").hide();
+						},200)
+					})
+				}
+			});
+
+			$("#com-category").click(function(){
+				$(".mask").fadeIn();
+				$(".com-category").fadeIn();
+				myScroll11.refresh();
+				myScroll10.refresh();
+				var index;
+				var list = $(".com-category .ul-l li");
+				var divs = $(".com-category .ul-r div>li");
+				list.on("click",function(){
+					that = $(this);
+					index = that.index();
+					that.addClass("m").siblings().removeClass("m");
+					$(this).addClass("m").siblings().removeClass("m");
+					divs.eq(index).show().siblings("li").hide();
+					myScroll11.refresh();
+					myScroll10.refresh();
+					divs.eq(index).find("li").click(function(){
+						$(this).find("span").addClass("m").parent().siblings().find("span").removeClass("m");
+						var $text = $(this).find("span").text();
+						$("#com-category span").text($text);
+						setTimeout(function(){
+							$(".com-category").fadeOut();
+							$(".mask").hide();
+						},200)
+					});
+				});
+				var index2 = $(".com-category .ul-r div>li li").size();
+				//alert(index2)
+				for( i=0; i<index2; i++){
+					divs.find("li").eq(i).click(function(){
+						$(this).find("span").addClass("m").parent().siblings().find("span").removeClass("m");
+						var $text = $(this).find("span").text();
+						$("#com-category span").text($text);
+						setTimeout(function(){
+							$(".com-category").fadeOut();
+							$(".mask").hide();
+						},200)
+					})
+				}
+				
+			});
+
+
+			$("#com-subdivide").click(function(){
+				$(".mask").fadeIn();
+				$(".com-subdivide").fadeIn();
+				myScroll11.refresh();
+				myScroll10.refresh();
+				var index;
+				var list = $(".com-subdivide .ul-l li");
+				var divs = $(".com-subdivide .ul-r div>li");
+				list.on("click",function(){
+					that = $(this);
+					index = that.index();
+					that.addClass("m").siblings().removeClass("m");
+					$(this).addClass("m").siblings().removeClass("m");
+					divs.eq(index).show().siblings("li").hide();
+					myScroll11.refresh();
+					myScroll10.refresh();
+					divs.eq(index).find("li").click(function(){
+						$(this).find("span").addClass("m").parent().siblings().find("span").removeClass("m");
+						var $text = $(this).find("span").text();
+						$("#com-subdivide span").text($text);
+						setTimeout(function(){
+							$(".com-subdivide").fadeOut();
+							$(".mask").hide();
+						},200)
+					});
+				});
+				var index2 = $(".com-subdivide .ul-r div>li li").size();
+				//alert(index2)
+				for( i=0; i<index2; i++){
+					divs.find("li").eq(i).click(function(){
+						$(this).find("span").addClass("m").parent().siblings().find("span").removeClass("m");
+						var $text = $(this).find("span").text();
+						$("#com-subdivide span").text($text);
+						setTimeout(function(){
+							$(".com-subdivide").fadeOut();
+							$(".mask").hide();
+						},200)
+					})
+				}
+				
+			});
+			
+
+			/*$(".mask").click( function(){
+				$(".com-alt").hide();
+				$(".com-alt2").hide();
+				$(".mask").hide();
+			})
+			*/
+
+			$("#m-tre").click(function(){
+				if($("#m-tre").hasClass("current")){
+					$(".m-phone").hide();
+					$(this).removeClass("current").removeClass("m");
+				}else{
+					$(".m-phone").show();
+					$(this).addClass("current").addClass("m");
+				}
+			})
+
+			$("input").click(function(){
+				if(document.activeElement.tagName == 'INPUT'){
+					$(".fixed").css({'position': 'absolute','top':'0'}); 
+				} else if(document.activeElement.tagName !== 'INPUT'){  
+					$(".fixed").css('position', 'fixed');
+				}
+			})
+			
+    })
+	
+    //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+</body>
+</html>

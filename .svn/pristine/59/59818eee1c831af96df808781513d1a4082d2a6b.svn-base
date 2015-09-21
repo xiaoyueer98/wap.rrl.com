@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>人人猎</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="/Public/js/jquery-ui-1.10.3.min.js"></script>
+	<script type="text/javascript" src="/Public/js/jquery.fullPage.min.js"></script>
+	<link rel="stylesheet"  href="/Public/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/Public/css/new-index.css"/>
+	<link rel="stylesheet" type="text/css" href="/Public/css/jquery.fullPage.css">
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+</head>
+<body>
+	<div class="section page1" id="section0">
+		<header>
+			<div class="logo"><a href=""><img src="/Public/images/logo.png" alt=""></a></div>
+			<div class="login-enroll">
+				<a href="/index.php?s=/Login/login" class="login">登录</a>
+				<a href="/index.php?s=/Reg/reg">注册</a>
+			</div>
+		</header>
+		<div class="banner">
+			<img src="/Public/images/banner.png" alt="">
+		</div>
+		<a href="#page2" class="btn-l"></a>
+		<a href="#page3" class="btn-r"></a>
+	</div>
+	<div class="section" id="section1">
+		<div class="page2">
+			<img src="/Public/images/page2.png" alt="">
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="page3">
+			<img src="/Public/images/page3.png" alt="">
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="page4">
+			<img src="/Public/images/page4.jpg" alt="">
+		</div>
+	</div>
+	<div class="section" id="section4">
+		<div class="page5">
+			<img src="/Public/images/page5.jpg" alt="">
+		</div>
+	</div>
+	<div class="section" id="section5">
+		<div class="page6">
+			<img src="/Public/images/page6.jpg" alt="">
+		</div>
+	</div>
+	<div class="section" id="section6">
+		<div class="page7">
+			<img src="/Public/images/page7.jpg" alt="">
+		</div>
+	</div>
+	<div class="section" id="section7">
+		<div class="page8">
+			<img src="/Public/images/page8.jpg" alt="">
+		</div>
+		<footer>
+			
+		</footer>
+	</div>
+	<!-- <div class="section" id="section8"></div> -->
+<script type="text/javascript">
+	$(document).ready(function(e){
+		$.fn.fullpage({
+			slidesColor: ['#335882', '#335882', '#f0f0f0', '#f0f0f0','#f0f0f0','#f0f0f0','#ffffff','#ffffff','#f0f0f0'],
+			anchors: ['page1', 'page2', 'page3', 'page4', 'page5','page6', 'page7', 'page8', 'page9',],
+			navigation:true,
+			navigationPosition:'right',
+			scrollingSpeed:500,
+			easing:'easeInQuart',
+			//loopBottom:true
+		});
+	})
+</script>
+        <include file="Public:statistics">
+</body>
+</html>

@@ -1,0 +1,56 @@
+<style>
+    header #rnew{
+        width: 102px;
+        height: 22px;
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 0px;
+        text-align: right;
+        line-height: 43px;
+        font-size: 12px;
+    } 
+    header #rnew a{color:white;}
+    header #rnew span{color:white;}
+    
+</style>
+<header class="rec_hd">	
+    <?php if(strpos($_SERVER['HTTP_REFERER'],"Login/login")===false): ?>
+    <span class="l" onclick="history.go(-1);"></span>
+    <?php endif;?>
+    <ul class="hd_li">
+        <li>{$header_title}</li>
+    </ul>
+   
+    <label class="r"></label>
+    
+</header>
+
+<span style="display:none;"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1254515209'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1254515209%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></span>
+<script>
+    $(document).ready(function () {
+        $('.hd_li>li').click(function () {
+            $(".head-nav").toggle(100);
+        });
+        $('.hd_ul li').click(function () {
+            $(this).addClass('m').siblings().removeClass('m');
+        });
+        $('.rec_hd label').click(function () {
+            if ($(this).hasClass("current")) {
+                
+                $('.nav').hide();
+                $(".head-nav").hide();
+                $(this).removeClass('m')
+                $(this).removeClass("current");
+            } else {
+                
+                $('.nav').show();
+                $(".head-nav").hide();
+                $(this).addClass('m')
+                $(this).addClass("current");
+            }
+
+        })
+    })
+</script>

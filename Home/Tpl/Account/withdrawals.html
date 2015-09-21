@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>人人猎</title>
+        <link rel="stylesheet"  href="/Public/css/reset.css">
+        <link rel="stylesheet"  href="/Public/css/wep.css">
+        <script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="/Public/js/iscroll.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <meta content="telephone=no" name="format-detection" />
+    </head>
+    <body>
+    <include file="Public:header_new"/>
+    <include file="Public:head_nav"/>
+    <include file="Public:like_alert" />
+    
+    <div class="set_wrapper tx" id="re_wrapper" >
+        <div id="scroller">
+            <div id="pullDown" style="display:none">
+                <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+            </div>
+            <include file="Public:nav" />
+
+            <div class="tixian">
+                <ul class="ul1">
+                    <h3>我的余额</h3>
+                    <li class="clearfix li1">
+                        <span class="dis-inlin dis-block fl-lef">我的余额：</span>
+                        <em class="dis-inlin dis-block fl-lef">￥<span id="accountMoney">{$accountMoney}</span></em>
+                    </li>
+                    <li class="clearfix li2">
+                        <span class="dis-inlin dis-block fl-lef">提取金额(元)：</span>
+                        <input class="dis-inlin dis-block fl-lef input2" type="text" id="encashMoney">
+                    </li>
+                </ul>
+                <button class="tixian-btn">完成</button>
+                <ul class="ul2">
+                    <li>
+                        <em class="dis-inlin dis-block fl-lef">提示：</em>
+                        <span class="dis-inlin dis-block fl-rig">提取金额不低于5元，在2个工作日内到账
+                            每次扣除手续费5元</span>
+                    </li>
+                </ul>
+            </div>
+            <div id="pullUp" style="display:none;">
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        $(".tixian-btn")[0].disabled = false;
+        $(".tixian-btn").click(function () {
+
+            $(".tixian-btn")[0].disabled = true;
+            var encashMoney = $.trim($("#encashMoney").val());
+
+            if (encashMoney == "") {
+                like_alert("请输入提现金额！");
+                $(".tixian-btn")[0].disabled = false;
+                return;
+            } else if (isNaN(encashMoney)) {
+                like_alert("请输入正确的提现金额！");
+                $(".tixian-btn")[0].disabled = false;
+                return;
+            } else if (encashMoney <= 5) {
+                like_alert("每次提取限额不能少于5元！");
+                $(".tixian-btn")[0].disabled = false;
+                return;
+            } else if (parseInt(encashMoney) > parseInt("{$accountMoney}")) {
+                like_alert("余额不足！");
+                $(".tixian-btn")[0].disabled = false;
+                return;
+            } else {
+                var tmpMoney = encashMoney-5;
+                if (confirm("您提取的金额为" + encashMoney + "元,需要扣除手续费5元，届时您的到款金额为" + tmpMoney + "元。")) {
+                    $.post("/index.php?s=/Usercenter/add_encash_log", {
+                        "encashMoney": encashMoney
+                    }, function (re) {
+                        if (re.code == "200") {
+                            lo_like_alert(re.msg, "/index.php?s=/Job/my_account");
+                            return;
+                        } else if(re.code == "400"){
+                            lo_like_alert(re.msg, "/index.php?s=/Login/login");
+                            return;
+                        }else {
+                            like_alert(re.msg);
+                            $(".tixian-btn")[0].disabled = false;
+                            return;
+                        }
+                    }, "json");
+                }else{
+                    $(".tixian-btn")[0].disabled = false;
+                    return;
+                }
+            }
+            
+        })
+    </script>
+</body>
+</html>

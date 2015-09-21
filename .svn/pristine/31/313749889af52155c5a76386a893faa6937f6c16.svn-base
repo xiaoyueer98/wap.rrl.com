@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>人人猎</title>
+	<link rel="stylesheet"  href="/Public/new-css/reset.css">
+    <link rel="stylesheet"  href="/Public/new-css/new-recommende.css">
+	<script type="text/javascript" src="/Public/new-js/iscroll-refresh.js"></script>
+	<script type="text/javascript" src="/Public/new-js/jquery-1.11.0.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<script type="text/javascript">
+
+            var myScroll,
+                    pullDownEl, pullDownOffset,
+                    pullUpEl, pullUpOffset,
+                    generatedCount = 0;
+             function ajx(page, number) {
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://localhost:8081/index.php?s=/Job/get_resume_list',
+                    data: 'page=' + page + '&number=' + number + '&jobid=141',
+                    dataType: 'json',
+                    success: function (data) {
+
+                        if (data.count == 0) {
+                            if ($.trim($("#thelist2").html()) == "") {
+                                $('#thelist2').append('<div class="resultjobs clearfix" style="font-size:14px;text-align:center;line-height:50px;color:#b4b4b4;">还未有正在推荐的职位，请先去推荐!</div>');
+                            }
+                            $('#pullUp').hide();
+                            return;
+                        }
+
+                        var data = eval(data['result']);
+                            $.each(data,function(index ,value){
+                                var str = "";
+                                //alert(data[index].username)
+                                str =  '<div class="bd"><dl class="clearfix dis_box"><dt class="dis-lef"><span class=""></span></dt><dd class="dis-rig flex"><div><span>'+data[index].username+'</span><em>'
+                                    +data[index].sex+'</em><em>'+data[index].mobile+'</em></div><div><span></span><span>'+data[index].statedata+'</span></div></dd></dl></div>';
+                                $('#thelist2').append(str);
+                            })
+                            // alert(data[i]);
+                    }
+                });
+                ++num;
+            }
+            function pullUpAction() {
+                setTimeout(function () {
+                	ajx(num, 10);
+                    var el, li, i;
+                    el = document.getElementById('thelist');
+                    myScroll.refresh();
+                }, 1000);
+            }
+            function pullUpAction2() {
+                setTimeout(function () {
+                    ajx(1, 10)
+                    myScroll.refresh();
+                }, 1000);
+            }
+            var num = 1;
+            pullUpAction2();
+
+            /**
+             * 初始化iScroll控件
+             */
+            function loaded() {
+                pullDownEl = document.getElementById('pullDown');
+                pullDownOffset = pullDownEl.offsetHeight;
+                pullUpEl = document.getElementById('pullUp');
+                pullUpOffset = pullUpEl.offsetHeight;
+
+                myScroll = new iScroll('thelist', {
+                    scrollbarClass: 'myScrollbar', /* 重要样式 */
+                    useTransition: false, /* 此属性不知用意，本人从true改为false */
+                    topOffset: pullDownOffset,
+                    onRefresh: function () {
+                        if (pullDownEl.className.match('loading')) {
+                            pullDownEl.className = '';
+                            pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+                        } else if (pullUpEl.className.match('loading')) {
+                            pullUpEl.className = '';
+                            pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+                        }
+                    },
+                    onScrollMove: function () {
+                        if (this.y > 5 && !pullDownEl.className.match('flip')) {
+                            pullDownEl.className = 'flip';
+                            pullDownEl.querySelector('.pullDownLabel').innerHTML = '松手开始更新...';
+                            this.minScrollY = 0;
+                        } else if (this.y < 5 && pullDownEl.className.match('flip')) {
+                            pullDownEl.className = '';
+                            pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+                            this.minScrollY = -pullDownOffset;
+                        } else if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+                            pullUpEl.className = 'flip';
+                            pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
+                            this.maxScrollY = this.maxScrollY;
+                        } else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+                            pullUpEl.className = '';
+                            pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+                            this.maxScrollY = pullUpOffset;
+                        }
+                    },
+                    onScrollEnd: function () {
+                        if (pullDownEl.className.match('flip')) {
+                        } else if (pullUpEl.className.match('flip')) {
+                            pullUpEl.className = 'loading';
+                            pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';
+                            pullUpAction(); // Execute custom function (ajax call?)
+                        }
+                    }
+                });
+            }
+            //初始化绑定iScroll控件 
+            document.addEventListener('touchmove', function (e) {
+                e.preventDefault();
+            }, false);
+            document.addEventListener('DOMContentLoaded', loaded, false);
+    </script>
+    </head>
+    <body>
+        <include file="Public:header1"/>
+        <include file="Public:head-nav"/>
+        <div id="wrap" class="job-wrap">
+	        <div class="content">
+                <div id="pullDown" style="display:none">
+                    <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+                </div>
+                <include file="Public:nav"/>
+                <div id="thelist" class="job-list-content process">
+				
+                    <div class="list-candidates" style="padding-bottom:45px;">
+                        <div id="thelist2">
+                            <div class="bd2">
+                        <div class="lists">
+                            <ul class="latest-position">
+                                <li class="clearfix lis1">
+                                    <div class="fl-lef dis-inlin">
+                                        <span class="fl-lef dis-inlin dis-block mysp1">冯辉</span>
+                                        <em class="fl-lef dis-inlin dis-block">PHP高级开发工程师</em>
+                                    </div>
+                                    <div class="fl-rig dis-inlin">
+                                        <span class="fl-lef dis-inlin dis-block">推荐费：</span>
+                                        <b>2000</b>
+                                    </div>
+                                </li>
+                                <li class="clearfix lis1">
+                                    <div class="fl-lef dis-inlin r">北京盈禾优仕科技有限公司</div>
+                                    
+                                    <div class="fl-rig dis-inlin r"><span class="fl-lef dis-inlin dis-block">招聘人数:<i>5</i></span></div>
+                                </li>
+                                <li class="clearfix lis2">
+                                    <div class="fl-lef dis-inlin">
+                                        
+                                        <span class="fl-lef dis-inlin dis-block mysp1">10K-20K</span>
+                                        <span class="fl-lef dis-inlin dis-block">进度:<b>未审核</b></span>
+                                        
+                                    </div>
+                                    <div class="fl-rig dis-inlin">
+                                         <span id="pingjia" class="pinj-btn">评价</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <span class="down"></span>
+                        </div>
+                        <div class="list-process">
+                            <ul>
+                                <li class="clearfix">
+                                    <span class="sp1 l">
+                                        <em>2015-06-19 20:59</em>
+                                        <b></b>
+                                    </span>
+                                    <span class="sp3">
+                                        <em>成功上传简历成功上传简历成功上传简历成功上传简历</em>   
+                                        <b></b>
+                                    </span>
+                                </li>
+
+                                <li class="clearfix">
+                                    <span class="sp1 l">
+                                        <em>2015-06-19 20:59</em>
+                                        <b></b>
+                                    </span>
+                                    <span class="sp3">
+                                        <em>成功上传简历成功上传简历成功上传简历成功上传简历</em>   
+                                        <b class="m"></b>
+                                    </span>
+                                </li>
+
+                                <li class="clearfix">
+                                    <span class="sp1 l">
+                                        <em>2015-06-19 20:59</em>
+                                        <b></b>
+                                    </span>
+                                    <span class="sp3">
+                                        <em>成功上传简历成功上传简历成功上传简历成功上传简历</em>   
+                                        <b></b>
+                                    </span>
+                                </li>
+
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bd2">
+                        <div class="lists">
+                            <ul class="latest-position">
+                                <li class="clearfix lis1">
+                                    <div class="fl-lef dis-inlin">
+                                        <span class="fl-lef dis-inlin dis-block mysp1">冯辉</span>
+                                        <em class="fl-lef dis-inlin dis-block">PHP高级开发工程师</em>
+                                    </div>
+                                    <div class="fl-rig dis-inlin">
+                                        <span class="fl-lef dis-inlin dis-block">推荐费：</span>
+                                        <b>2000</b>
+                                    </div>
+                                </li>
+                                <li class="clearfix lis1">
+                                    <div class="fl-lef dis-inlin r">北京盈禾优仕科技有限公司</div>
+                                    
+                                    <div class="fl-rig dis-inlin r"><span class="fl-lef dis-inlin dis-block">招聘人数:<i>5</i></span></div>
+                                </li>
+                                <li class="clearfix lis2">
+                                    <div class="fl-lef dis-inlin">
+                                        
+                                        <span class="fl-lef dis-inlin dis-block mysp1">10K-20K</span>
+                                        <span class="fl-lef dis-inlin dis-block">进度:<b>未审核</b></span>
+                                        
+                                    </div>
+                                    <div class="fl-rig dis-inlin">
+                                         <span id="pingjia" class="pinj-btn">评价</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <span class="down"></span>
+                        </div>
+                        <div class="list-process">
+                            <ul>
+                                <li class="clearfix">
+                                    <span class="sp1 l">
+                                        <em>2015-06-19 20:59</em>
+                                        <b></b>
+                                    </span>
+                                    <span class="sp3">
+                                        <em>成功上传简历成功上传简历成功上传简历成功上传简历</em>   
+                                        <b></b>
+                                    </span>
+                                </li>
+
+                                <li class="clearfix">
+                                    <span class="sp1 l">
+                                        <em>2015-06-19 20:59</em>
+                                        <b></b>
+                                    </span>
+                                    <span class="sp3">
+                                        <em>成功上传简历成功上传简历成功上传简历成功上传简历</em>   
+                                        <b class="m"></b>
+                                    </span>
+                                </li>
+
+                                <li class="clearfix">
+                                    <span class="sp1 l">
+                                        <em>2015-06-19 20:59</em>
+                                        <b></b>
+                                    </span>
+                                    <span class="sp3">
+                                        <em>成功上传简历成功上传简历成功上传简历成功上传简历</em>   
+                                        <b></b>
+                                    </span>
+                                </li>
+
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bd2">
+                        <div class="lists">
+                            <ul class="latest-position">
+                                <li class="clearfix lis1">
+                                    <div class="fl-lef dis-inlin">
+                                        <span class="fl-lef dis-inlin dis-block mysp1">冯辉</span>
+                                        <em class="fl-lef dis-inlin dis-block">PHP高级开发工程师</em>
+                                    </div>
+                                    <div class="fl-rig dis-inlin">
+                                        <span class="fl-lef dis-inlin dis-block">推荐费：</span>
+                                        <b>2000</b>
+                                    </div>
+                                </li>
+                                <li class="clearfix lis1">
+                                    <div class="fl-lef dis-inlin r">北京盈禾优仕科技有限公司</div>
+                                    
+                                    <div class="fl-rig dis-inlin r"><span class="fl-lef dis-inlin dis-block">招聘人数:<i>5</i></span></div>
+                                </li>
+                                <li class="clearfix lis2">
+                                    <div class="fl-lef dis-inlin">
+                                        
+                                        <span class="fl-lef dis-inlin dis-block mysp1">10K-20K</span>
+                                        <span class="fl-lef dis-inlin dis-block">进度:<b>未审核</b></span>
+                                        
+                                    </div>
+                                    <div class="fl-rig dis-inlin">
+                                         <span id="pingjia" class="pinj-btn">评价</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <span class="down"></span>
+                        </div>
+                        <div class="list-process">
+                            <ul>
+                                <li class="clearfix">
+                                    <span class="sp1 l">
+                                        <em>2015-06-19 20:59</em>
+                                        <b></b>
+                                    </span>
+                                    <span class="sp3">
+                                        <em>成功上传简历成功上传简历成功上传简历成功上传简历</em>   
+                                        <b></b>
+                                    </span>
+                                </li>
+
+                                <li class="clearfix">
+                                    <span class="sp1 l">
+                                        <em>2015-06-19 20:59</em>
+                                        <b></b>
+                                    </span>
+                                    <span class="sp3">
+                                        <em>成功上传简历成功上传简历成功上传简历成功上传简历</em>   
+                                        <b class="m"></b>
+                                    </span>
+                                </li>
+
+                                <li class="clearfix">
+                                    <span class="sp1 l">
+                                        <em>2015-06-19 20:59</em>
+                                        <b></b>
+                                    </span>
+                                    <span class="sp3">
+                                        <em>成功上传简历成功上传简历成功上传简历成功上传简历</em>   
+                                        <b></b>
+                                    </span>
+                                </li>
+
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bd2">
+                        <div class="lists">
+                            <ul class="latest-position">
+                                <li class="clearfix lis1">
+                                    <div class="fl-lef dis-inlin">
+                                        <span class="fl-lef dis-inlin dis-block mysp1">冯辉</span>
+                                        <em class="fl-lef dis-inlin dis-block">PHP高级开发工程师</em>
+                                    </div>
+                                    <div class="fl-rig dis-inlin">
+                                        <span class="fl-lef dis-inlin dis-block">推荐费：</span>
+                                        <b>2000</b>
+                                    </div>
+                                </li>
+                                <li class="clearfix lis1">
+                                    <div class="fl-lef dis-inlin r">北京盈禾优仕科技有限公司</div>
+                                    
+                                    <div class="fl-rig dis-inlin r"><span class="fl-lef dis-inlin dis-block">招聘人数:<i>5</i></span></div>
+                                </li>
+                                <li class="clearfix lis2">
+                                    <div class="fl-lef dis-inlin">
+                                        
+                                        <span class="fl-lef dis-inlin dis-block mysp1">10K-20K</span>
+                                        <span class="fl-lef dis-inlin dis-block">进度:<b>未审核</b></span>
+                                        
+                                    </div>
+                                    <div class="fl-rig dis-inlin">
+                                         <span id="pingjia" class="pinj-btn">评价</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <span class="down"></span>
+                        </div>
+                        <div class="list-process">
+                            <ul>
+                                <li class="clearfix">
+                                    <span class="sp1 l">
+                                        <em>2015-06-19 20:59</em>
+                                        <b></b>
+                                    </span>
+                                    <span class="sp3">
+                                        <em>成功上传简历成功上传简历成功上传简历成功上传简历</em>   
+                                        <b></b>
+                                    </span>
+                                </li>
+
+                                <li class="clearfix">
+                                    <span class="sp1 l">
+                                        <em>2015-06-19 20:59</em>
+                                        <b></b>
+                                    </span>
+                                    <span class="sp3">
+                                        <em>成功上传简历成功上传简历成功上传简历成功上传简历</em>   
+                                        <b class="m"></b>
+                                    </span>
+                                </li>
+
+                                <li class="clearfix">
+                                    <span class="sp1 l">
+                                        <em>2015-06-19 20:59</em>
+                                        <b></b>
+                                    </span>
+                                    <span class="sp3">
+                                        <em>成功上传简历成功上传简历成功上传简历成功上传简历</em>   
+                                        <b></b>
+                                    </span>
+                                </li>
+
+                                
+                            </ul>
+                        </div>
+                    </div>
+                        </div>
+                        <div id="pullUp" style="font-family: '微软雅黑';background: #fff;height: 40px;line-height: 40px;padding: 5px 10px;border-bottom: 1px solid #ccc;font-weight: bold;font-size: 14px;color: #888;">
+                        <span class="pullUpIcon"></span><div style="margin:0 auto;display:block;width:96px;" class="pullUpLabel">上拉加载更多...</div>
+                    </div><div id="over"></div>
+                    </div> 
+                </div>
+	        </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".lists").click(function(){
+                    $(this).next().show();
+                    $(this).parent().siblings().find(".list-process").hide();
+                    $(this).parent().siblings().find(".lists").removeClass('m');
+                    $(this).parent().siblings().css({'border-bottom':'1px #afafaf solid'});
+                    $(this).parent().prev().css({'border-bottom':'none'});
+                    $(this).parent().css({'border-bottom':'1px #afafaf solid'});
+                    $(this).addClass('m').find(".down").addClass('m');
+                    $(this).parent().siblings().find(".down").removeClass('m');
+                    $(this).addClass('m').find(".down").addClass('m');
+                    myScroll.refresh();
+                })
+            });
+        </script>
+    </body>
+</html>

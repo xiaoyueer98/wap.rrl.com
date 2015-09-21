@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>人人猎</title>
+        <link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="/Public/new-css/new-recommende.css"/>    
+        <script type="text/javascript" src="/Public/new-js/iscroll.js"></script>
+        <script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <meta content="telephone=no" name="format-detection" />
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.nav').hide();
+                $(".gsjj-btn").click(function () {
+                    $('.comp-text').slideDown();
+                    $('.myh3-2').addClass("m");
+                    $(".myh3").removeClass('m');
+                    setTimeout(function () {
+                        myScroll.refresh();
+                    }, 500)
+                })
+                $('.myh3-2').click(function () {
+                    $('.comp-text').slideUp();
+                    $('.myh3-2').removeClass("m");
+                    $(".myh3").addClass('m');
+                    setTimeout(function () {
+                        myScroll.refresh();
+                    }, 500)
+                })
+                var list2 = $(".posi-nav li");
+                var divs2 = $(".m-c>div");
+                list2.on("click", function () {
+                    that = $(this);
+                    index = that.index();
+                    that.addClass("m").siblings().removeClass("m");
+                    $(this).find("a").addClass("m").parent("li").siblings().find("a").removeClass("m");
+                    divs2.eq(index).show().siblings("div").hide();
+                    setTimeout(function () {
+                        myScroll.refresh();
+                    }, 500)
+                });
+
+            })
+        </script>
+    </head>
+    <body id='top'>
+    <include file="Public:header_new"/>
+	<include file="Public:head_nav"/>
+        <div class="wrap" id="wamp" style="padding-top:45px;" >
+            <div class="content">
+                <include file="Public:nav"/>
+                <div id="m" class="flex wap">
+                    <div class="scroll md-pawd salon-index salon-child  back-top">
+                        
+                        <span class="position"><img src="/Public/new-images/icon5.png" alt=""></span>
+                        <div class="salon-head">
+                            <span class="dis-block"><img src="/Public/new-images/pic1.png" alt=""></span>
+                            <i></i>
+                            <div><h3 style="border:none;margin:10px auto;width:90%">最新<b style="color:#f15233">预告</b></h3></div>
+                            <?php if($isActive){?>
+                            <ul>
+
+                                <li class="clearfix">
+                                    <span class="dis-block fl-lef dis-inlin">1.时间：</span>
+                                    <em class="dis-block fl-lef dis-inlin"><?php echo $arSalon['activetime']?>。</em>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="dis-block fl-lef dis-inlin">2.标题：</span>
+                                    <em class="dis-block fl-lef dis-inlin"><?php echo $arSalon['activename']?>。</em>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="dis-block fl-lef dis-inlin">3.主题：</span>
+                                    <em class="dis-block fl-lef dis-inlin"><?php echo $arSalon['theme']?>。</em>
+                                </li>
+
+                                <li class="clearfix">
+                                    <span class="dis-block fl-lef dis-inlin">4.地址：</span>
+                                    <em class="dis-block fl-lef dis-inlin">海淀区西二旗辉煌国际2号楼2206。</em>
+                                </li>
+
+                                <li class="clearfix">
+                                    <span class="dis-block fl-lef dis-inlin">5.电话：</span>
+                                    <em class="dis-block fl-lef dis-inlin">010-57188076</em>
+                                </li>
+                            </ul>
+                            <?php }else{?>
+                            <ul>
+                                <li class="clearfix">
+                                    <span class="dis-block fl-lef dis-inlin">1.时间：</span>
+                                    <em class="dis-block fl-lef dis-inlin">待定。</em>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="dis-block fl-lef dis-inlin">2.标题：</span>
+                                    <em class="dis-block fl-lef dis-inlin">待定。</em>
+                                </li>
+                               
+                                <li class="clearfix">
+                                    <span class="dis-block fl-lef dis-inlin">3.地址：</span>
+                                    <em class="dis-block fl-lef dis-inlin">海淀区西二旗辉煌国际2号楼2206。</em>
+                                </li>
+
+                                <li class="clearfix">
+                                    <span class="dis-block fl-lef dis-inlin">4.电话：</span>
+                                    <em class="dis-block fl-lef dis-inlin">010-57188076</em>
+                                </li>
+                            </ul>
+                            <?php }?>
+                            <?php if($isActive):?>
+                            <a href='/index.php?s=/Salon/sign_up'><span class="btn">立即报名</span></a>
+                            <?php endif;?>
+                        </div>
+                        <div>
+                            <span class="title" style="color:#960606">往期活动回顾</span>
+                        </div>
+                        <div class="myimg">
+                            <volist name='arSalonActive' id='vo'>
+                                <em <if condition="$vo.picurl eq ''"> style="display:none;" </if>><a href="/index.php?s=/Salon/salon_detail/id/{$vo[id]}">{$vo['activename1']}<i>{$vo['activename2']}</i><b>{$vo['activename3']}</b></a></em>
+                                <span class="clearfix" <if condition="$vo.picurl eq ''"> style="display:none;" </if>><a href='/index.php?s=/Salon/salon_detail/id/{$vo[id]}'><img src="{$vo['picurl']}" alt=""></a></span>
+                            </volist>
+
+                        </div>
+
+                        <ul style="margin-top:30px;">
+                            <li class="clearfix mli">
+                                <a href="/">返回首页</a> | <a href="#top" class="scrol-top" target="_self">返回顶部</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <script>
+            $(function () {
+                $(".scrol-top").click(function () {
+                    $(".back-top").animate({
+                        '-webkit-transform': 'translate(0,0)'
+                    }, 400);
+                    setTimeout(function () {
+                        var myScroll1 = new IScroll('.wap', {mouseWheel: true, click: true});
+                    }, 200)
+                })
+            })
+        </script>
+    </body>
+</html>

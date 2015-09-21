@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>人人猎</title>
+        <link rel="stylesheet"  href="/Public/css/reset.css">
+        <link rel="stylesheet"  href="/Public/css/wep.css">
+        <script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="/Public/js/iscroll.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <meta content="telephone=no" name="format-detection" />
+    </head>
+    <body>
+    <include file="Public:header_new"/>
+    <include file="Public:head_nav"/>
+    <include file="Public:like_alert" />
+    
+    <div class="set_wrapper" id="re_wrapper" >
+        <div id="scroller">
+            <div id="pullDown" style="display:none">
+                <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+            </div>
+            <include file="Public:nav" />
+            <div class="con_modify thelist" id="thelist">
+                <ul style="padding-top:10px">
+                    <h3>我的账号</h3>
+                    <li><span>收款银行：</span><span>{$mArr.bankname}</span></li>
+                    <li><span>收款账号：</span><span>{$mArr.banknumber}</span></li>
+                </ul>
+                <ul>
+                    <li style="padding:0;padding-bottom:10px;"><button class="modify">修改</button></li>
+                </ul>
+            </div>
+
+            <div class="end thelist" id="thelist">
+                <ul style="padding-top:10px">
+                    <h3>我的账号</h3>
+                    <li><span>收款银行：</span><input type="text" value="{$mArr.bankname}" id="bname"></li>
+                    <li><span>收款账号：</span><input type="text" value="{$mArr.banknumber}" id="bnum"></li>
+                </ul>
+                <ul>
+                    <li style="padding:0;padding-bottom:10px;"><button class="modify end_btn" id="btn">完成</button></li>
+                </ul>
+            </div>
+            <div id="pullUp" style="display:none;">
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+            </div>
+
+        </div>
+    </div>
+    <!-- <include file="Public:footer" /> -->
+    <script>
+        document.addEventListener("touchmove", function (e) {
+            e.preventDefault();
+        }, false);
+        $(document).ready(function () {
+
+            $('.modify').click(function () {
+                $('.con_modify').hide()
+                $('.end').show()
+            })
+            $('.end_btn').click(function () {
+                $('.con_modify').show()
+                $('.end').hide()
+            })
+//            var myScroll = new IScroll('#re_wrapper', {mouseWheel: true, click: false});
+        })
+
+
+        $("#btn").click(function () {
+            
+            $("#btn")[0].disabled = true;
+            
+            var bname = $("#bname").val();
+            var bnum = $("#bnum").val().replace(/[ ]/g,"");
+            if (bname == "") {
+                
+                $("#btn")[0].disabled = false;
+                like_alert("收款银行不能为空");
+                return;
+            }
+            
+            
+            if (bnum == "" || !/^[0-9]{15,}$/.test(bnum)) {
+                
+                $("#btn")[0].disabled = false;
+                like_alert("请正确填写收款卡号");
+                return;
+            }
+            if(bname == "{$mArr.bankname}" && bnum=="{$mArr.banknumber}"){
+                re_like_alert("保存成功");
+                return;
+            }
+            $.post("/index.php?s=/Job/my_account_info_save", {
+                'bname': bname,
+                'bnum': bnum
+            }, function (data) {
+
+                if (data.code == "400") {
+                    
+                    lo_like_alert(data.msg,"/index.php?s=/Login/login");
+                    return;
+                    
+                }else if(data.code != "200"){
+                    like_alert(data.msg);
+                    $("#btn")[0].disabled = false;
+                    return;
+                } else {
+                    re_like_alert(data.msg);
+                    return;
+                }
+            }, "json");
+        })
+    </script>
+</body>
+</html>

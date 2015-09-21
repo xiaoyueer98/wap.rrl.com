@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>人人猎</title>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/new-recommende.css"/>    
+    <script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+</head>
+<body>
+	<include file="Public:header_new"/>
+	<include file="Public:head_nav"/>
+			
+			<div id="m" class="flex" >
+				<div class="scroll md-pawd salon-address" style="padding-top:45px;">
+                                    <include file="Public:nav"/>
+					<div class="clearfix">
+						<img src="/Public/new-images/address-img1.png" alt="">
+					</div>
+					<div class="clearfix">
+						<img src="/Public/new-images/address-img2.png" alt="">
+					</div>
+					<div class="clearfix">
+						<img src="/Public/new-images/address-img3.png" alt="">
+					</div>
+					<div class="clearfix">
+						<img src="/Public/new-images/address-img4.png" alt="">
+					</div>
+					<div class="clearfix">
+						<img src="/Public/new-images/address-img5.png" alt="">
+					</div>
+					<div class="clearfix" style="margin-top:20px;padding-bottom:20px;">
+						<a href="/index.php?s=/Salon/sign_up">返回报名页</a>
+					</div>
+                                </div>
+					
+</body>
+</html>

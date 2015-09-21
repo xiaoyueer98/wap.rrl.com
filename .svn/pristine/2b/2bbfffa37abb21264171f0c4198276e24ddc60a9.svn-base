@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>职位明细</title>
+	<script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+	<link rel="stylesheet"  href="/Public/css/reset.css">
+    <link rel="stylesheet"  href="/Public/css/wep.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+</head>
+<body>
+<include file='Public:header' />
+
+<div class="posdetail">
+	<div class="dis_box aligncenter orient" >
+                <include file='Public:nav' />
+		<dl class="positname dis_box">
+                        
+			<dt class="dis_box orient" style="width:100%;height:auto;">
+				<div class="flex2">{$result.cpname}</div>
+				<div class="flex2"><span class="l">地址：</span><span style="color:#cccccc;height:auto;line-height:20px;" class="c">{$result.address}</span></div>
+				<div class="flex2"><span class="l">网址：</span><span style="color:#cccccc;height:auto;line-height:20px;" class="c">{$result.webname}
+				</span></div>
+			</dt>
+		</dl>
+	</div>
+	<div class="dis_box aligncenter orient">
+		<ul class="companyinfor">
+			<li class="ml"><b>融资阶段：</b><span>{$result.stagedata}</span><b>性质：</b><span>{$result.naturedata}</span></li>
+			<li class="ml"><b>注册日期：</b><span>{$result.regtime}</span><b>规模：</b><span>{$result.scaledata}</span></li>
+		</ul>
+	</div>
+	<div class="dis_box aligncenter orient">
+		<h3>公司亮点</h3>
+		<p>{$result.bright}</p>
+	</div>
+	<div class="dis_box aligncenter orient" style="border:none;">
+		<h3>热招职位</h3>
+                <volist name="return_job" id="vo"  key="k" empty="$empty">
+                
+                <div class="rz_div" onclick="location.href='/index.php?s=/Job/job_detail/id/{$vo.id}'">
+			<p class="rz"><span class="rz_l">{$vo.title}</span><span class="rz_r">￥{$vo.Tariff}</span></p>
+			<p class="rz"><span class="rz_l">{$vo.experiencedata} </span><span class="rz_l">{$vo.educationdata}</span><span class="rz_l">北京</span><span class=" rz_r2">{$vo.treatmentdata}</span></p>
+		</div>
+                
+                </volist>
+
+		
+		
+	</div>
+</div>
+<!-- <include file='Public:footer' /> -->
+<script type="text/javascript" src="js/slider.js"></script>
+</body>
+</html>

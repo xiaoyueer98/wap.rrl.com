@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>人人猎</title>
+	<link rel="stylesheet"  href="/Public/css/reset.css">
+    <link rel="stylesheet"  href="/Public/css/wep.css">
+	<script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="/Public/js/iscroll.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+</head>
+<body>
+<include file="Public:like_alert"/>
+<include file="Public:header1"/>
+<div class="set_wrapper" id="re_wrapper" >
+	<div id="scroller">
+		<div id="pullDown" style="display:none">
+			<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+		</div>
+		<include file="Public:nav"/>
+		<div class="con_modify thelist" id="thelist">
+			<ul style="padding-top:10px">
+				<h3>推荐设置</h3>
+				<li><span>行业：</span><span>{$memArr['strycatedata']}</span></li>
+				<li><span>职位：</span><span>{$memArr['Jobcatedata']}</span></li>
+			</ul>
+
+			<ul>
+				<h3>地区设置</h3>
+				<li><span>地区：</span><span>{$memArr['strycatedata']}</span></li>
+			</ul>
+
+			<ul>
+				<h3>时间设置</h3>
+				<li><span>时间：</span><span>{$memArr['date']}</span></li>
+			</ul>
+			<ul>
+				<li style="padding:0;padding-bottom:10px;"><button class="modify">修改</button></li>
+			</ul>
+		</div>
+
+		<div class="end thelist" id="thelist">
+			<ul style="padding-top:10px">
+				<h3>推荐设置</h3>
+				<li><span>行业：</span><input type="text" value="{$memArr['strycatedata']}" id=""></li>
+				<li><span>职位：</span><input type="text" value="{$memArr['Jobcatedata']}"></li>
+			</ul>
+
+			<ul>
+				<h3>地区设置</h3>
+				<li><span>地区：</span><input type="text" value="{$memArr['strycatedata']}"></li>
+			</ul>
+
+			<ul>
+				<h3>时间设置</h3>
+				<li><span>时间：</span><input type="text" value="{$memArr['date']}"></li>
+			</ul>
+			<ul>
+				<li style="padding:0;padding-bottom:10px;"><button class="modify end_btn" id="savebtn">完成</button></li>
+			</ul>
+		</div>
+		<div id="pullUp" style="display:none;">
+			<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+		</div>
+		
+	</div>
+</div>
+<!-- <include file="Public:footer"/> -->
+<script>
+document.addEventListener("touchmove", function (e) {
+                e.preventDefault();
+            }, false);
+	$(document).ready(function(){
+		
+		$('.modify').click(function(){
+			$('.con_modify').hide()
+			$('.end').show()
+		})
+		$('.end_btn').click(function(){
+			$('.con_modify').show()
+			$('.end').hide()
+		})
+
+		 var myScroll = new IScroll('#re_wrapper', {mouseWheel: true, click: false});
+	})
+
+    
+$("#savebtn").click(function(){
+        like_alert(11);
+})    
+</script>
+</body>
+</html>

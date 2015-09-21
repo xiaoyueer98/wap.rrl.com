@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>人人猎</title>
+        <link rel="stylesheet"  href="/Public/css/reset.css">
+        <link rel="stylesheet"  href="/Public/css/wep.css">
+        <script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="/Public/js/iscroll.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <meta content="telephone=no" name="format-detection" />
+    </head>
+    <body>
+    <include file="Public:like_alert"/>
+    <include file="Public:header3"/>
+    <div class="set_wrapper" id="re_wrapper" style="background:#ffffff;" >
+        <div id="scroller">
+            <div id="pullDown" style="display:none">
+                <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+            </div>
+            <form action="/index.php?s=/Job/add_resume" method="post" id="form">
+                <if condition="$data.type eq 'username'">
+                    <textarea placeholder="请输入{$data.desc}" name="{$data.type}" id="audstartdate">{$data.username}</textarea>
+                <else />
+                    <input type="hidden" value='{$data.username}' name='username' />
+                </if>
+                <if condition="$data.type eq 'sex'">
+                    <textarea placeholder="请输入{$data.desc}" name="{$data.type}" id="audstartdate">{$data.sex}</textarea>
+                <else />
+                    <input type="hidden" value='{$data.sex}' name='sex' />
+                </if>
+                <if condition="$data.type eq 'age'">
+                    <textarea placeholder="请输入{$data.desc}" name="{$data.type}" id="audstartdate">{$data.age}</textarea>
+                <else />
+                    <input type="hidden" value='{$data.age}' name='age' />
+                </if>
+                <if condition="$data.type eq 'email'">
+                    <textarea placeholder="请输入{$data.desc}" name="{$data.type}" id="audstartdate">{$data.email}</textarea>
+                <else />
+                    <input type="hidden" value='{$data.email}' name='email' />
+                </if>
+                <if condition="$data.type eq 'qqnum'">
+                    <textarea placeholder="请输入{$data.desc}" name="{$data.type}" id="audstartdate">{$data.qqnum}</textarea>
+                <else />
+                    <input type="hidden" value='{$data.qqnum}' name='qqnum' />
+                </if>
+                <if condition="$data.type eq 'state'">
+                    <textarea placeholder="请输入{$data.desc}" name="{$data.type}" id="audstartdate">{$data.state}</textarea>
+                <else />
+                    <input type="hidden" value='{$data.state}' name='state' />
+                </if>
+                <if condition="$data.type eq 'edu'">
+                    <textarea placeholder="请输入{$data.desc}" name="{$data.type}" id="audstartdate">{$data.edu}</textarea>
+                <else />
+                    <input type="hidden" value='{$data.edu}' name='edu' />
+                </if>
+                <if condition="$data.type eq 'exper'">
+                    <textarea placeholder="请输入{$data.desc}" name="{$data.type}" id="audstartdate">{$data.exper}</textarea>
+                <else />
+                    <input type="hidden" value='{$data.exper}' name='exper' />
+                </if>
+                <if condition="$data.type eq 'zige'">
+                    <textarea placeholder="请输入{$data.desc}" name="{$data.type}" id="audstartdate">{$data.zige}</textarea>
+                <else />
+                    <input type="hidden" value='{$data.zige}' name='zige' />
+                </if>
+                <if condition="$data.type eq 'because'">
+                    <textarea placeholder="请输入{$data.desc}" name="{$data.type}" id="audstartdate">{$data.because}</textarea>
+                <else />
+                    <input type="hidden" value='{$data.because}' name='because' />
+                </if>
+                <if condition="$data.type eq 'mobile'">
+                    <textarea placeholder="请输入{$data.desc}" name="{$data.type}" id="audstartdate">{$data.mobile}</textarea>
+                <else />
+                    <input type="hidden" value='{$data.mobile}' name='mobile' />
+                </if>
+                <if condition="$data.type eq 'personal'">
+                    <textarea placeholder="请输入{$data.desc}" name="{$data.type}" id="audstartdate">{$data.personal}</textarea>
+                <else />
+                    <input type="hidden" value='{$data.personal}' name='personal' />
+                </if>
+
+            </form>
+            <div id="pullUp" style="display:none;">
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+            </div>
+
+        </div>
+    </div>
+    <!-- <include file="Public:footer"/> -->
+    <script>
+        document.addEventListener("touchmove", function (e) {
+            e.preventDefault();
+        }, false);
+        $(document).ready(function () {
+
+            /*		$('.modify').click(function(){
+             $('.con_modify').hide()
+             $('.end').show()
+             })
+             $('.end_btn').click(function(){
+             $('.con_modify').show()
+             $('.end').hide()
+             })
+             */
+
+            var myScroll = new IScroll('#re_wrapper', {mouseWheel: true, click: false});
+        })
+
+
+        $("#savebtn").click(function () {
+            
+            $("#form")[0].submit();
+        })
+        $('.jl ul li em').on('click', function () {
+            $(this).hide();
+            $(this).nextAll().show();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<ul id="nav" class="nav" style='background:white;display:none;'>
+    <li><a href="/index.php?s=/Company/complete_info"><span <if condition="$select eq 'info'"> class="sp0 sp0_2" <else /> class="sp0"</if>></span><b <if condition="$select eq 'info'"> class='m' </if>>完善资料</b></a></li>
+    <li><a href="/index.php?s=/Company/agreement_status"><span <if condition="$select eq 'agreement'"> class="sp1 sp1_2" <else /> class="sp1" </if>></span><b <if condition="$select eq 'agreement'"> class='m' </if>>签订合同</b></a></li>
+    <li><a href="/index.php?s=/Company/send_job"><span  <if condition="$select eq 'send_job'"> class="sp2 sp2_2" <else />class="sp2"</if>></span><b <if condition="$select eq 'send_job'"> class='m' </if>>发布职位</b></a></li>
+    <li><a href="/index.php?s=/Company/candidate"><span <if condition="$select eq 'candidate'"> class="sp3 sp3_2" <else /> class="sp3"</if>></span><b <if condition="$select eq 'candidate'"> class='m' </if>>查看候选人</b></a></li>
+    <li><a href="/index.php?s=/Company/process_track"><span  <if condition="$select eq 'record'"> class="sp4 sp4_2" <else />class="sp4"</if>></span><b <if condition="$select eq 'record'"> class='m' </if>>入职管理</b></a></li>
+</ul>
+

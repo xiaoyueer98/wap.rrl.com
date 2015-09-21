@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cn" style="background:#7fc6e3">
+<head>
+    <title>人人猎热血传奇时代，等你来！</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="full-screen" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="/Public/js/iscroll.js"></script>
+    <link rel="stylesheet"  href="/Public/css/jin_2.css">
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .jrwmbg{
+            width: 100%;
+            height: 100%;
+            background-size:cover;
+        }
+    </style>
+</head>
+<body>
+<!--<div id="header">
+    <span href="../db.html#page2">被推荐人</span>
+    <a href="">返回</a>
+</div>-->
+<div class="jrwmbg">
+    <div id="wrapper1" style="height:100%;" >
+        <div id="scroller">
+            <div id="thelist" style="background:none">
+                <div id="thelist2" style="background:none" >
+                    <div class="cn2">
+                        <ul>
+                            <h3 style="color:#1B5D95;margin-bottom:5px;">线上新媒体推广</h3>
+                            <h3>任职资格：</h3>
+                            <li><p>微博、盆友圈上叽叽喳喳热闹什么我都通晓，<br>
+                                自己也曾玩笑着注册过账号；<br>
+                                知乎大神掰着手指能数，<br>
+                                豆瓣小组哪个也都别跑；<br>
+                                媒体BLABLA，自媒体BLABLA再熟我也不骄傲，<br>
+                                想谈点网站优化，SEO，多少也知道；<br>
+                                线上推广，先推出自己才是真的好！<br>
+                                人人猎热血传奇时代，等你来！<br></p>
+                            </li>
+                            <h3>工作地点：</h3>
+                            <li><p>北京西二旗，临近地铁站，随时等你来。</p>
+                            </li>
+
+                            <h3>接收简历：</h3>
+                            <li><p>hr@renrenlie.com</p>
+                            </li>
+<!--                            <li><center>
+                                     JiaThis Button BEGIN 
+                                      <b><img src="/Public/img/jt_up.png" alt=""></b> 
+                                    <div class="jiathis_style_24x24" id="shareAction" style="margin-left: 10px">
+                                        <a class="jiathis_button_qzone" title="分享到QQ空间"><span class="jiathis_txt jtico jtico_qzone"></span></a>
+                                        <a class="jiathis_button_weixin" title="分享到微信"><span class="jiathis_txt jtico jtico_weixin"></span></a>
+                                        <a class="jiathis_button_tsina" title="分享到新浪微博"><span class="jiathis_txt jtico jtico_tsina"></span></a>
+                                        <a class="jiathis_button_tqq" title="分享到腾讯微博"><span class="jiathis_txt jtico jtico_tqq"></span></a>
+                                        <a class="jiathis_button_renren" title="分享到人人网"><span class="jiathis_txt jtico jtico_renren"></span></a>
+                                        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" style="padding:0px!important;  margin-right: -2px;" target="_blank"></a>
+                                        <a class="jiathis_counter_style" style="margin-right: 35px;"><span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_147" title="累计分享0次">0</span></a>
+                                    </div>
+
+                                     JiaThis Button END 
+                                </center>
+                            </li>-->
+                            <li style="margin:0"><p class="clearfix"><a style="float:right;color:#1B5D95" href="/">返回首页</a></p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+</div>
+<include file="Public:statistics">
+<script>
+document.addEventListener("touchmove", function (e) {e.preventDefault();}, false);
+setTimeout(function(){
+    var myScroll = new IScroll('#wrapper1', {mouseWheel: true, click: true});
+},200)
+
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/plugin.client.js" charset="utf-8"></script>
+</body>
+</html>

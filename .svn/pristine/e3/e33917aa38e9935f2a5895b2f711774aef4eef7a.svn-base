@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>抢红包</title>
+        <script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+        <link rel="stylesheet"  href="/Public/css/reset.css">
+        <link rel="stylesheet"  href="/Public/css/wechat.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <meta content="telephone=no" name="format-detection" />
+    </head>
+    <body>
+        <include file="Public:like_alert"/>
+        <div class="mack"></div>
+        <div class="waper">
+            <div class="redpckag">
+                <img src="/Public/images/redpackage.png">
+                <a class="btn"  id="getnow">立即去领取></a>
+                <a class="btn"  id="getnow1" style="display:none;">立即去领取></a>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $('.btn').on('click', function () {
+                    $('.btn').css('background', '#d5c903');
+                });
+            })
+            $("#getnow").click(function () {
+                $("#getnow").css("display","none");
+                $("#getnow1").css("display","block");
+                $.post("/index.php?s=/Redpackage/get_redpackage", {}, function (data) {
+                    if (data.code == "200") {
+                        location.href = "/index.php?s=/Redpackage/redpackage_end/mo/"+data.msg;
+                    } else {
+                        lo_like_alert(data.msg,"/index.php?s=/Index/index");
+                    }
+                }, "json");
+            })
+        </script>
+    </body>
+</html>

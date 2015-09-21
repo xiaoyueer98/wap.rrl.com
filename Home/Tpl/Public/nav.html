@@ -1,0 +1,19 @@
+<?php if(!empty($_SESSION['userinfo'])){?>
+<ul id="nav" class="nav" style="background:white;">
+    <li><a href="/index.php?s=/Usercenter/myinfo"><if condition="$select eq 'info'"><span class="sp0 sp0_2"></span><b class='m'>我的资料</b><else /><span class="sp0"></span><b>完善资料</b></if></a></li>
+    <li><a href="/index.php?s=/Job/add_resume"><if condition="$select eq 'resume'"><span class="sp4 sp4_2"></span><b class='m'>简历库</b><else /><span class="sp4"></span><b>简历库</b></if></a></li>
+    <li><a href="/index.php?s=/Job/job_list"><if condition="$select eq 'collect'"><span class="sp2 sp2_2"></span><b class='m'>推荐职位</b><else /><span class="sp2"></span><b>推荐职位</b></if></a></li>
+    <li><a href="/index.php?s=/Recommend/recommending"><if condition="$select eq 'recommend'"><span class="sp1 sp1_2"></span><b class='m'>跟踪状态</b><else /><span class="sp1"></span><b>跟踪状态</b></if></a></li>
+    <li><a href="/index.php?s=/Job/my_account"><if condition="$select eq 'account'"><span class="sp3 sp3_2"></span><b class='m'>查看收益</b><else /><span class="sp3"></span><b>查看收益</b></if></a></li>
+</ul>
+<?php }else if(!empty($_SESSION['cuserinfo'])){?>
+<ul id="nav" class="nav" style='background:white;display:none;'>
+    <li><a href="/index.php?s=/Company/complete_info"><span <if condition="$select eq 'info'"> class="sp0 sp0_2" <else /> class="sp0"</if>></span><b <if condition="$select eq 'info'"> class='m' </if>>完善资料</b></a></li>
+    <li><a href="/index.php?s=/Company/agreement_status"><span <if condition="$select eq 'agreement'"> class="sp1 sp1_2" <else /> class="sp1" </if>></span><b <if condition="$select eq 'agreement'"> class='m' </if>>签订合同</b></a></li>
+    <li><a href="/index.php?s=/Company/send_job"><span  <if condition="$select eq 'send_job'"> class="sp2 sp2_2" <else />class="sp2"</if>></span><b <if condition="$select eq 'send_job'"> class='m' </if>>发布职位</b></a></li>
+    <li><a href="/index.php?s=/Company/candidate"><span <if condition="$select eq 'candidate'"> class="sp3 sp3_2" <else /> class="sp3"</if>></span><b <if condition="$select eq 'candidate'"> class='m' </if>>查看候选人</b></a></li>
+    <li><a href="/index.php?s=/Company/process_track"><span  <if condition="$select eq 'record'"> class="sp4 sp4_2" <else />class="sp4"</if>></span><b <if condition="$select eq 'record'"> class='m' </if>>入职管理</b></a></li>
+</ul>
+<?php } ?>
+
+  

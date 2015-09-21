@@ -1,0 +1,32 @@
+<header class="rec_hd">	
+    <span class="l" onclick="history.go(-1);"></span>
+    <ul class="hd_li" style='background: url() no-repeat right 20px;'>
+        <li>{$header_title}</li>
+    </ul>
+     <label class="r2" id="savebtn">保存</label> 
+</header>
+<span style="display:none;"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254515209'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1254515209%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></span>
+<script>
+    $(document).ready(function(){
+        $('.hd_li>li').click(function(){
+            $('.hd_ul').toggle(100);
+            $('.b').toggle(100);
+            $('.b').css('display','block');
+        });
+        $('.hd_ul li').click(function(){
+            $(this).addClass('m').siblings().removeClass('m');
+        });
+        $('.rec_hd label').click(function(){
+            if($(this).hasClass("current")){
+                $('.nav').slideUp();
+                $(this).removeClass('m')
+                $(this).removeClass("current");
+            }else{
+                $('.nav').slideDown();
+                $(this).addClass('m')
+                $(this).addClass("current");
+            }
+           
+        })
+    })
+</script>

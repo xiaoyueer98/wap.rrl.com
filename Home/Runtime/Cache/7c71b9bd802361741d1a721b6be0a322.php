@@ -1,0 +1,95 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>人人猎</title>
+        <link rel="stylesheet" type="text/css" href="/Public/new-css/new-company.css">
+        <link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css">
+        <script type="text/javascript" src="/Public/new-js/iscroll.js"></script>
+        <script type="text/javascript" src="/Public/js/jquery-1.11.0.min.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="format-detection" content="telephone=no,email=no"/>
+        <meta name="full-screen" content="yes">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <style>
+            html,body{
+                width: 100%;
+                height: 100%;
+                background: url(/Public/new-images/new-company/com-index-bg.png) no-repeat;
+                background-size: cover;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="com-index">
+            <div class="scrol" style="padding-bottom:20px;">
+                <header>
+                    <div class="logo">
+                        <img src="/Public/new-images/new-company/logo.png" alt="">
+                    </div>
+                    <div class="logo-text">
+                        <img src="/Public/new-images/new-company/12.png" alt="">
+                    </div>
+                </header>
+                <div class="bt-list">
+                    <a href='?s=/Company/complete_info'>
+                        <div class="odiv odiv1">
+                            <span><img src="/Public/new-images/new-company/icon-bg1.png" alt=""></span>
+                            <em>完善资料</em>
+                            <i class="<?php if($leftNavCompleted['userinfo_completed']) echo'm';?>"></i>
+                        </div>
+                    </a>
+                    <a href='?s=/Company/agreement_status'>
+                        <div class="odiv odiv2">
+                            <span><img src="/Public/new-images/new-company/icon-bg2.png" alt=""></span>
+                            <em>签订合同</em>
+                            <i class="<?php if($leftNavCompleted['contract_completed']) echo'm';?>"></i>
+                        </div>
+                    </a>
+                    <a href='?s=/Company/send_job'>
+                        <div class="odiv odiv3">
+                            <span><img src="/Public/new-images/new-company/icon-bg3.png" alt=""></span>
+                            <em>发布职位</em>
+                            <i class="<?php if($leftNavCompleted['job_completed']) echo'm';?>"></i>
+                        </div>
+                    </a>
+                    <a href='?s=/Company/candidate'>
+                        <div class="odiv odiv4">
+                            <span><img src="/Public/new-images/new-company/icon-bg4.png" alt=""></span>
+                            <em>查看候选人</em>
+                            <i class="<?php if($leftNavCompleted['record_completed']) echo'm';?>"></i>
+                        </div>
+                    </a>
+                    <a href='?s=/Company/process_track'>
+                        <div class="odiv odiv5">
+                            <span><img src="/Public/new-images/new-company/icon-bg5.png" alt=""></span>
+                            <em>入职管理</em>
+                            <i class="<?php if($leftNavCompleted['record_completed']) echo'm';?>"></i>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                myScroll = new IScroll('.com-index', {
+                    click: true,
+                    mouseWheel: true,
+                    interactiveScrollbars: true,
+                    shrinkScrollbars: 'scale',
+                    fadeScrollbars: true
+                });
+                $(".com-index .odiv").click(function () {
+                    $(this).addClass("m").siblings().removeClass("m");
+                })
+            })
+            document.addEventListener('touchmove', function (e) {
+                e.preventDefault();
+            }, false);
+        </script>
+    </body>
+</html>

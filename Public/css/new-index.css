@@ -1,0 +1,166 @@
+.clearfix:after{ visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0;}
+.clearfix{ zoom:1;}
+
+header{
+	height: 44px;
+	background: #f0f0f0;
+	border-top: 4px #335882 solid;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+header .logo{
+	width: 64px;
+	height: 25px;
+	float: left;
+	margin-left: 10px;
+	margin-top:8px;
+}
+header .logo img{
+	width: 100%;
+}
+header .login-enroll{
+	float: right;
+	width:81px;
+	height: 27px;
+	background: #335882;
+	padding:4px 7px;
+}
+header .login-enroll a{
+	color: #fff;
+	font-size: 14px;
+	width: 40px;
+	height: 26px;
+	display: inline;
+	display: block;
+	float: left;
+	line-height: 26px;
+	text-align: center;
+	text-decoration:none;
+}
+header .login-enroll .login{
+	background: url(../images/icon2.png) no-repeat right center;
+	background-size: 2px 10px;
+}
+.banner{
+	width: 100%;
+	position: absolute;
+	top: 44px;
+	left: 0;
+
+}
+.banner img {
+	width: 100%;
+	float: left;
+}
+.page1-m3{
+	width: 100%;
+	position: absolute;
+	top: 39%;
+	left: 0;
+	
+}
+.page1-m3 img {
+	width: 100%;
+	float: left;
+}
+.page1 a.btn-l{
+	width: 29%;
+	height: 7%;
+	display: block;
+	position: absolute;
+	top: 210px;
+	left: 4%;
+
+}
+.page1 a.btn-r{
+	width: 29%;
+	height: 7%;
+	display: block;
+	position: absolute;
+	top: 210px;
+	right: 4%;
+}
+.page2{
+	width: 100%;
+	position: absolute;
+	top: 20px;
+}
+.page2 img{
+	width: 100%;
+}
+
+
+.page3,.page4,.page5,.page6,.page7,.page8{
+	width: 100%;
+	position: absolute;
+	top: 0px;
+}
+.page3 img,.page4 img,.page5 img,.page6 img,.page7 img,.page8 img{
+	width: 100%;
+}
+
+@media screen and (max-width: 325px) { /*当屏幕尺寸小于325px时，应用下面的CSS样式*/
+   .page2,.page3,.page4,.page5,.page6,.page7,.page8{
+		width: 100%;
+		position: absolute;
+		top: 0px;
+		text-align: center;
+	}
+	.page2 img,.page3 img,.page4 img,.page5 img,.page6 img,.page7 img,.page8 img{
+		width: 85%;
+	}
+	.page3{
+		background: #335882;
+		height: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.odiv{
+	width: 100%;
+}
+.odiv img{
+	width: 100%;
+	float:left;
+}
+
+footer{
+	width: 100%;
+	height: 48px;
+	padding-top: 10px;
+	background: #2f4052;
+}
+footer ul{
+	width: 32%;
+	float: left;
+}
+footer ul li{
+	line-height: 14px;
+	font-size: 12px;
+	color: #fff;
+	text-align: center;
+}
+footer p{
+	  width: 66%;
+  float: right;
+  font-size: 12px;
+  line-height: 48px;
+  color: #fff;
+}*/

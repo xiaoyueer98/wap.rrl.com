@@ -1,0 +1,526 @@
+[ 2015-08-13T09:58:53+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002373s ]
+SQL: SHOW COLUMNS FROM `stj_job` [ RunTime:0.015813s ]
+SQL: select * from stj_job where stj_job.is_show=1 and stj_job.employ>(select count(*) from stj_record where stj_record.j_id = stj_job.id and audstart=6) and checkinfo='true' and endtime>unix_timestamp(now()) and is_deleted=0 order by orderid asc, checktime desc,starttime desc limit 0,10 [ RunTime:0.009162s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=225 [ RunTime:0.001329s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000768s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 770 [ RunTime:0.000370s ]
+SQL: SHOW COLUMNS FROM `stj_cascadedata` [ RunTime:0.001596s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=1 ) LIMIT 1   [ RunTime:0.004729s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000840s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=12000 ) LIMIT 1   [ RunTime:0.000789s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=1 ) LIMIT 1   [ RunTime:0.000886s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=225 [ RunTime:0.000269s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000241s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 780 [ RunTime:0.000267s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=1 ) LIMIT 1   [ RunTime:0.001056s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000756s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=8000 ) LIMIT 1   [ RunTime:0.000885s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000949s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=219 [ RunTime:0.000255s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000245s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 334 [ RunTime:0.000221s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.000990s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.001003s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=15000 ) LIMIT 1   [ RunTime:0.000826s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000644s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000746s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000218s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 255 [ RunTime:0.000236s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000786s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000681s ]
+SQL: SHOW COLUMNS FROM `stj_casclist` [ RunTime:0.003629s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1100' ) LIMIT 1   [ RunTime:0.000567s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=20000 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000772s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=50 [ RunTime:0.000783s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000235s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 189 [ RunTime:0.000334s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.001032s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000842s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='952' ) LIMIT 1   [ RunTime:0.000177s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=8000 ) LIMIT 1   [ RunTime:0.000859s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=6 ) LIMIT 1   [ RunTime:0.000917s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000215s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000193s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 159 [ RunTime:0.000231s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.001194s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000662s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1015' ) LIMIT 1   [ RunTime:0.000218s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=40000 ) LIMIT 1   [ RunTime:0.000714s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000845s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000202s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000188s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 158 [ RunTime:0.000204s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000759s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000857s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1014' ) LIMIT 1   [ RunTime:0.000194s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=40000 ) LIMIT 1   [ RunTime:0.000767s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000799s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000218s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000202s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 157 [ RunTime:0.000200s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000963s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000903s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1013' ) LIMIT 1   [ RunTime:0.000258s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=20000 ) LIMIT 1   [ RunTime:0.000779s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000826s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=50 [ RunTime:0.000245s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000229s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 141 [ RunTime:0.000260s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.000913s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000671s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1000' ) LIMIT 1   [ RunTime:0.000161s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=15000 ) LIMIT 1   [ RunTime:0.000647s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000695s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=57 [ RunTime:0.000662s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000204s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 122 [ RunTime:0.000164s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.000615s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000621s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='731' ) LIMIT 1   [ RunTime:0.000492s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=12000 ) LIMIT 1   [ RunTime:0.000790s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000852s ]
+SQL: SHOW COLUMNS FROM `stj_member` [ RunTime:0.001802s ]
+SQL: SELECT * FROM `stj_member` WHERE ( id='1141' ) LIMIT 1   [ RunTime:0.002047s ]
+SQL: SHOW COLUMNS FROM `stj_resume` [ RunTime:0.001468s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `stj_resume` WHERE ( t_id=1141 and isshow=1 ) LIMIT 1   [ RunTime:0.002269s ]
+SQL: SHOW COLUMNS FROM `stj_record` [ RunTime:0.001526s ]
+SQL: SELECT * FROM `stj_record` WHERE ( t_id=1141 )  [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `stj_account` [ RunTime:0.002770s ]
+SQL: SELECT `account` FROM `stj_account` WHERE ( uid=1141 ) LIMIT 1   [ RunTime:0.004647s ]
+NOTIC: [8] Undefined index: checkinfo /private/var/www/mrenren/Home/Lib/Action/IndexAction.class.php 第 151 行.
+NOTIC: [8] Undefined index: checkinfo /private/var/www/mrenren/Home/Lib/Action/IndexAction.class.php 第 151 行.
+NOTIC: [8] Undefined index: HTTP_REFERER /private/var/www/mrenren/Home/Lib/Action/IndexAction.class.php 第 164 行.
+NOTIC: [8] Undefined index: HTTP_REFERER /private/var/www/mrenren/Home/Lib/Action/IndexAction.class.php 第 164 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: arInventedData /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 24 行.
+NOTIC: [2] Invalid argument supplied for foreach() /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 24 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 279 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 280 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 281 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 282 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 283 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 367 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 368 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 369 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 370 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 371 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 503 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 504 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 505 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 506 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 507 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 584 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 585 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 586 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 587 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 588 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 731 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 732 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 733 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 734 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 735 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 786 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 787 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 788 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 789 行.
+NOTIC: [8] Undefined variable: select /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 790 行.
+NOTIC: [8] Undefined variable: isshow /private/var/www/mrenren/Home/Runtime/Cache/2b6cd52cd0ae5b2c22ea44ba14a3bf98.php 第 830 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.061486s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061549s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000648s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000689s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000572s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000927s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002997s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001155s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001241s ]
+
+[ 2015-08-13T09:58:55+08:00 ] 127.0.0.1 /index.php?s=/Job/job_detail_new/jobid/770
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001104s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001248s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `stj_job` [ RunTime:0.001265s ]
+SQL: SELECT job.title,job.report,job.report_number,job.type,job.employ,job.starttime,job.orderid,job.posttime,job.experience,job.jobplace,job.education,job.endtime,job.joblang,job.employ,com.cpname,com.remark,job.softlytip,com.webname,job.email,job.mobile,com.address,com.stage,com.nature,com.scale,com.brightreg,com.intro,com.bright,job.content,job.workdesc,job.treatment,job.Tariff,job.Jobcate,job.strycate,cas.cascname,com.id as cpid,job.id FROM stj_job job inner join stj_company com ON job.cpid = com.id inner join stj_casclist cas ON job.Jobplace = cas.id  and  job.id=770 LIMIT 1   [ RunTime:0.000436s ]
+SQL: SHOW COLUMNS FROM `stj_cascadedata` [ RunTime:0.001186s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='stage' and datavalue=3 ) LIMIT 1   [ RunTime:0.001324s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='nature' and datavalue=1 ) LIMIT 1   [ RunTime:0.000673s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=1 ) LIMIT 1   [ RunTime:0.000678s ]
+SQL: SHOW COLUMNS FROM `stj_casclist` [ RunTime:0.002193s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='315' ) LIMIT 1   [ RunTime:0.000563s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='joblang' and datavalue=1 ) LIMIT 1   [ RunTime:0.000715s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='738' ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='22' ) LIMIT 1   [ RunTime:0.000136s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=12000 ) LIMIT 1   [ RunTime:0.000830s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=1 ) LIMIT 1   [ RunTime:0.000865s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000932s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 770 [ RunTime:0.000236s ]
+SQL: SHOW COLUMNS FROM `stj_job_collection` [ RunTime:0.001401s ]
+SQL: SELECT * FROM `stj_job_collection` WHERE ( username='tuijianren' and status=1 and j_id=770 ) LIMIT 1   [ RunTime:0.000374s ]
+NOTIC: [8] Undefined index: share /private/var/www/mrenren/Home/Lib/Action/JobAction.class.php 第 114 行.
+NOTIC: [8] unserialize(): Error at offset 0 of 8 bytes /private/var/www/mrenren/Home/Common/common.php 第 291 行.
+NOTIC: [8] unserialize(): Error at offset 0 of 8 bytes /private/var/www/mrenren/Home/Common/common.php 第 291 行.
+SQL: SHOW COLUMNS FROM `stj_company` [ RunTime:0.002750s ]
+SQL: select * from stj_job where stj_job.employ>(select count(*) from stj_record where stj_record.j_id = stj_job.id and audstart=6) and checkinfo='true' and endtime>unix_timestamp(now()) and is_deleted=0 and cpid=225 order by orderid asc, starttime desc [ RunTime:0.001099s ]
+SQL: select com.cpname,com.id cpid from stj_company com where  com.id=225 [ RunTime:0.000388s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000273s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=12000 ) LIMIT 1   [ RunTime:0.001137s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=1 ) LIMIT 1   [ RunTime:0.001093s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.001444s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 770 [ RunTime:0.000233s ]
+SQL: select com.cpname,com.id cpid from stj_company com where  com.id=225 [ RunTime:0.000187s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000154s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=8000 ) LIMIT 1   [ RunTime:0.000807s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000831s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000955s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 780 [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `stj_evaluate` [ RunTime:0.001425s ]
+SQL: SELECT * FROM `stj_evaluate` WHERE ( tag='record' and j_id=770 and status=0 )  [ RunTime:0.000482s ]
+INFO: [ view_parse ] --START--
+SQL: SHOW COLUMNS FROM `stj_job` [ RunTime:0.001539s ]
+SQL: SELECT * FROM `stj_job` WHERE ( id=770 ) LIMIT 1   [ RunTime:0.000321s ]
+INFO: ParseTemplate Behavior ::run [ RunTime:0.049184s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049222s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000270s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000176s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000100s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000826s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000278s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000307s ]
+
+[ 2015-08-13T10:08:56+08:00 ] 127.0.0.1 /index.php?s=/Job/push_resume_new/jobid/770/type/1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000405s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `stj_resume` [ RunTime:0.001475s ]
+SQL: SHOW COLUMNS FROM `stj_resume` [ RunTime:0.001430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `stj_resume` WHERE ( t_id=1141 ) LIMIT 1   [ RunTime:0.000664s ]
+SQL: SELECT res.username,res.id,res.state,res.sex,res.job_id,res.keyid,res.mobile,res.sex FROM stj_resume res WHERE ( t_id=1141 ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `stj_cascadedata` [ RunTime:0.001945s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='zzstart' and datavalue=2 ) LIMIT 1   [ RunTime:0.000725s ]
+SQL: SHOW COLUMNS FROM `stj_record` [ RunTime:0.001562s ]
+SQL: SELECT * FROM `stj_record` WHERE ( bt_id=597 and t_id=1141 and j_id=770 ) LIMIT 1   [ RunTime:0.001147s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='zzstart' and datavalue=0 ) LIMIT 1   [ RunTime:0.001030s ]
+SQL: SELECT * FROM `stj_record` WHERE ( bt_id=596 and t_id=1141 and j_id=770 ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='zzstart' and datavalue=0 ) LIMIT 1   [ RunTime:0.000782s ]
+SQL: SELECT * FROM `stj_record` WHERE ( bt_id=595 and t_id=1141 and j_id=770 ) LIMIT 1   [ RunTime:0.000263s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='zzstart' and datavalue=0 ) LIMIT 1   [ RunTime:0.000777s ]
+SQL: SELECT * FROM `stj_record` WHERE ( bt_id=594 and t_id=1141 and j_id=770 ) LIMIT 1   [ RunTime:0.000347s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='zzstart' and datavalue=2 ) LIMIT 1   [ RunTime:0.000827s ]
+SQL: SELECT * FROM `stj_record` WHERE ( bt_id=593 and t_id=1141 and j_id=770 ) LIMIT 1   [ RunTime:0.000274s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='zzstart' and datavalue=1 ) LIMIT 1   [ RunTime:0.000958s ]
+SQL: SELECT * FROM `stj_record` WHERE ( bt_id=592 and t_id=1141 and j_id=770 ) LIMIT 1   [ RunTime:0.000245s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='zzstart' and datavalue=0 ) LIMIT 1   [ RunTime:0.000650s ]
+SQL: SELECT * FROM `stj_record` WHERE ( bt_id=591 and t_id=1141 and j_id=770 ) LIMIT 1   [ RunTime:0.000257s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='zzstart' and datavalue=1 ) LIMIT 1   [ RunTime:0.000711s ]
+SQL: SELECT * FROM `stj_record` WHERE ( bt_id=590 and t_id=1141 and j_id=770 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='zzstart' and datavalue=0 ) LIMIT 1   [ RunTime:0.000775s ]
+SQL: SELECT * FROM `stj_record` WHERE ( bt_id=588 and t_id=1141 and j_id=770 ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='zzstart' and datavalue=1 ) LIMIT 1   [ RunTime:0.000930s ]
+SQL: SELECT * FROM `stj_record` WHERE ( bt_id=587 and t_id=1141 and j_id=770 ) LIMIT 1   [ RunTime:0.000281s ]
+SQL: SHOW COLUMNS FROM `stj_job` [ RunTime:0.001953s ]
+SQL: SELECT * FROM `stj_job` WHERE ( id=770 ) LIMIT 1   [ RunTime:0.000321s ]
+SQL: select s.id,s.mobile bt_mobile  from stj_resume r join stj_resume s  on r.id=597 and s.mobile=r.mobile  [ RunTime:0.002357s ]
+NOTIC: [8] Undefined variable: where /private/var/www/mrenren/Home/Lib/Action/JobAction.class.php 第 1001 行.
+SQL: SELECT * FROM `stj_record` WHERE ( ( bt_id=597 ) AND j_id=770  ) LIMIT 1   [ RunTime:0.001452s ]
+SQL: SELECT * FROM `stj_job` WHERE ( id=770 ) LIMIT 1   [ RunTime:0.001445s ]
+SQL: select s.id,s.mobile bt_mobile  from stj_resume r join stj_resume s  on r.id=596 and s.mobile=r.mobile  [ RunTime:0.000677s ]
+NOTIC: [8] Undefined variable: where /private/var/www/mrenren/Home/Lib/Action/JobAction.class.php 第 1001 行.
+SQL: SELECT * FROM `stj_record` WHERE ( ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) AND j_id=770  ) LIMIT 1   [ RunTime:0.000443s ]
+SQL: select *  from stj_record where ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) and j_id in (select id from stj_job where cpid = 225)  [ RunTime:0.000469s ]
+SQL: select *  from stj_record  r join stj_job b on  r.j_id = b.id  and ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) group by  b.cpid; [ RunTime:0.004125s ]
+SQL: SELECT * FROM `stj_job` WHERE ( id=770 ) LIMIT 1   [ RunTime:0.000274s ]
+SQL: select s.id,s.mobile bt_mobile  from stj_resume r join stj_resume s  on r.id=595 and s.mobile=r.mobile  [ RunTime:0.000695s ]
+NOTIC: [8] Undefined variable: where /private/var/www/mrenren/Home/Lib/Action/JobAction.class.php 第 1001 行.
+SQL: SELECT * FROM `stj_record` WHERE ( ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) AND j_id=770  ) LIMIT 1   [ RunTime:0.000494s ]
+SQL: select *  from stj_record where ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) and j_id in (select id from stj_job where cpid = 225)  [ RunTime:0.002303s ]
+SQL: select *  from stj_record  r join stj_job b on  r.j_id = b.id  and ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) group by  b.cpid; [ RunTime:0.003927s ]
+SQL: SELECT * FROM `stj_job` WHERE ( id=770 ) LIMIT 1   [ RunTime:0.000372s ]
+SQL: select s.id,s.mobile bt_mobile  from stj_resume r join stj_resume s  on r.id=594 and s.mobile=r.mobile  [ RunTime:0.000779s ]
+NOTIC: [8] Undefined variable: where /private/var/www/mrenren/Home/Lib/Action/JobAction.class.php 第 1001 行.
+SQL: SELECT * FROM `stj_record` WHERE ( ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) AND j_id=770  ) LIMIT 1   [ RunTime:0.000439s ]
+SQL: select *  from stj_record where ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) and j_id in (select id from stj_job where cpid = 225)  [ RunTime:0.000408s ]
+SQL: select *  from stj_record  r join stj_job b on  r.j_id = b.id  and ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) group by  b.cpid; [ RunTime:0.001860s ]
+SQL: SELECT * FROM `stj_job` WHERE ( id=770 ) LIMIT 1   [ RunTime:0.000243s ]
+SQL: select s.id,s.mobile bt_mobile  from stj_resume r join stj_resume s  on r.id=593 and s.mobile=r.mobile  [ RunTime:0.000620s ]
+NOTIC: [8] Undefined variable: where /private/var/www/mrenren/Home/Lib/Action/JobAction.class.php 第 1001 行.
+SQL: SELECT * FROM `stj_record` WHERE ( ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) AND j_id=770  ) LIMIT 1   [ RunTime:0.000384s ]
+SQL: select *  from stj_record where ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) and j_id in (select id from stj_job where cpid = 225)  [ RunTime:0.000449s ]
+SQL: select *  from stj_record  r join stj_job b on  r.j_id = b.id  and ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) group by  b.cpid; [ RunTime:0.003782s ]
+SQL: SELECT * FROM `stj_job` WHERE ( id=770 ) LIMIT 1   [ RunTime:0.000294s ]
+SQL: select s.id,s.mobile bt_mobile  from stj_resume r join stj_resume s  on r.id=592 and s.mobile=r.mobile  [ RunTime:0.000828s ]
+NOTIC: [8] Undefined variable: where /private/var/www/mrenren/Home/Lib/Action/JobAction.class.php 第 1001 行.
+SQL: SELECT * FROM `stj_record` WHERE ( ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) AND j_id=770  ) LIMIT 1   [ RunTime:0.000459s ]
+SQL: select *  from stj_record where ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) and j_id in (select id from stj_job where cpid = 225)  [ RunTime:0.000534s ]
+SQL: select *  from stj_record  r join stj_job b on  r.j_id = b.id  and ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) group by  b.cpid; [ RunTime:0.003351s ]
+SQL: SELECT * FROM `stj_job` WHERE ( id=770 ) LIMIT 1   [ RunTime:0.000358s ]
+SQL: select s.id,s.mobile bt_mobile  from stj_resume r join stj_resume s  on r.id=591 and s.mobile=r.mobile  [ RunTime:0.000737s ]
+NOTIC: [8] Undefined variable: where /private/var/www/mrenren/Home/Lib/Action/JobAction.class.php 第 1001 行.
+SQL: SELECT * FROM `stj_record` WHERE ( ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) AND j_id=770  ) LIMIT 1   [ RunTime:0.000485s ]
+SQL: select *  from stj_record where ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) and j_id in (select id from stj_job where cpid = 225)  [ RunTime:0.000587s ]
+SQL: select *  from stj_record  r join stj_job b on  r.j_id = b.id  and ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) group by  b.cpid; [ RunTime:0.003465s ]
+SQL: SELECT * FROM `stj_job` WHERE ( id=770 ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: select s.id,s.mobile bt_mobile  from stj_resume r join stj_resume s  on r.id=590 and s.mobile=r.mobile  [ RunTime:0.000826s ]
+NOTIC: [8] Undefined variable: where /private/var/www/mrenren/Home/Lib/Action/JobAction.class.php 第 1001 行.
+SQL: SELECT * FROM `stj_record` WHERE ( ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) AND j_id=770  ) LIMIT 1   [ RunTime:0.000386s ]
+SQL: select *  from stj_record where ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) and j_id in (select id from stj_job where cpid = 225)  [ RunTime:0.000382s ]
+SQL: select *  from stj_record  r join stj_job b on  r.j_id = b.id  and ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) group by  b.cpid; [ RunTime:0.001241s ]
+SQL: SELECT * FROM `stj_job` WHERE ( id=770 ) LIMIT 1   [ RunTime:0.000240s ]
+SQL: select s.id,s.mobile bt_mobile  from stj_resume r join stj_resume s  on r.id=588 and s.mobile=r.mobile  [ RunTime:0.000647s ]
+NOTIC: [8] Undefined variable: where /private/var/www/mrenren/Home/Lib/Action/JobAction.class.php 第 1001 行.
+SQL: SELECT * FROM `stj_record` WHERE ( ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) AND j_id=770  ) LIMIT 1   [ RunTime:0.000422s ]
+SQL: select *  from stj_record where ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) and j_id in (select id from stj_job where cpid = 225)  [ RunTime:0.000473s ]
+SQL: select *  from stj_record  r join stj_job b on  r.j_id = b.id  and ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) group by  b.cpid; [ RunTime:0.001462s ]
+SQL: SELECT * FROM `stj_job` WHERE ( id=770 ) LIMIT 1   [ RunTime:0.000293s ]
+SQL: select s.id,s.mobile bt_mobile  from stj_resume r join stj_resume s  on r.id=587 and s.mobile=r.mobile  [ RunTime:0.000763s ]
+NOTIC: [8] Undefined variable: where /private/var/www/mrenren/Home/Lib/Action/JobAction.class.php 第 1001 行.
+SQL: SELECT * FROM `stj_record` WHERE ( ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) AND j_id=770  ) LIMIT 1   [ RunTime:0.000445s ]
+SQL: select *  from stj_record where ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) and j_id in (select id from stj_job where cpid = 225)  [ RunTime:0.000462s ]
+SQL: select *  from stj_record  r join stj_job b on  r.j_id = b.id  and ( bt_id=188 OR bt_id=488 OR bt_id=499 OR bt_id=519 OR bt_id=524 OR bt_id=525 OR bt_id=526 OR bt_id=527 OR bt_id=528 OR bt_id=529 OR bt_id=530 OR bt_id=531 OR bt_id=532 OR bt_id=533 OR bt_id=534 OR bt_id=535 OR bt_id=536 OR bt_id=537 OR bt_id=538 OR bt_id=539 OR bt_id=540 OR bt_id=541 OR bt_id=542 OR bt_id=543 OR bt_id=544 OR bt_id=545 OR bt_id=546 OR bt_id=547 OR bt_id=548 OR bt_id=549 OR bt_id=550 OR bt_id=551 OR bt_id=552 OR bt_id=553 OR bt_id=554 OR bt_id=555 OR bt_id=556 OR bt_id=557 OR bt_id=558 OR bt_id=559 OR bt_id=560 OR bt_id=561 OR bt_id=562 OR bt_id=563 OR bt_id=572 OR bt_id=571 OR bt_id=573 OR bt_id=574 OR bt_id=575 OR bt_id=576 OR bt_id=577 OR bt_id=578 OR bt_id=579 OR bt_id=580 OR bt_id=581 OR bt_id=582 OR bt_id=583 OR bt_id=584 OR bt_id=585 OR bt_id=586 OR bt_id=587 OR bt_id=588 OR bt_id=589 OR bt_id=590 OR bt_id=591 OR bt_id=592 OR bt_id=593 OR bt_id=594 OR bt_id=595 OR bt_id=596 ) group by  b.cpid; [ RunTime:0.001609s ]
+INFO: [ view_parse ] --START--
+SQL: SELECT * FROM `stj_job` WHERE ( id=770 ) LIMIT 1   [ RunTime:0.000423s ]
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017383s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017426s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000295s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000207s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000123s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000273s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000985s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000794s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000834s ]
+
+[ 2015-08-13T10:08:56+08:00 ] 127.0.0.1 /index.php?s=/Job/checkSelectUser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000483s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+SQL: SHOW COLUMNS FROM `stj_record` [ RunTime:0.008989s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `stj_record` WHERE ( j_id='770' and t_id='1141' ) LIMIT 1   [ RunTime:0.000252s ]
+
+[ 2015-08-13T10:09:03+08:00 ] 127.0.0.1 /index.php?s=/Job/add_resume_new/jobid/770
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000386s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000222s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000257s ]
+SQL: SHOW COLUMNS FROM `stj_cascadedata` [ RunTime:0.009614s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='zzstart' )  [ RunTime:0.001347s ]
+INFO: [ view_parse ] --START--
+SQL: SHOW COLUMNS FROM `stj_job` [ RunTime:0.001859s ]
+SQL: SELECT * FROM `stj_job` WHERE ( id=770 ) LIMIT 1   [ RunTime:0.000333s ]
+NOTIC: [8] Undefined index: username /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 211 行.
+NOTIC: [8] Undefined index: username /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 211 行.
+NOTIC: [8] Undefined index: sex /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 217 行.
+NOTIC: [8] Undefined index: age /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 228 行.
+NOTIC: [8] Undefined index: age /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 228 行.
+NOTIC: [8] Undefined index: email /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 232 行.
+NOTIC: [8] Undefined index: email /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 232 行.
+NOTIC: [8] Undefined index: qqnum /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 236 行.
+NOTIC: [8] Undefined index: qqnum /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 236 行.
+NOTIC: [8] Undefined index: state /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 245 行.
+NOTIC: [8] Undefined index: state /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 245 行.
+NOTIC: [8] Undefined index: state /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 245 行.
+NOTIC: [8] Undefined index: mobile /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 253 行.
+NOTIC: [8] Undefined index: mobile /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 253 行.
+NOTIC: [8] Undefined index: keyword /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 259 行.
+NOTIC: [8] Undefined index: keyword /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 259 行.
+NOTIC: [8] Undefined index: personal /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 262 行.
+NOTIC: [8] Undefined index: personal /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 262 行.
+NOTIC: [8] Undefined index: edu /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 265 行.
+NOTIC: [8] Undefined index: edu /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 265 行.
+NOTIC: [8] Undefined index: exper /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 268 行.
+NOTIC: [8] Undefined index: exper /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 268 行.
+NOTIC: [8] Undefined index: zige /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 271 行.
+NOTIC: [8] Undefined index: zige /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 271 行.
+NOTIC: [8] Undefined index: because /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 275 行.
+NOTIC: [8] Undefined index: because /private/var/www/mrenren/Home/Runtime/Cache/2a218221aecffb843a22b109e4c3bea1.php 第 275 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.032885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032940s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000235s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000180s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000090s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000199s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000767s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000385s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000415s ]
+
+[ 2015-08-13T10:11:17+08:00 ] 127.0.0.1 /index.php?s=/Job/job_list
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000454s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000236s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000271s ]
+SQL: SHOW COLUMNS FROM `stj_job` [ RunTime:0.002031s ]
+SQL: select * from stj_job where stj_job.is_show=1 and stj_job.employ>(select count(*) from stj_record where stj_record.j_id = stj_job.id and audstart=6) and checkinfo='true' and endtime>unix_timestamp(now()) and is_deleted=0 order by orderid asc, checktime desc,starttime desc limit 0,10 [ RunTime:0.001264s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=225 [ RunTime:0.000228s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000191s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 770 [ RunTime:0.000188s ]
+SQL: SHOW COLUMNS FROM `stj_cascadedata` [ RunTime:0.001517s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=1 ) LIMIT 1   [ RunTime:0.000806s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000780s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=12000 ) LIMIT 1   [ RunTime:0.000769s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=1 ) LIMIT 1   [ RunTime:0.000920s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=225 [ RunTime:0.000355s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000230s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 780 [ RunTime:0.000221s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=1 ) LIMIT 1   [ RunTime:0.000875s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000954s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=8000 ) LIMIT 1   [ RunTime:0.000761s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000672s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=219 [ RunTime:0.000236s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000211s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 334 [ RunTime:0.000201s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.000861s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000896s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=15000 ) LIMIT 1   [ RunTime:0.000920s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000904s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000210s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000202s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 255 [ RunTime:0.000218s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000918s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000936s ]
+SQL: SHOW COLUMNS FROM `stj_casclist` [ RunTime:0.001868s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1100' ) LIMIT 1   [ RunTime:0.000204s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=20000 ) LIMIT 1   [ RunTime:0.000704s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000722s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=50 [ RunTime:0.000244s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000198s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 189 [ RunTime:0.000243s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.000967s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000755s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='952' ) LIMIT 1   [ RunTime:0.000190s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=8000 ) LIMIT 1   [ RunTime:0.000649s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=6 ) LIMIT 1   [ RunTime:0.000761s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000227s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000198s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 159 [ RunTime:0.000208s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000852s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000816s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1015' ) LIMIT 1   [ RunTime:0.000222s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=40000 ) LIMIT 1   [ RunTime:0.000916s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000756s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000238s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000218s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 158 [ RunTime:0.000217s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000942s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000634s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1014' ) LIMIT 1   [ RunTime:0.000213s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=40000 ) LIMIT 1   [ RunTime:0.000691s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000679s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=88 [ RunTime:0.000200s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000207s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 157 [ RunTime:0.000213s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=4 ) LIMIT 1   [ RunTime:0.000672s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000715s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1013' ) LIMIT 1   [ RunTime:0.000223s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=20000 ) LIMIT 1   [ RunTime:0.000845s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=3 ) LIMIT 1   [ RunTime:0.000838s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=50 [ RunTime:0.000227s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000201s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 141 [ RunTime:0.000208s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.000984s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000859s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='1000' ) LIMIT 1   [ RunTime:0.000192s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=15000 ) LIMIT 1   [ RunTime:0.000741s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000669s ]
+SQL: select com.cpname,com.scale,com.id cpid from stj_company com where  com.id=57 [ RunTime:0.000215s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000179s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 122 [ RunTime:0.000196s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=2 ) LIMIT 1   [ RunTime:0.000841s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=3 ) LIMIT 1   [ RunTime:0.000833s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='731' ) LIMIT 1   [ RunTime:0.000253s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=12000 ) LIMIT 1   [ RunTime:0.000677s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.000714s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011586s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011628s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000184s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000152s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000086s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000174s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000663s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000271s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000299s ]
+
+[ 2015-08-13T10:11:24+08:00 ] 127.0.0.1 /index.php?s=/Job/job_detail_new/jobid/770
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000356s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000238s ]
+SQL: SHOW COLUMNS FROM `stj_job` [ RunTime:0.001411s ]
+SQL: SELECT job.title,job.report,job.report_number,job.type,job.employ,job.starttime,job.orderid,job.posttime,job.experience,job.jobplace,job.education,job.endtime,job.joblang,job.employ,com.cpname,com.remark,job.softlytip,com.webname,job.email,job.mobile,com.address,com.stage,com.nature,com.scale,com.brightreg,com.intro,com.bright,job.content,job.workdesc,job.treatment,job.Tariff,job.Jobcate,job.strycate,cas.cascname,com.id as cpid,job.id FROM stj_job job inner join stj_company com ON job.cpid = com.id inner join stj_casclist cas ON job.Jobplace = cas.id  and  job.id=770 LIMIT 1   [ RunTime:0.000536s ]
+SQL: SHOW COLUMNS FROM `stj_cascadedata` [ RunTime:0.000980s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='stage' and datavalue=3 ) LIMIT 1   [ RunTime:0.000966s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='nature' and datavalue=1 ) LIMIT 1   [ RunTime:0.000792s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='scale' and datavalue=1 ) LIMIT 1   [ RunTime:0.000768s ]
+SQL: SHOW COLUMNS FROM `stj_casclist` [ RunTime:0.001151s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='315' ) LIMIT 1   [ RunTime:0.000310s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='joblang' and datavalue=1 ) LIMIT 1   [ RunTime:0.001615s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='738' ) LIMIT 1   [ RunTime:0.000315s ]
+SQL: SELECT * FROM `stj_casclist` WHERE ( id='22' ) LIMIT 1   [ RunTime:0.000215s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=12000 ) LIMIT 1   [ RunTime:0.000770s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=1 ) LIMIT 1   [ RunTime:0.000672s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000723s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 770 [ RunTime:0.000267s ]
+SQL: SHOW COLUMNS FROM `stj_job_collection` [ RunTime:0.001851s ]
+SQL: SELECT * FROM `stj_job_collection` WHERE ( username='tuijianren' and status=1 and j_id=770 ) LIMIT 1   [ RunTime:0.000346s ]
+NOTIC: [8] Undefined index: share /private/var/www/mrenren/Home/Lib/Action/JobAction.class.php 第 114 行.
+NOTIC: [8] unserialize(): Error at offset 0 of 8 bytes /private/var/www/mrenren/Home/Common/common.php 第 291 行.
+NOTIC: [8] unserialize(): Error at offset 0 of 8 bytes /private/var/www/mrenren/Home/Common/common.php 第 291 行.
+SQL: SHOW COLUMNS FROM `stj_company` [ RunTime:0.007368s ]
+SQL: select * from stj_job where stj_job.employ>(select count(*) from stj_record where stj_record.j_id = stj_job.id and audstart=6) and checkinfo='true' and endtime>unix_timestamp(now()) and is_deleted=0 and cpid=225 order by orderid asc, starttime desc [ RunTime:0.001089s ]
+SQL: select com.cpname,com.id cpid from stj_company com where  com.id=225 [ RunTime:0.000320s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000336s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=12000 ) LIMIT 1   [ RunTime:0.001209s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=1 ) LIMIT 1   [ RunTime:0.001015s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000905s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 770 [ RunTime:0.000220s ]
+SQL: select com.cpname,com.id cpid from stj_company com where  com.id=225 [ RunTime:0.000249s ]
+SQL: select cas.cascname from stj_casclist cas where cas.id=22 [ RunTime:0.000223s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='treatment' and datavalue=8000 ) LIMIT 1   [ RunTime:0.000893s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='experience' and datavalue=2 ) LIMIT 1   [ RunTime:0.001277s ]
+SQL: SELECT * FROM `stj_cascadedata` WHERE ( datagroup='education' and datavalue=2 ) LIMIT 1   [ RunTime:0.000751s ]
+SQL: select count(*) as num from stj_record where stj_record.j_id = 780 [ RunTime:0.000214s ]
+SQL: SHOW COLUMNS FROM `stj_evaluate` [ RunTime:0.001155s ]
+SQL: SELECT * FROM `stj_evaluate` WHERE ( tag='record' and j_id=770 and status=0 )  [ RunTime:0.000214s ]
+INFO: [ view_parse ] --START--
+SQL: SHOW COLUMNS FROM `stj_job` [ RunTime:0.001268s ]
+SQL: SELECT * FROM `stj_job` WHERE ( id=770 ) LIMIT 1   [ RunTime:0.000306s ]
+INFO: ParseTemplate Behavior ::run [ RunTime:0.022193s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022238s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000295s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000203s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000125s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000284s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000993s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000354s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000383s ]
+

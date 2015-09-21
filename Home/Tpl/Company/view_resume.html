@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>人人猎</title>
+        <link rel="stylesheet" type="text/css" href="/Public/new-css/new-company.css">
+        <link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css">
+        <script type="text/javascript" src="/Public/new-js/iscroll.js"></script>
+        <script type="text/javascript" src="/Public/new-js/jquery-1.11.0.min.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="format-detection" content="telephone=no,email=no"/>
+        <meta name="full-screen" content="yes">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    </head>
+    <body>
+        
+        <include file='Public:header_com' />
+        <include file='Public:head_nav_com' />
+        <div class="wrap">
+            <include file='Public:nav_com' />
+
+            <section class="content myresume" style="padding-bottom:20px;display:block">
+                <div style="margin-bottom:5px;">
+                    <span class="h3 dis-block">基本信息</span>
+                </div>
+                <div class="bd clearfix resume-divlist">
+                    <div class="wh-center">
+                        <em class="fl-lef dis-inlin dis-block l">姓&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp名：</em><span class="r fl-lef dis-block dis-inlin wk"><?php echo $result['username']?></span>
+                    </div>
+                </div>
+
+                <div class="bd clearfix resume-divlist">
+                    <div class="wh-center">
+                        <em class="fl-lef dis-inlin dis-block l">性&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp别：</em><span class="r fl-lef dis-block dis-inlin wk"><?php echo $result['sexdata']?></span>
+                    </div>
+                </div>
+
+                <div class="bd clearfix resume-divlist">
+                    <div class="wh-center">
+                        <em class="fl-lef dis-inlin dis-block l">年&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp龄：</em><span class="r fl-lef dis-block dis-inlin wk"><?php echo $result['agedata']?></span>
+                    </div>
+                </div>
+
+                <div class="bd clearfix resume-divlist">
+                    <div class="wh-center">
+                        <em class="fl-lef dis-inlin dis-block l">邮&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp箱：</em><span class="r fl-lef dis-block dis-inlin wk"><?php echo $result['email']?></span>
+                    </div>
+                </div>
+
+                <div class="bd clearfix resume-divlist">
+                    <div class="wh-center">
+                        <em class="fl-lef dis-inlin dis-block l">Q&nbspQ号码：</em><span class="r fl-lef dis-block dis-inlin wk"><?php echo $result['qqnum']?></span>
+                    </div>
+                </div>
+
+                <div class="bd clearfix resume-divlist">
+                    <div class="wh-center">
+                        <em class="fl-lef dis-inlin dis-block l">在职状态：</em><span class="r fl-lef dis-block dis-inlin wk"><?php echo $result['statedata']?></span>
+                    </div>
+                </div>
+
+                <div class="bd clearfix resume-divlist">
+                    <div class="wh-center">
+                        <em class="fl-lef dis-inlin dis-block l">联系电话：</em><span class="r fl-lef dis-block dis-inlin wk"><?php echo $result['mobile']?></span>
+                    </div>
+                </div>
+
+                <div class="bd clearfix resume-divlist">
+                    <div class="wh-center">
+                        <em class="fl-lef dis-inlin dis-block l">自我评价：</em><span class="r fl-lef dis-block dis-inlin wk"><?php echo $result['personal']?></span>
+                    </div>
+                </div>
+
+                <div class="bd clearfix resume-divlist">
+                    <div class="wh-center">
+                        <em class="fl-lef dis-inlin dis-block l">教育经历：</em><span class="r fl-lef dis-block dis-inlin wk"><?php echo $result['educationdata']?></span>
+                    </div>
+                </div>
+
+                <div class="bd clearfix resume-divlist">
+                    <div class="wh-center">
+                        <em class="fl-lef dis-inlin dis-block l">工作经历：</em><span class="r fl-lef dis-block dis-inlin wk"><?php echo $result['experiencedata']?></span>
+                    </div>
+                </div>
+
+                <div class="bd clearfix resume-divlist">
+                    <div class="wh-center">
+                        <em class="fl-lef dis-inlin dis-block l">资格证书：</em><span class="r fl-lef dis-block dis-inlin wk"><?php echo $result['zige']?></span>
+                    </div>
+                </div>
+
+                <div class="bd clearfix resume-divlist">
+                    <div class="wh-center">
+                        <em class="fl-lef dis-inlin dis-block l">推荐理由：</em><span class="r fl-lef dis-block dis-inlin wk"><?php echo $result['because']?></span>
+                    </div>
+                </div>
+
+                <div class="bd clearfix resume-divlist">
+                    <a class="btn" href='javascript:history.go(-1);'>返回</a>
+                </div>
+            </section>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#m-tre").click(function () {
+                    if ($("#m-tre").hasClass("current")) {
+                        $(".m-phone").hide();
+                        $(this).removeClass("current").removeClass("m");
+                    } else {
+                        $(".m-phone").show();
+                        $(this).addClass("current").addClass("m");
+                    }
+                })
+
+                $("input").click(function () {
+                    if (document.activeElement.tagName == 'INPUT') {
+                        $(".fixed").css({'position': 'absolute', 'top': '0'});
+                    } else if (document.activeElement.tagName !== 'INPUT') {
+                        $(".fixed").css('position', 'fixed');
+                    }
+                })
+
+            })
+
+            //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        </script>
+    </body>
+</html>

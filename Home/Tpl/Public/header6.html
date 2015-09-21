@@ -1,0 +1,49 @@
+<header class="headder">
+    <a class="nav_btn cur"><img src="/Public/images/nav_btn.png" alt=""></a>
+    <php>
+        if(!empty($_SESSION['userinfo']) || !empty($_SESSION['cuserinfo']) ){
+    </php>
+    <ul>
+        <span class="r" style='font-size:16px;'></span>
+    </ul>
+    <php>
+        }else{
+    </php>
+    <ul>
+        <a href="/index.php?s=/Login/login">登录</a>
+        <span>|</span>
+        <a href="/index.php?s=/Reg/reg">注册</a>
+    </ul>
+    <php>
+        }
+    </php>
+    <span style="display:none;"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254515209'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1254515209%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></span>
+</header>
+<script>
+     //$('.nav').css({'height':'0px!important'})
+     $('.headder .r').click(function(){
+            if($(this).hasClass("current")){
+                $('.nav').animate({height:'0px'},200);
+                setTimeout(function(){
+                    $('.nav').hide()
+                },200) ;
+                setTimeout(function(){
+                    $(window).resize();
+                },250);
+                // $(".back-top").css({'padding-bottom':'40px;'});
+                $(this).removeClass('m')
+                $(this).removeClass("current");
+                // alert(23)
+            }else{
+                $('.nav').height(0)
+                $('.nav').show();
+                $('.nav').animate({height:'48px'},200);
+                $(window).resize();
+                $(this).addClass('m')
+                $(this).addClass("current");
+                //$(".back-top").css({'padding-bottom':'0px;'});
+            }
+            //alert($('.nav').height())
+        })
+
+</script>

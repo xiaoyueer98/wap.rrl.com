@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>com-index</title>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/new-company.css">
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css">
+	<script type="text/javascript" src="/Public/new-js/iscroll.js"></script>
+    <script type="text/javascript" src="/Public/js/zepto.min.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="full-screen" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+	<header class="com-head fixed">
+		<div class="con">
+			<span class="l dis-block"></span>
+			<span class="c dis-block">完善资料</span>
+			<span class="r bc unback dis-block">保存</span>
+		</div>
+	</header>
+	<p class="error">对不起您填写的信息有误，请重新填写</p>
+	<div class="wrap">
+		<section class="content m-content1" style="padding-bottom:20px;display:block">
+			<div class="com-list">
+				<div class="">
+					<div class="list"><em class="" style="width:100%;">小提示:更换后，下次可使用新手机号码登录</em></div>
+				</div>
+				<div class="">
+					<div class="list" id="com-nature"><em class="wh90">当前手机号码 :</em><span class="wh100 cl2">18500521769</span></div>
+				</div>
+				<div class="bd">
+					<div class="list" id="com-size"><em class="wh90">新手机号码：</em><input class="wh100" type="text" autofocus="autofocus"></div>
+				</div>
+
+				<div class="bd">
+					<div class="list" id="com-size"><em style="width:50px;">验证码：</em><input class="wh100" type="text"><span class="hqyzm">免费获取验证码</span></div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript">
+    $(document).ready(function(){
+			$("input").click(function(){
+				if(document.activeElement.tagName == 'INPUT'){
+					$(".fixed").css({'position': 'absolute','top':'0'}); 
+				} else if(document.activeElement.tagName !== 'INPUT'){  
+					$(".fixed").css('position', 'fixed');
+				}
+			})
+			
+    })
+
+	
+    //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+</body>
+</html>

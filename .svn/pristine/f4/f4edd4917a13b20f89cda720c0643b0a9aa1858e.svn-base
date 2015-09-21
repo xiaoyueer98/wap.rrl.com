@@ -1,0 +1,384 @@
+<?php
+
+class IndexAction extends Action {
+
+        public function index() {
+
+                //推荐成功虚拟列表
+//                $arInventedData = M("invented_data")->order("created_at DESC")->select();
+//                foreach ($arInventedData as &$data) {
+//                        $data['title'] = strip_tags($data[content]);
+//                }
+//                $this->assign("arInventedData", $arInventedData);
+
+                $mOb = new JobModel;
+                $limit = "0,10";
+                $result = $mOb->new_job_list($limit); //得到首页职位列表
+
+                //如果是企业用户
+                if (!empty($_SESSION['cuserinfo'])) {
+
+                        $cUserInfo = M("company")->where("id='{$_SESSION['cuserinfo']['userid']}'")->find();
+                        
+                        //判断基本资料是否填写完整
+                        if ($cUserInfo['cpname'] && isset($cUserInfo['mobile']) && $cUserInfo['email'] )
+                                $leftNavCompleted['userinfo_completed'] = true;
+                        else
+                                $leftNavCompleted['userinfo_completed'] = false;
+
+                        //判断合同
+                        if (isset($cUserInfo['contract']) && ($cUserInfo['checkcontract'] == 1))
+                                $leftNavCompleted['contract_completed'] = true;
+                        else
+                                $leftNavCompleted['contract_completed'] = false;
+
+                        //判断是否发布过职位
+                        $isJob = M("job")->where("cpid='" . $cUserInfo['id'] . "'")->find();
+                        if (!empty($isJob))
+                                $leftNavCompleted['job_completed'] = true;
+                        else
+                                $leftNavCompleted['job_completed'] = false;
+
+                        //用户已经注册天数
+                        $regTime = intval((time() - $cUserInfo['regtime']) / (24 * 3600));
+                        
+                        //候选人简历数量
+                        $arResume = M()->query("select * from stj_record r join stj_job b on r.j_id=b.id and r.status=2 and b.cpid=" . $cUserInfo['id']);
+
+                        $resumeCount = count($arResume); //判断候选人简历数量（只要审核通过）
+                        $leftNavCompleted['record_completed'] = false; //判断是否有未查看的候选人(审核通过且is_view=0的)
+                        $newRecordCount = 0; //判断新收到候选人数量（审核通过且is_view=0的）
+                        $isSinkCount = 0; //判断进入待付款状态的候选人数量（已入职未打款）
+                        $isSucCount = 0; //累计入职数量
+
+                        foreach ($arResume as $v) {
+                                if ($v['is_view'] == 0) {
+                                        $leftNavCompleted['record_completed'] = true;
+                                        $newRecordCount++;
+                                }
+                                if ($v['audstart'] == 6) {
+                                        $isSucCount++;
+                                        if ($v['sink'] == 1) {
+                                                $isSinkCount++;
+                                        }else{
+                                                $jids .= ",".$v['j_id'];
+                                        }
+                                }
+                               
+                        }
+                        $where = "(".substr($jids,1).")";
+                        //累计支付费用
+                        $arJobFee = M("job")->query("select sum(Tariff) as count from stj_job where id in ".$where);
+                        
+                        $sumFee = intval($arJobFee[0]['count']);
+
+                        //判断发布职位数量
+                        $jobCount = M("job")->where("cpid='" . $cUserInfo['id'] . "'")->count();
+                        
+                        $this->assign("sumFee", $sumFee);
+                        $this->assign("isSucCount", $isSucCount);
+                        $this->assign("isSinkCount", $isSinkCount);
+                        $this->assign("newRecordCount", $newRecordCount);
+                        $this->assign("regTime", $regTime);
+                        $this->assign("resumeCount", $resumeCount);
+                        $this->assign("jobCount", $jobCount);
+                        $this->assign("cuserinfo", $cUserInfo);
+                        $this->assign("leftNavCompleted", $leftNavCompleted);
+                 
+                //如果是推荐人用户
+                } elseif (!empty($_SESSION['userinfo'])) {
+                        
+                        //更新登陆时间
+                        $this->get_login_time();
+                        
+                        $userInfo = M("member")->where("id='{$_SESSION['userinfo']['userid']}'")->find();
+                        
+                        //是否验证手机号
+                        if($userInfo['mobile']){
+                                $Info['is_mobile'] = true;
+                               //是否完善资料
+                                if($userInfo['cnname'] && $userInfo['email']){
+                                        $Info['userinfo_completed'] = true;
+                                }else{
+                                        $Info['userinfo_completed'] = false;
+                                } 
+                        }else{
+                                 $Info['is_mobile'] = false;
+                                 $Info['userinfo_completed'] = false;
+                        } 
+                                                
+                        //用户已经注册天数
+                        $regTime = intval((time() - $userInfo['regtime']) / (24 * 3600));
+                        
+                        //简历数量
+                        $resumeCount = M("resume")->where("t_id=".$userInfo['id'])->count();
+                        
+                        //是否上传过简历
+                        if($resumeCount == 0){
+                               $Info['is_resume'] = false;
+                        }else{
+                               $Info['is_resume'] = true;
+                        }
+                        
+                        //推荐次数
+                        $arRecord = M("record")->where("t_id=".$userInfo['id'])->select();
+                        $recordCount = count($arRecord);
+                        
+                        //是否推荐过候选人
+                        if($recordCount == 0){
+                               $Info['is_record'] = false;
+                        }else{
+                               $Info['is_record'] = true;
+                        }
+                        //累计收益（只要面试通过就算）
+                        $feeCount = 0;
+                        
+                        //正在面试中(已入职以前的面试状态且已经审核通过)
+                        $isAudstartCount = 0;
+                        
+                        //进入代付款状态的候选人数量（已入职且付款状态为待付款）
+                        $isSinkCount = 0;
+                        
+                        foreach($arRecord as $v){
+                                if($v['audstart'] == 6){
+                                        $arJob = M("job")->where("id=".$v['j_id'])->find();
+                                        //招聘资费处理
+                                        if ($arJob['Tariff'] > 10)
+                                        {
+
+                                                $arJob['Tariff'] = floor($arJob['Tariff'] * 0.8 / 100) * 100;
+                                        }
+                                        else
+                                        {
+                                                $arJob['Tariff'] = floor($arJob['treatment'] * $arJob['Tariff'] * 12 * 0.8 / 100) * 100;
+                                        }
+                                        $feeCount +=  $arJob['Tariff'];
+                                        if($v['sink'] = 1){
+                                                $isSinkCount++;
+                                        }
+                                }
+                                if($v['audstart'] < 6 and $v['checkinfo'] == "true"){
+                                        $isSinkCount ++;
+                                }
+                                
+                        }
+                        
+                        $this -> assign("Info", $Info);
+                        $this -> assign("isSinkCount", $isSinkCount);
+                        $this -> assign("isAudstartCount", $isAudstartCount);
+                        $this -> assign("feeCount", $feeCount);
+                        $this -> assign("recordCount", $recordCount);
+                        $this -> assign("resumeCount", $resumeCount);
+                        $this -> assign("regTime", $regTime);
+                        $this -> assign("arUserinfo", $userInfo);
+                        
+                } 
+                $this->assign("result", $result);
+                $this->display("Index/indexed");
+        }
+
+        /*
+         * 获取用户登录页面
+         */
+
+        public function get_login_time() {
+
+                //如果是登陆更新用户的登陆时间
+//                var_dump(date("Y-m-d H:i:s", $_COOKIE["record_time"]));
+
+                if (!$_COOKIE["record_time"]) {
+                        //查看今天是否已经更新过这个时间
+                        $arMember = M("member")->where("id=" . $_SESSION['userinfo']['userid'])->find();
+                        if (time() - $arMember['logintime'] >= 3600 * 24) {
+                                //修改登陆信息
+                                $arUserLogin = array("logintime" => time(), "loginip" => $_SERVER["REMOTE_ADDR"]);
+                                M("member")->where("id=" . $_SESSION['userinfo']['userid'])->save($arUserLogin);
+                                setcookie("record_time", time(), time() + 3600 * 24, "/");
+                        } else {
+                                setcookie("record_time", time(), $arMember['logintime'] + 3600 * 24, "/");
+                        }
+                }
+//                setcookie("record_time","",time()-1,"/");
+        }
+
+        public function index_back() {
+
+                //推荐成功虚拟列表
+                $arInventedData = M("invented_data")->order("created_at DESC")->select();
+                foreach ($arInventedData as &$data) {
+                        $data['title'] = strip_tags($data[content]);
+                }
+                $this->assign("arInventedData", $arInventedData);
+
+                $mOb = new JobModel;
+                $limit = "0,10";
+
+                $result = $mOb->new_job_list($limit); //得到职位列表
+
+                if (!$_SESSION['cuserinfo']) {
+                        if (!empty($_SESSION['userinfo'])) {
+                                $this->get_login_time();
+                        }
+                        $this->assign("result", $result);
+                        $this->display("/Index/indexed");
+                } else {
+                        $cUserInfo = M("company")->where("id='{$_SESSION['cuserinfo']['userid']}'")->find();
+
+                        //判断基本资料是否填写完整
+                        if ($cUserInfo['cpname'] && isset($cUserInfo['mobile']))
+                                $leftNavCompleted['userinfo_completed'] = true;
+                        else
+                                $leftNavCompleted['userinfo_completed'] = false;
+
+                        //判断合同
+                        if (isset($cUserInfo['contract']) && ($cUserInfo['checkcontract'] == 1))
+                                $leftNavCompleted['contract_completed'] = true;
+                        else
+                                $leftNavCompleted['contract_completed'] = false;
+
+                        //判断是否发布过职位
+                        $isJob = M("job")->where("cpid='" . $cUserInfo['id'] . "'")->find();
+                        if (!empty($isJob))
+                                $leftNavCompleted['job_completed'] = true;
+                        else
+                                $leftNavCompleted['job_completed'] = false;
+
+                        //判断是否有候选人
+                        //判断是否有人入职或正在面试
+                        $sql = "select r.id from stj_record as r left join stj_job as j on r.j_id=j.id where j.cpid='$cUserInfo[id]'";
+                        $jlist = M("record")->query($sql);
+                        if (!empty($jlist))
+                                $leftNavCompleted['record_completed'] = true;
+                        else
+                                $leftNavCompleted['record_completed'] = false;
+
+                        $this->assign("leftNavCompleted", $leftNavCompleted);
+//                        $this->display("Company/index");
+                        $this->assign("result", $result);
+                        $this->display("Index/indexed");
+                }
+        }
+
+        /*
+         * 获取首页职位列表
+         * 
+         * 参数   post
+         *           page
+         *           number
+         * 返回值  json
+         *           count
+         *           result
+         * 
+         */
+
+        public function get_job_list() {
+
+                $page = $_POST['page'];
+                $size = $_POST['number'];
+                $title = $_POST['condition'];
+                $start = ($page - 1) * $size;
+
+
+                $mOb = new JobModel;
+                $num = intval($mOb->new_job_count($title)); //得到列表总条数
+
+                $limit = "$start,$size";
+                $result = $mOb->new_job_list($limit, $title); //得到职位列表
+//                echo "<pre>";var_dump($result);echo "</pre>";
+
+                if (empty($result)) {
+
+                        $result = array();
+                }
+//                foreach ($result as &$v) {
+//                        unset($v['content']);
+//                        unset($v['workdesc']);
+//                        unset($v['softlytip']);
+//                        unset($v['jobbright']);
+//                        unset($v['email']);
+//                        unset($v['match_company']);
+//                        unset($v['match_title']);
+//                        unset($v['match_skill']);
+//                        unset($v['match_industry']);
+//                        unset($v['is_match']);
+//                        unset($v['orderid']);
+//                        unset($v['joblang']);
+//                        unset($v['checkinfo']);
+//                        unset($v['is_deleted']);
+//                        unset($v['newstatus']);
+//                        unset($v['is_view']);
+//                        unset($v['meth']);
+//                        unset($v['expertid']);
+//                        unset($v['report']);
+//                }
+                $data = array(
+                    'count' => $num,
+                    'result' => $result,
+                );
+
+                echo json_encode($data);
+        }
+
+        /*
+         * 意见返回
+         */
+
+        public function feedback() {
+                $lArr = array(
+                    array("name" => "回到首页", "url" => "/", "img" => "/Public/new-images/head-icon/m-icon1.png"),
+                    array("name" => "意见反馈", "url" => "/index.php?s=/Index/feedback", "img" => "/Public/new-images/head-icon/feedback.png"),
+                );
+                $this->assign("lArr", $lArr);
+                $this->assign("header_title", "意见反馈");
+                $this->display("feedback");
+        }
+
+        /*
+         * 意见返回
+         */
+
+        public function addfeedback() {
+                $feedbackInfo = array();
+                $feedbackInfo['contacter'] = trim($_POST['fkusername']);
+                $feedbackInfo['mobile'] = trim($_POST['fkmobile']);
+                $feedbackInfo['email'] = trim($_POST['fkemail']);
+                $feedbackInfo['content'] = trim($_POST['fkcontent']);
+                $feedbackInfo['created_at'] = $feedbackInfo['updated_at'] = time();
+
+                if (empty($_SESSION['add_feedback']) || (time() - $_SESSION['add_feedback']) > 5 * 60) {
+                        M("feedback")->add($feedbackInfo);
+                        $_SESSION['add_feedback'] = time();
+                        echo json_encode(array("code" => 200, "msg" => "感谢您的宝贵意见或者建议！"));
+                        exit();
+                } else {
+                        echo json_encode(array("code" => 500, "msg" => "您刚提交宝贵意见或者建议，请坐下歇会！"));
+                        exit();
+                }
+        }
+
+        /*
+         * Q&A
+         */
+
+        public function qa() {
+
+                $arQAlist1 = M("qa")->where("type=1 and status=1")->order("orderid desc,id asc")->select();
+                $arQAlist2 = M("qa")->where("type=2 and status=1")->order("orderid desc,id asc")->select();
+                $this->assign("arQAlist1", $arQAlist1);
+                $this->assign("arQAlist2", $arQAlist2);
+
+                $share['url'] = "http://m.renrenlie.com/index.php?s=/Index/qa";
+                $share['title'] = "Q&A解答您的疑惑";
+                $share['description'] = "Q&A中是一些常见问题，希望帮助解答您的问题。";
+                $this->assign("share", $share);
+
+                $lArr = array(
+                    array("name" => "回到首页", "url" => "/", "img" => "/Public/new-images/head-icon/m-icon1.png"),
+                    array("name" => "Q&nbsp;&nbsp;A", "url" => "/index.php?s=/Index/qa", "img" => "/Public/new-images/head-icon/qa.png"),
+                );
+                $this->assign("lArr", $lArr);
+                $this->assign("header_title", "Q&nbsp;&&nbsp;A");
+                $this->display("qa");
+        }
+
+}

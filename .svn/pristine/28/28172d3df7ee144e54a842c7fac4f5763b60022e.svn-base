@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>付款记录</title>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/new-company.css">
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css">
+	<script type="text/javascript" src="/Public/new-js/iscroll.js"></script>
+    <script type="text/javascript" src="/Public/js/zepto.min.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="full-screen" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+
+	<header class="com-head fixed">
+		<div class="con">
+			<span class="l dis-block"></span>
+			<span class="c dis-block">付款记录</span>
+			<span class="r dis-block"></span>
+		</div>
+	</header>
+	<p class="error" style="display:none">添加招聘资费成功</p>
+	<div class="wrap">
+		<ul id="nav" class="nav">
+		    <li><a href="#"><span class="sp0 sp0_2"></span><b class='m'>完善资料</b></a></li>
+		    <li><a href="#"><span class="sp1"></span><b>签订合同</b></a></li>
+		    <li><a href="#"><span class="sp2"></span><b>发布职位</b></a></li>
+		    <li><a href="#"><span class="sp3"></span><b>查看候选人</b></a></li>
+		    <li><a href="#"><span class="sp4"></span><b>入职管理</b></a></li>
+		</ul>
+
+		<section class="is-rct resume" style="padding-bottom:20px;display:block">
+			<div class="pd-tb bd resume-list payment-list2">
+				<div class="rcmt-list back-none">
+					<div class="div-list odiv1 clearfix">
+						<span class="fl-lef">候选人：</span>
+						<span class="fl-lef">冯辉</span>
+						<div class="fl-rig">
+							<span class="fl-lef">招聘费：</span>
+							<span class="fl-lef red">2000</span>
+						</div>
+					</div>
+					<div class="div-list odiv2 clearfix">
+						<span class="fl-lef">面试职位：</span>
+						<span class="fl-lef">高级UI设计师</span>
+                                                
+					</div>
+					<div class="div-list odiv3 clearfix">
+                                                <span class="fl-lef">推荐人：</span>
+						<span class="fl-lef">leo plus</span>
+                                                
+						
+					</div>
+					<div class="div-list odiv4 clearfix">
+						
+					</div>
+					<div class="div-list odiv4 clearfix">
+						<!--<span class="fl-lef">在职状态：</span>-->
+						<!--<span class="fl-lef">离职随时到岗</span>-->
+                                                
+							<span class="fl-fl">面试状态：</span>
+							<span class="fl-fl">以入职</span>
+						
+                                                <div class="fl-rig">
+							<span class="fl-lef">付款记录：</span>
+							<span class="fl-lef">已付款</span>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			
+		</section>
+	</div>
+	<script type="text/javascript">
+    $(document).ready(function(){
+			var odiv4 = $(".rcmt-list .odiv4").width();
+			var mmWidth = $(".rcmt-list .mm").width();
+			$(".rcmt-list .eject").width( odiv4 - (mmWidth+5))
+			$("#m-tre").click(function(){
+				if($("#m-tre").hasClass("current")){
+					$(".m-phone").hide();
+					$(this).removeClass("current").removeClass("m");
+				}else{
+					$(".m-phone").show();
+					$(this).addClass("current").addClass("m");
+				}
+			})
+
+			$("input").click(function(){
+				if(document.activeElement.tagName == 'INPUT'){
+					$(".fixed").css({'position': 'absolute','top':'0'}); 
+				} else if(document.activeElement.tagName !== 'INPUT'){  
+					$(".fixed").css('position', 'fixed');
+				}
+			})
+			
+    })
+	
+    //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>往期招聘</title>
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/new-company.css">
+	<link rel="stylesheet" type="text/css" href="/Public/new-css/reset.css">
+	<script type="text/javascript" src="/Public/new-js/iscroll.js"></script>
+    <script type="text/javascript" src="/Public/js/zepto.min.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="full-screen" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+	<div class="mask" style="display:none"></div>
+	<div class="com-alt rcmd-fee" style="display:none">
+		<a href="javascript:void(0);" class="cold"></a>
+		<div class="text">
+			<em>推荐费：</em>
+			<span><input type="text"><b>00</b></span>
+			<i>元</i>
+		</div>
+		<p>馨提示：增加推荐费，可以刺激推荐人的兴趣及动力，缩短招聘周期。推荐费只可以上调，不可以下调。</p>
+		<span class="btn2" style="">确定</span>
+	</div>
+	<div class="com-alt modify-fee" style="display:none">
+		<a href="javascript:void(0);" class="cold"></a>
+		<div class="alt-head">修改招聘资费</div>
+		<p>您确定修改此招聘的费用为100元吗？</p>
+		<span class="btn2" style="">确定</span>
+	</div>
+	<header class="com-head fixed">
+		<div class="con">
+			<span class="l dis-block"></span>
+			<span class="c dis-block">往期招聘</span>
+			<span class="r dis-block"></span>
+		</div>
+	</header>
+	<p class="error" style="display:none">添加招聘资费成功</p>
+	<div class="wrap">
+		<ul id="nav" class="nav">
+		    <li><a href="#"><span class="sp0 sp0_2"></span><b class='m'>完善资料</b></a></li>
+		    <li><a href="#"><span class="sp1"></span><b>签订合同</b></a></li>
+		    <li><a href="#"><span class="sp2"></span><b>发布职位</b></a></li>
+		    <li><a href="#"><span class="sp3"></span><b>查看候选人</b></a></li>
+		    <li><a href="#"><span class="sp4"></span><b>入职管理</b></a></li>
+		</ul>
+
+		<section class="is-rct" style="padding-bottom:20px;display:block">
+			<div class="con-rcmt bd clearfix">
+				<div class="l rcmt-list">
+					<div class="div-list odiv1 clearfix">
+						<span class="fl-lef">高级UI设计师</span>
+						<div class="fl-rig">
+							<span class="fl-lef">招聘资费：</span>
+							<span class="fl-lef">￥8000</span>
+						</div>
+					</div>
+					<div class="div-list odiv2 clearfix">
+						<span class="fl-lef">状态：<i>正在审核</i></span>
+					</div>
+					<div class="div-list odiv3 clearfix">
+						<span class="fl-lef">截止日期：</span>
+						<span class="fl-lef">2015-06-30</span>
+						<div class="fl-rig dis-block">
+							<span class="fl-fl">推荐人数：</span>
+							<span class="fl-fl">50</span>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript">
+    $(document).ready(function(){
+			/*$(".mask").click( function(){
+				$(".com-alt").hide();
+				$(".com-alt2").hide();
+				$(".mask").hide();
+			})
+			*/
+
+			$("#m-tre").click(function(){
+				if($("#m-tre").hasClass("current")){
+					$(".m-phone").hide();
+					$(this).removeClass("current").removeClass("m");
+				}else{
+					$(".m-phone").show();
+					$(this).addClass("current").addClass("m");
+				}
+			})
+
+			$("input").click(function(){
+				if(document.activeElement.tagName == 'INPUT'){
+					$(".fixed").css({'position': 'absolute','top':'0'}); 
+				} else if(document.activeElement.tagName !== 'INPUT'){  
+					$(".fixed").css('position', 'fixed');
+				}
+			})
+			
+    })
+	
+    //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+</body>
+</html>

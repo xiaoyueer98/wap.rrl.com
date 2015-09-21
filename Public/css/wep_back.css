@@ -1,0 +1,222 @@
+html,body{
+	max-width: 100%;
+	height: 100%;
+}
+*{
+	font-family: '微软雅黑'；
+}
+.clearfix:after {
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+    content: " ";
+    font-size: 0;
+}
+
+#container{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -mz-box;
+	display: -o-box;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	-mz-box-orient: vertical;
+	-o-box-orient: vertical;
+	height: 100%;
+	width: 100%;
+	margin:0 auto;
+}
+button{
+	outline: medium;
+}
+input{
+	 outline: none;
+	 outline: medium;
+}
+ul,li{list-style: none;}
+
+a{
+	text-decoration:none;
+}
+
+
+
+
+
+
+/* ------------------------weppage-------------------------- */
+.wapper{
+	max-width:640px;
+	height: 100%;
+	margin: 0 auto;
+}
+.headder{
+	width: 100%;
+	height: 43px;
+	background: #ffffff;
+	border-bottom:2px #1b5d95 solid;
+	text-align: right;
+	line-height: 43px;
+	font-size: 14px;
+	position: fixed;
+	z-index: 2;
+}
+.headder>.logo{
+	width: 64px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	display: block;
+}
+.headder>.logo img{
+	width: 100%;
+}
+.headder ul{
+	margin-right: 10px;
+	float: right;
+}
+
+.wapper section{
+	width: 100%;
+	padding-bottom: 47px;
+	padding-top:43px;
+}
+.wapper .slider{
+	margin: 0 auto;
+	margin-top:10px;
+	width: 98%;
+}
+
+.wapper .sbanner{
+	width: 98%;
+	margin:0 auto;
+}
+.wapper .sbanner span{
+	display: inline-block;
+	width: 30%;
+	margin-right:7px;
+}
+.wapper .sbanner span img{
+	width: 100%;
+}
+.wapper section h3{
+	width: 98%;
+	margin:0 auto;
+	margin-top:10px;
+	height: 25px;
+	border-left: 3px #2380b8 solid;
+}
+.wapper section h3 span{
+	font-size: 16px;
+	margin-left: 10px;
+	height: 25px;
+	line-height: 25px;
+}
+
+.wapper section dl{
+	width: 100%;
+	background: #f5f5f5;
+	height: 66px;
+	margin-top:10px;
+}
+
+.wapper section dl dt.top{
+	height: 33px;
+	width: 98%;
+	margin: 0 auto;
+}
+.wapper section dl dt.top span{
+	font-size: 16px;
+	color: #000000;
+	display: inline-block;
+	height: 33px;
+	line-height: 33px;
+	float: left;
+}
+.wapper section dl dt.top span.l{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 70px;
+}
+.wapper section dl dt.top span.c{
+	font-size: 12px;
+	color: #206daf;
+	margin-left: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 70px;
+}
+.wapper section dl dt.top span.r{
+	float: right;
+	color: #206daf;
+}
+.wapper section dl dd{
+	height: 33px;
+	width: 98%;
+	margin: 0 auto;
+}
+.wapper section dl dd span{
+	color: #b4b4b4;
+	margin-right: 3px;
+	display: inline-block;
+	float: left;
+	height: 33px;
+	line-height: 33px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.wapper section dl dd span.r{
+	color: #e84700;
+	float: right;
+	font-size: 16px;
+	text-align: right;
+	margin-right:0;
+	width: 80px;
+	background: url(/Public/images/shang.png) no-repeat left center;
+	background-size: 20px 20px;
+}
+.wapper section dl dd.btom span.s{
+	display: block;
+	margin-left: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 20%;
+}
+.scrolltop{
+	height: 45px;
+	width: 100%;
+	background: #283645;
+	color: #81868d;
+	text-align: center;
+	line-height: 45px;
+	border-bottom: 2px #919498 solid;
+}
+.scrolltop a{
+	color: #81868d;
+	text-align: center;
+} 
+footer{
+	height: 48px;
+	position: fixed;
+	bottom: 0;
+	background: #283645;
+	width: 100%;
+	z-index: 10;
+}
+
+footer h3{
+	color: #ffffff;
+	text-align: center;
+	font-size: 14px;
+	margin-top:5px;
+}
+footer p{
+	text-align: center;
+	margin-top:3px;
+	color: #ffffff;
+}
